@@ -1,20 +1,71 @@
-import React from 'react'
-
+import { useState, useEffect } from "react";
+import "../styles/components/Countdown.css";
 const Countdown = () => {
-    return (
-        <>
-          <div className="bg-violet-400 h-screen w-full">
-            <div className="pt-3  ml-[21%]">
-              <div className="flex flex-col items-center w-[80%] my-10">
-                <p className="text-6xl">GRAND FINALE STARTS IN</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center pt-[10%] pl-[2%]">
-              <p className="text-9xl">00:00:00</p>
-            </div>
-          </div>
-        </>
-      )
-}
+  const targetDate = new Date("2024-12-31T23:59:59").getTime(); // Change this to your target date
+  const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
-export default Countdown
+  useEffect(() => {
+    const updateCountdown = () => {
+      setTimeRemaining(targetDate - Date.now());
+    };
+
+    const intervalId = setInterval(updateCountdown, 1000);
+    return () => clearInterval(intervalId);
+  }, [targetDate]);
+
+  const getTime = () => {
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    return { days, hours, minutes, seconds };
+  };
+
+  const { days, hours, minutes, seconds } = getTime();
+
+  return (
+    <div
+      className="bg-cover bg-center h-screen w-full flex flex-col items-center justify-center"
+      style={{ backgroundImage: "url('./counter.png')" }}
+    >
+      <div className="flex flex-col items-center">
+        <div className="flex space-x-6 text-center">
+          <div className="flex flex-col items-center">
+            <p className="text-5xl text-white">Days</p>
+            <p className="text-8xl font-bold text-white">
+              {String(days).padStart(2, "0")}
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-5xl text-white">Hours</p>
+            <p className="text-8xl font-bold text-white">
+              {String(hours).padStart(2, "0")}
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-5xl text-white">Minutes</p>
+            <p className="text-8xl font-bold text-white">
+              {String(minutes).padStart(2, "0")}
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-5xl text-white">Seconds</p>
+            <p className="text-8xl font-bold text-white">
+              {String(seconds).padStart(2, "0")}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-9xl text-white font-bold">GRAND FINALE</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Countdown;

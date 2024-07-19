@@ -1,0 +1,39 @@
+/* PartnerCard.css */
+
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.partner-logo {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+.partner-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}

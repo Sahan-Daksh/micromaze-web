@@ -1,0 +1,74 @@
+/* Merch.css */
+.merch-container {
+    background: linear-gradient(to right, #3f0f71, #d7336f, #000000);
+    /* Equivalent to bg-gradient-to-r from-purple-900 via-pink-700 to-black */
+    color: white;
+    /* Equivalent to text-white */
+    padding: 2.5rem 0;
+    /* Equivalent to py-10 */
+}
+
+.merch-title {
+    font-size: 4.5rem;
+    /* Equivalent to text-7xl */
+    font-weight: 700;
+    /* Equivalent to font-bold */
+    margin-bottom: 1.5rem;
+    /* Equivalent to mb-6 */
+    text-align: center;
+    /* Equivalent to text-center */
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid layout */
+    gap: 1.5rem;
+    /* Equivalent to gap-6 */
+}
+
+.merch-card {
+    background-color: #2d2d2d;
+    /* Equivalent to bg-gray-800 */
+    border-radius: 0.5rem;
+    /* Equivalent to rounded-lg */
+    overflow: hidden;
+    /* Equivalent to overflow-hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Equivalent to shadow-lg */
+    transition: transform 0.3s;
+    /* Equivalent to transition duration */
+}
+
+.merch-card:hover {
+    transform: scale(1.05);
+    /* Equivalent to whileHover={{ scale: 1.05 }} */
+}
+
+.merch-image {
+    width: 100%;
+    /* Equivalent to w-full */
+    height: 12rem;
+    /* Equivalent to h-48 */
+    object-fit: cover;
+    /* Equivalent to object-cover */
+}
+
+.merch-info {
+    padding: 1rem;
+    /* Equivalent to p-4 */
+}
+
+.merch-name {
+    font-size: 1.25rem;
+    /* Equivalent to text-xl */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+}
+
+.merch-price {
+    margin-top: 0.5rem;
+    /* Equivalent to mt-2 */
+    color: #d1d5db;
+    /* Equivalent to text-gray-300 */
+}

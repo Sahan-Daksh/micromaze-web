@@ -1,0 +1,53 @@
+.footer-container {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 2rem;
+    border-top: 1px solid #444;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.footer-description {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+.footer-connect {
+    flex: 1;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1da1f2;
+    /* Twitter blue for hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+}

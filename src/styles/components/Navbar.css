@@ -1,0 +1,55 @@
+/* Navbar container styling */
+.navbar-container {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    /* No background color for transparency */
+    backdrop-filter: blur(10px);
+    /* Optional: Adds a blur effect for a frosted glass look */
+}
+
+/* Navbar styling */
+.navbar {
+    background: transparent !important;
+}
+
+/* Logo styling */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button styling */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(131, 58, 180, 1) 100%);
+    transform: scale(1.05);
+}
+
+.btn-gradient:focus {
+    outline: none;
+}

@@ -1,0 +1,77 @@
+/* About.css */
+
+.relative {
+    position: relative;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-left {
+    background-position: left;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-9xl {
+    font-size: 5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-purple-500 {
+    color: #6b46c1;
+}
+
+.bg-slate-50 {
+    background-color: #f8fafc;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.p-10 {
+    padding: 2.5rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.m-5 {
+    margin: 1.25rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.mix-blend-mode {
+    mix-blend-mode: multiply;
+}

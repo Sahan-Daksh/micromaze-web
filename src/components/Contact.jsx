@@ -1,32 +1,63 @@
-import React from "react";
+import { motion } from "framer-motion";
+import "../styles/components/Contact.css";
+import { contacts } from "../data/contacts";
 
 const Contact = () => {
   return (
-    <>
-      <div className="bg-purple-900 w-full">
-        <div className="pt-3  ml-[18%]">
-          <div className="flex flex-col items-center w-[80%] my-10">
-            <p className="text-6xl">Contact Us</p>
-          </div>
-        </div>
-        <div className="flex pt-3">
-          <div className="flex-auto pl-[20%]">
-            <div className="flex flex-col items-center bg-purple-700 w-[70px] rounded-lg min-h-[350px] min-w-[400px]"></div>
-          </div>
-          <div className="flex-auto pr-[10%]">
-            <div className="flex flex-col items-center bg-purple-700 w-[70px] rounded-lg min-h-[350px] min-w-[400px]"></div>
-          </div>
-        </div>
-        <div className="flex pt-14 pb-14">
-          <div className="flex-auto pl-[20%]">
-            <div className="flex flex-col items-center bg-purple-700 w-[70px] rounded-lg min-h-[350px] min-w-[400px]"></div>
-          </div>
-          <div className="flex-auto pr-[10%]">
-            <div className="flex flex-col items-center bg-purple-700 w-[70px] rounded-lg min-h-[350px] min-w-[400px]"></div>
-          </div>
-        </div>
+    <motion.div
+      className="contact-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="contact-title-container">
+        <motion.h1
+          className="contact-title"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Contact Us
+        </motion.h1>
+        <motion.p
+          className="contact-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Get in touch with our team for any inquiries
+        </motion.p>
+        <motion.div
+          className="contact-list-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          {contacts.map((contact, index) => (
+            <motion.div
+              key={index}
+              className="contact-card"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
+            >
+              <h2 className="contact-card-title">{contact.title}</h2>
+              <p className="contact-card-name">{contact.name}</p>
+              <p className="contact-card-detail">
+                Email:
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="contact-card-email"
+                >
+                  {contact.email}
+                </a>
+              </p>
+              <p className="contact-card-detail">Phone: {contact.phone}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

@@ -9,21 +9,23 @@ import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Hero />
-      <Intro/>
-      <Countdown/>
-      <About/>
-      <Register/>
-      <Guidelines/>
-      <Timeline/>
-      <Awards/>
-      <Partners/>
-      <Contact/>
-      <Footer/>
+      <Intro />
+      <Countdown />
+      <About />
+      <Register />
+      <Guidelines />
+      <Timeline />
+      <Awards />
+      <Partners />
+      <Contact />
+      <Footer />
     </div>
   );
 };

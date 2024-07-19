@@ -6,7 +6,7 @@ const Intro = () => {
           <div className="bg-purple-600 h-screen w-full">
             <div className='flex'>
                 <div className="flex-auto">
-                    <div className='flex flex-col bg-violet-900 w-[50%]  min-h-[100%] min-w-[100%]'>
+                    <div className='flex flex-col bg-violet-900 w-[50%]  min-h-screen min-w-full'>
                         <div className='w-[40%] pt-[40%] pl-5'>
                             <p>
                             IEEE RAS of IIT<br/>
@@ -18,7 +18,7 @@ const Intro = () => {
                     </div>
                 </div>
                 <div className="flex-auto">
-                    <div className='flex flex-col bg-purple-900 w-[50%]  min-h-[705px] min-w-[100%]'>
+                    <div className='flex flex-col bg-purple-900 w-[50%]  min-h-screen min-w-full'>
                     <div className='w-[40%] pt-[10%] pl-[10%]'>
                             <p>
                             COMPLETE FOR GLORY<br/>

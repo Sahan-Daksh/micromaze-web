@@ -1,68 +1,52 @@
 /* AwardCard.css */
 
-/* Basic styles for the card */
+/* Base styles for the award card */
 .award-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Container for the card */
-.award-card-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 8px;
+    background-color: #2d3748;
+    /* Default background color */
+    border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image styling */
+/* Award card image */
 .award-card-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-/* Content area */
+/* Award card content */
 .award-card-content {
-    padding: 1rem;
+    padding: 1.5rem;
+    color: #e2e8f0;
     text-align: center;
 }
 
-/* Title styling */
+/* Award card title */
 .award-card-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-/* Prize text styling */
+/* Award card prize */
 .award-card-prize {
-    font-size: 1.2rem;
-    color: #4caf50;
-    margin: 0.5rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
-/* Hover effects */
-.award-card:hover {
+/* Special styling for the winner card */
+.award-card.winner {
+    background-color: #ffcc00;
+    /* Gold color for emphasis */
+    color: #000000;
+    /* Black text for contrast */
+    border: 2px solid #ffd700;
+    /* Gold border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* More prominent shadow */
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Image hover effect */
-.award-card-image:hover {
-    transform: scale(1.1);
-}
-
-/* Title hover effect */
-.award-card-title:hover {
-    color: #2196f3;
+    /* Slightly larger to stand out */
 }

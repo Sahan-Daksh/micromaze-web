@@ -1,6 +1,7 @@
 .hero-container {
   position: relative;
-  background-color: #1e3a8a; /* Tailwind's bg-blue-800 color */
+  background-color: #1e3a8a;
+  /* Tailwind's bg-blue-800 color */
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -18,8 +19,10 @@
   left: 0;
   width: 100%;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-  backdrop-filter: blur(8px); /* Blur effect */
+  background: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent background */
+  backdrop-filter: blur(8px);
+  /* Blur effect */
   z-index: 10;
 }
 
@@ -28,11 +31,13 @@
   position: relative;
   text-align: center;
   z-index: 1;
+  margin-top: -10vh;
+  /* Adjust this value to move the content higher */
 }
 
 .hero-heading {
-  font-size: 10rem;
-  font-weight: 800;
+  font-size: 15rem;
+  font-weight: 1000;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;

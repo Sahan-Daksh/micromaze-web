@@ -16,24 +16,24 @@ const Partners = () => {
           Our Official Partners
         </motion.p>
       </div>
-      <motion.div
-        className="partners-grid"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      >
-        {partners.map((partner, index) => (
-          <motion.div
-            key={index}
-            className="partner-card-wrapper"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <PartnerCard partner={partner} />
-          </motion.div>
-        ))}
-      </motion.div>
+
+      {/* Infinite Scroll Wrapper */}
+      <div className="partners-scroll-wrapper">
+        <div className="partners-scroll-content">
+          {/* Duplicate the partner list for seamless scrolling */}
+          {[...partners, ...partners].map((partner, index) => (
+            <motion.div
+              key={index}
+              className="partner-card-wrapper"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <PartnerCard partner={partner} />
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

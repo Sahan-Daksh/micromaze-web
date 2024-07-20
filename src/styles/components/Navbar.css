@@ -1,8 +1,8 @@
 /* Navbar container styling */
 .navbar-container {
     width: 100%;
-    padding: 0.5rem 1rem;
-    /* No background color for transparency */
+    padding: 0.25rem 0.5rem;
+    /* Reduced padding for a smaller height */
     backdrop-filter: blur(10px);
     /* Optional: Adds a blur effect for a frosted glass look */
 }
@@ -16,6 +16,7 @@
 .navbar-logo {
     display: flex;
     align-items: center;
+    /* Adjust vertical alignment as needed */
 }
 
 .navbar-logo-link {
@@ -27,12 +28,14 @@
     display: block;
     max-width: 100%;
     height: auto;
+    /* Ensure the logo scales correctly with the new height */
 }
 
 /* Button styling */
 .navbar-buttons {
     display: flex;
     align-items: center;
+    /* Adjust alignment if necessary */
 }
 
 .btn-gradient {
@@ -40,7 +43,8 @@
     color: #fff;
     border: none;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
+    /* Reduced padding for buttons */
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.3s ease;
 }

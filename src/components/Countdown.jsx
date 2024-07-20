@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/components/Countdown.css";
+
 const Countdown = () => {
   const targetDate = new Date("2024-12-31T23:59:59").getTime(); // Change this to your target date
   const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
@@ -28,43 +29,46 @@ const Countdown = () => {
   const { days, hours, minutes, seconds } = getTime();
 
   return (
-    <div
-      className="bg-cover bg-center h-screen w-full flex flex-col items-center justify-center"
-      style={{ backgroundImage: "url('./counter.png')" }}
-    >
-      <div className="flex flex-col items-center">
-        <div className="flex space-x-6 text-center">
-          <div className="flex flex-col items-center">
-            <p className="text-5xl text-white">Days</p>
-            <p className="text-8xl font-bold text-white">
-              {String(days).padStart(2, "0")}
-            </p>
+    <>
+      <div
+        className="bg-cover bg-center h-screen w-full flex flex-col items-center justify-center relative"
+        style={{ backgroundImage: "url('./counter/counter.png')" }}
+      >
+        <div className="countdown-overlay"></div>
+        <div className="countdown-content flex flex-col items-center">
+          <div className="flex space-x-6 text-center">
+            <div className="flex flex-col items-center">
+              <p className="text-5xl text-white">Days</p>
+              <p className="text-8xl font-bold text-white">
+                {String(days).padStart(2, "0")}
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-5xl text-white">Hours</p>
+              <p className="text-8xl font-bold text-white">
+                {String(hours).padStart(2, "0")}
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-5xl text-white">Minutes</p>
+              <p className="text-8xl font-bold text-white">
+                {String(minutes).padStart(2, "0")}
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-5xl text-white">Seconds</p>
+              <p className="text-8xl font-bold text-white">
+                {String(seconds).padStart(2, "0")}
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col items-center">
-            <p className="text-5xl text-white">Hours</p>
-            <p className="text-8xl font-bold text-white">
-              {String(hours).padStart(2, "0")}
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-5xl text-white">Minutes</p>
-            <p className="text-8xl font-bold text-white">
-              {String(minutes).padStart(2, "0")}
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-5xl text-white">Seconds</p>
-            <p className="text-8xl font-bold text-white">
-              {String(seconds).padStart(2, "0")}
-            </p>
-          </div>
-        </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-9xl text-white font-bold">GRAND FINALE</p>
+          <div className="mt-12 text-center">
+            <p className="text-9xl text-white font-bold">GRAND FINALE</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

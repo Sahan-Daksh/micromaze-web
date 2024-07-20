@@ -53,3 +53,28 @@
     font-weight: bold;
     color: white;
 }
+
+/* Countdown.css */
+
+.countdown-overlay {
+    position: absolute;
+    top: 45%;
+    /* Adjust this value to position the overlay lower */
+    right: 35%;
+    /* Adjust this value as needed */
+    left: 15.5%;
+    /* Adjust this value as needed */
+    width: 50%;
+    height: 50%;
+    /* Adjust this value to make the overlay shorter */
+    background-image: url('./counter/counterNoBg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+}
+
+
+.countdown-content {
+    position: relative;
+    z-index: 2;
+}

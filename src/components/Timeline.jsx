@@ -71,7 +71,9 @@ const Timeline = () => {
                   <p className="event-title">{event.title}</p>
                   <p className="event-date">{event.date}</p>
                 </div>
-                <div className="timeline-dot"></div>
+                <div className="timeline-dot-container">
+                  <div className="timeline-dot"></div>
+                </div>
               </motion.li>
             ))}
           </motion.ul>

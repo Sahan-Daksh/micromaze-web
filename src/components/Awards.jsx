@@ -1,10 +1,11 @@
 import AwardCard from "../component/AwardCard";
 import { awardsImgs } from "../data/imgs/awardsImgs";
+
 const Awards = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-purple-900 via-pink-700 to-black w-full p-10">
-        <div className="pt-3 ml-[18%]">
+        <div className="ml-[18%]">
           <div className="flex flex-col items-center w-[80%] my-10">
             <p className="text-6xl text-white font-bold">Awards</p>
             <p className="text-xl text-gray-300 mt-4">
@@ -18,7 +19,12 @@ const Awards = () => {
             image={awardsImgs.firstRunnerUp}
             prize="$1,000"
           />
-          <AwardCard title="Winner" image={awardsImgs.winner} prize="$5,000" />
+          <AwardCard
+            title="Winner"
+            image={awardsImgs.winner}
+            prize="$5,000"
+            className="winner" // Add this class to highlight the winner card
+          />
           <AwardCard
             title="2nd Runner Up"
             image={awardsImgs.secondRunnerUp}

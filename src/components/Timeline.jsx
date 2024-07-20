@@ -1,83 +1,84 @@
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import "../styles/components/Timeline.css";
+import { timeLineBackgroundImages } from "../data/imgs/timeLineBackgroundImgs.jsx";
+import { timelineData } from "../data/timeline.jsx";
+
+const getRandomBackground = () => {
+  return timeLineBackgroundImages[
+    Math.floor(Math.random() * timeLineBackgroundImages.length)
+  ];
+};
+
 const Timeline = () => {
+  const [background, setBackground] = useState("");
+
+  useEffect(() => {
+    setBackground(getRandomBackground());
+
+    const items = document.querySelectorAll(".timeline-item");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("loaded");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    items.forEach((item) => {
+      observer.observe(item);
+    });
+
+    return () => {
+      items.forEach((item) => {
+        observer.unobserve(item);
+      });
+    };
+  }, []);
+
   return (
-    <>
-      <div className="bg-violet-700 h-screen w-full">
-        <div className="pt-3  ml-[18%]">
-          <div className="flex flex-col items-center w-[80%] my-10">
-            <p className="text-6xl">Timeline</p>
-            <ul>
-              <li className="relative flex gap-6 mt-10">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>Registration Open</p>
-                  <p>1st July, 2024</p>
+    <div className="timeline" style={{ backgroundImage: `url(${background})` }}>
+      <div className="timeline-container">
+        <motion.div
+          className="timeline-content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="timeline-heading">Timeline</p>
+          <motion.ul
+            className="timeline-list"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            {timelineData.map((event, index) => (
+              <motion.li
+                key={index}
+                className="timeline-item"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <div
+                  className={`timeline-text ${
+                    index % 2 === 0 ? "left" : "right"
+                  }`}
+                >
+                  <p className="event-title">{event.title}</p>
+                  <p className="event-date">{event.date}</p>
                 </div>
-              </li>
-              <li className="relative flex gap-6">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>Awareness Session</p>
-                  <p>14th July, 2024</p>
-                </div>
-              </li>
-              <li className="relative flex gap-6">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>Registration Closed</p>
-                  <p>17th July, 2024</p>
-                </div>
-              </li>
-              <li className="relative flex gap-6">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>Online Workshop</p>
-                  <p>20th July, 2024</p>
-                </div>
-              </li>
-              <li className="relative flex gap-6">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>Qualifier Round</p>
-                  <p>10th August, 2024</p>
-                </div>
-              </li>
-              <li className="relative flex gap-6">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
-                <svg width="100" height="100">
-  <circle cx="50" cy="50" r="10" fill="white" />
-</svg>
-              </div>
-              <div className="text-lg text-gray">
-                  <p>The Finale</p>
-                  <p>11th August, 2024</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+                <div className="timeline-dot"></div>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
-    </>
-  )
+    </div>
+  );
 };
 
 export default Timeline;

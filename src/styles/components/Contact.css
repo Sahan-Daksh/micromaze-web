@@ -1,0 +1,76 @@
+/* Contact.css */
+
+/* Container for the contact section */
+.contact-container {
+    background: linear-gradient(to right, #4a148c, #ec407a, #000000);
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+/* Title section */
+.contact-title-container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+/* Main title */
+.contact-title {
+    font-size: 6rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.contact-subtitle {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    margin-top: 1rem;
+}
+
+/* Contacts list container */
+.contact-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+/* Individual contact card */
+.contact-card {
+    background: rgba(0, 0, 0, 0.6);
+    /* Slightly transparent background for readability */
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contact title */
+.contact-card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact name */
+.contact-card-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Contact email and phone */
+.contact-card-detail {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Email link */
+.contact-card-email {
+    text-decoration: underline;
+}

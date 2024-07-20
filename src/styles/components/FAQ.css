@@ -1,0 +1,46 @@
+/* FAQ.css */
+
+/* Container for FAQ section */
+.faq-container {
+    background: linear-gradient(to right, #6b46c1, #d53f8c, #000);
+    color: white;
+    padding: 2.5rem 0;
+}
+
+/* Heading for FAQ section */
+.faq-heading {
+    font-size: 4rem;
+    /* 7xl */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* FAQ item container */
+.faq-item {
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* FAQ question header */
+.faq-question {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    /* xl */
+    font-weight: 600;
+}
+
+/* Expanded FAQ answer */
+.faq-answer {
+    margin-top: 1rem;
+    color: #e2e8f0;
+}
+
+/* Active state for FAQ question */
+.faq-question-active {
+    background-color: #6b46c1;
+}

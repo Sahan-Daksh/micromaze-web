@@ -33,6 +33,9 @@ export default {
           12: "#2E2A41",
           13: "#6C7275",
         },
+        "purple-900": "#2d2a4a",
+        "pink-700": "#d6336c",
+        black: "#000000",
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
@@ -56,6 +59,9 @@ export default {
       transitionTimingFunction: {
         DEFAULT: "linear",
       },
+      backgroundImage: {
+        "gradient-r": "linear-gradient(to right, #2d2a4a, #d6336c, #000000)",
+      },
       zIndex: {
         1: "1",
         2: "2",
@@ -75,7 +81,10 @@ export default {
   },
   plugins: [
     plugin(function ({ addBase, addComponents, addUtilities }) {
+      // Base Styles
       addBase({});
+
+      // Component Classes
       addComponents({
         ".container": {
           "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
@@ -122,6 +131,8 @@ export default {
           "@apply font-code text-xs font-bold uppercase tracking-wider": {},
         },
       });
+
+      // Utility Classes
       addUtilities({
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",

@@ -1,0 +1,142 @@
+.timeline {
+    overflow: hidden;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-container {
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-content {
+    position: relative;
+    height: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.timeline-heading {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 5vh;
+    font-family: var(--font-sora);
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--font-sora);
+    width: 100%;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid gray;
+    margin: 0 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.timeline-dot::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: gray;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.timeline-dot:first-child::before {
+    display: none;
+    /* No line before the first dot */
+}
+
+.timeline-dot:last-child::before {
+    height: 50%;
+    /* Half the height for the last dot */
+}
+
+.timeline-item.loaded .timeline-dot {
+    transform: scale(1.2);
+}
+
+.timeline-text {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    flex-grow: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.timeline-text.left {
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.timeline-text.right {
+    margin-right: 2rem;
+    text-align: right;
+}
+
+.timeline-item.loaded .timeline-text {
+    transform: translateX(0);
+}
+
+.timeline-text.left {
+    transform: translateX(-50px);
+}
+
+.timeline-text.right {
+    transform: translateX(50px);
+}
+
+.event-title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-sora);
+}
+
+.event-date {
+    font-size: 1.2rem;
+    font-family: var(--font-sora);
+}

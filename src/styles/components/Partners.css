@@ -1,0 +1,39 @@
+/* Partners.css */
+.partners-container {
+    background-color: #6d28d9;
+    /* Equivalent to bg-purple-800 */
+    width: 100%;
+    padding-top: 2.5rem;
+    /* Equivalent to py-10 */
+    padding-bottom: 2.5rem;
+    /* Equivalent to py-10 */
+}
+
+.partners-title {
+    font-size: 2.25rem;
+    /* Equivalent to text-4xl */
+    color: white;
+    /* Equivalent to text-white */
+    margin-bottom: 1.5rem;
+    /* Equivalent to mb-6 */
+    text-align: center;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Equivalent to gap-6 */
+    padding-left: 1rem;
+    /* Equivalent to px-4 */
+    padding-right: 1rem;
+    /* Equivalent to px-4 */
+}
+
+.motion-partners-title {
+    opacity: 0;
+    /* Initial opacity for animation */
+    transition: opacity 1s;
+    /* Duration of the fade-in animation */
+}

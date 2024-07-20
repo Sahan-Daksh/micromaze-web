@@ -1,0 +1,55 @@
+/* Countdown.css */
+
+/* Container for the countdown section */
+.countdown-container {
+    background: url('./counter.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flex container for time units */
+.countdown-time-units {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* Individual time unit container */
+.countdown-time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels for time units */
+.countdown-time-label {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Time values */
+.countdown-time-value {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* GRAND FINALE section */
+.grand-finale {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* GRAND FINALE text */
+.grand-finale-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+}

@@ -9,7 +9,7 @@
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-image: url('./bdc.png');
+    background-image: url('../../../public/bdc.png');
     overflow: hidden;
     /* Ensure scrolling effect stays within bounds */
 }

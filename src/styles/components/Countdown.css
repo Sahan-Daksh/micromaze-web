@@ -2,7 +2,7 @@
 
 /* Container for the countdown section */
 .countdown-container {
-    background: url('./counter.png') no-repeat center center;
+    background: url('../../../public/counter/counter.png') no-repeat center center;
     background-size: cover;
     height: 100vh;
     /* Full viewport height */
@@ -67,7 +67,7 @@
     width: 50%;
     height: 50%;
     /* Adjust this value to make the overlay shorter */
-    background-image: url('./counter/counterNoBg.png');
+    background-image: url('../../../public/counter/counterNoBg.png');
     background-size: cover;
     background-position: center;
     z-index: 5;

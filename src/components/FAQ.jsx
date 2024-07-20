@@ -12,8 +12,10 @@ export default function FAQ() {
 
   return (
     <div className="faq-container">
-      <div className="container mx-auto px-5">
-        <h2 className="faq-heading">Frequently Asked Questions</h2>
+      <div className="faq-heading-container">
+        <h2 className="faq-heading">Frequently Asked Questions (FAQ)</h2>
+      </div>
+      <div className="faq-content-container">
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
@@ -21,6 +23,10 @@ export default function FAQ() {
                 initial={false}
                 animate={{
                   backgroundColor: selected === index ? "#6b46c1" : "#2d3748",
+                  color:
+                    selected === index
+                      ? "#ffffff"
+                      : "#e2e8f0" /* Adjust color */,
                 }}
                 className={`faq-question ${
                   selected === index ? "faq-question-active" : ""
@@ -28,6 +34,8 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
               >
                 <h3>{faq.question}</h3>
+                {/* Optional: Add an icon for expanded/collapsed state */}
+                <span>{selected === index ? "−" : "+"}</span>
               </motion.div>
               <AnimatePresence>
                 {selected === index && (
@@ -36,7 +44,7 @@ export default function FAQ() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="faq-answer overflow-hidden"
+                    className="faq-answer"
                   >
                     <p>{faq.answer}</p>
                   </motion.div>

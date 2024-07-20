@@ -1,14 +1,17 @@
 /* Partners.css */
+
+/* Container for the partner section */
 .partners-container {
     background-color: #6d28d9;
     /* Equivalent to bg-purple-800 */
     width: 100%;
-    padding-top: 2.5rem;
+    padding-top: 7rem;
     /* Equivalent to py-10 */
     padding-bottom: 2.5rem;
     /* Equivalent to py-10 */
 }
 
+/* Title of the partner section */
 .partners-title {
     font-size: 2.25rem;
     /* Equivalent to text-4xl */
@@ -19,21 +22,36 @@
     text-align: center;
 }
 
-.partners-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    /* Equivalent to gap-6 */
-    padding-left: 1rem;
-    /* Equivalent to px-4 */
-    padding-right: 1rem;
-    /* Equivalent to px-4 */
+/* Wrapper for the infinite scrolling effect */
+.partners-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
-.motion-partners-title {
-    opacity: 0;
-    /* Initial opacity for animation */
-    transition: opacity 1s;
-    /* Duration of the fade-in animation */
+/* Content inside the scroll wrapper */
+.partners-scroll-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200%;
+    /* Twice the width to accommodate the scrolling effect */
+    animation: scroll-left 20s linear infinite;
+}
+
+/* Styling for the partners grid */
+.partner-card-wrapper {
+    flex: 1 0 auto;
+    margin-right: 1.5rem;
+    /* Space between cards */
+}
+
+/* Keyframes for infinite scroll animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }

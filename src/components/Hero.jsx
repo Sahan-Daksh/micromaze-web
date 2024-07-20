@@ -30,6 +30,7 @@ const Hero = () => {
         src="./hero/heroImageWithoutBg.png"
         alt="Overlay"
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 5 }}
       />
     </motion.div>
   );

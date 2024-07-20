@@ -12,9 +12,6 @@
   --font-grotesk: "Space Grotesk", sans-serif;
 }
 
-* {
-  scroll-behavior: smooth;
-}
 
 @layer base {
   body {
@@ -28,3 +25,52 @@
   color: white;
 }
 
+
+.container-inbuilt {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+  /* Optional: Add padding for spacing */
+}
+
+/* Define specific section sizes */
+.section-100 {
+  min-height: 100vh;
+}
+
+.section-75 {
+  min-height: 75vh;
+}
+
+.section-50 {
+  min-height: 50vh;
+}
+
+.section-25 {
+  min-height: 25vh;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(219, 52, 191, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(191, 0, 255, 0.9);
+  /* Darker color with transparency when hovered */
+}

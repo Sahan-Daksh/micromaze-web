@@ -5,42 +5,84 @@
     background: linear-gradient(to right, #6b46c1, #d53f8c, #000);
     color: white;
     padding: 2.5rem 0;
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: flex-start;
+    /* Align items to the start */
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+/* FAQ heading container */
+.faq-heading-container {
+    flex: 1 1 25%;
+    padding: 2rem;
+    /* Add padding for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align text to the left */
 }
 
 /* Heading for FAQ section */
 .faq-heading {
-    font-size: 4rem;
-    /* 7xl */
+    font-size: 5rem;
+    /* Adjusted size */
     font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    text-transform: uppercase;
+    /* Uppercase text */
+    color: #ffffff;
+    line-height: 1.2;
+    /* Adjust line height for better spacing */
+}
+
+/* FAQ content container */
+.faq-content-container {
+    flex: 1 1 75%;
+    padding: 2rem;
+    /* Add padding for spacing */
 }
 
 /* FAQ item container */
 .faq-item {
     background-color: #2d3748;
     border-radius: 0.5rem;
-    padding: 1rem;
     margin-bottom: 1rem;
+    overflow: hidden;
+    /* Ensure no content overflows */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Modern shadow effect */
 }
 
 /* FAQ question header */
 .faq-question {
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.25rem;
+    /* Slightly larger padding */
     border-radius: 0.5rem;
-    font-size: 1.25rem;
-    /* xl */
+    font-size: 1.5rem;
+    /* Larger font size */
     font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    justify-content: space-between;
+    /* Space between question and any icons */
 }
 
 /* Expanded FAQ answer */
 .faq-answer {
-    margin-top: 1rem;
+    padding: 1.25rem;
+    /* Match padding */
     color: #e2e8f0;
+    background-color: #1a202c;
+    /* Darker background for answer */
 }
 
 /* Active state for FAQ question */
 .faq-question-active {
     background-color: #6b46c1;
+    color: #ffffff;
+    /* White text for better readability */
 }

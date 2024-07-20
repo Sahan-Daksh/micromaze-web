@@ -15,17 +15,17 @@ const About = () => {
       >
         <div className="flex flex-col items-end w-[80%] p-10">
           <motion.p
-            className="text-9xl text-white mb-8"
+            className="lg:text-9xl text-[40px] leading-10 text-white mb-8"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             <b>
-              What is <br /> MicroMaze?
+              What is <br/>MicroMaze?
             </b>
           </motion.p>
           <motion.div
-            className="flex flex-col items-end bg-slate-50 w-[70%] rounded-lg p-6"
+            className="flex flex-col items-end bg-slate-50 lg-w-[70%] rounded-lg p-6"
             style={{ backgroundColor: "#D9D9D9" }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -13,7 +13,7 @@
 
 /* Title of the partner section */
 .partners-title {
-    font-size: 2.25rem;
+    font-size: 5rem;
     /* Equivalent to text-4xl */
     color: white;
     /* Equivalent to text-white */
@@ -55,3 +55,11 @@
         transform: translateX(-50%);
     }
 }
+
+@media (min-width: 360px) and (max-width: 1200px) {
+    .partners-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  

@@ -8,7 +8,7 @@ const Awards = () => {
         <div className="ml-[18%]">
           <div className="flex flex-col items-center w-[80%] my-10">
             <p className="text-6xl text-white font-bold">Awards</p>
-            <p className="text-xl text-gray-300 mt-4">
+            <p className="text-xl text-gray-300 mt-4 text-center">
               Recognizing outstanding achievements and milestones
             </p>
           </div>

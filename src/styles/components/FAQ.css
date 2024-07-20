@@ -86,3 +86,14 @@
     color: #ffffff;
     /* White text for better readability */
 }
+
+@media (min-width: 360px) and (max-width: 1200px) {
+    .faq-heading {
+      font-size: 3rem;
+      text-align: center;
+    }
+    .faq-container{
+        flex-direction: column;
+        align-items: center;
+    }
+  }

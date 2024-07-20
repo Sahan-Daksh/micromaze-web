@@ -151,3 +151,9 @@
     font-size: 1.2rem;
     font-family: var(--font-sora);
 }
+
+@media (min-width: 360px) and (max-width: 1200px) {
+    .timeline-item {
+      flex-direction: column;
+    }
+  }

@@ -74,3 +74,9 @@
 .contact-card-email {
     text-decoration: underline;
 }
+
+@media (min-width: 360px) and (max-width: 1200px) {
+    .contact-title {
+      font-size: 4.5rem;
+    }
+  }

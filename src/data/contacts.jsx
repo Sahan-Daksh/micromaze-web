@@ -1,20 +1,20 @@
 export   const contacts = [
     {
-      name: "Jane Doe",
-      title: "Chairperson",
-      email: "jane.doe@example.com",
-      phone: "+1234567890",
+      name: "Shamini Fernando",
+      title: "Project Chair",
+      email: "shamini.20221555@iit.ac.lk",
+      phone: "+94765642045",
     },
     {
-      name: "John Smith",
-      title: "Co-Chair",
-      email: "john.smith@example.com",
-      phone: "+0987654321",
+      name: "Atheeque Furkhan",
+      title: "Event Co-Chair",
+      email: "atheeque.20231063@iit.ac.lk",
+      phone: "+94729498655",
     },
     {
-      name: "Emily Johnson",
-      title: "Event In-Charge",
-      email: "emily.johnson@example.com",
-      phone: "+1122334455",
+      name: "Pragash Sasitharan",
+      title: "Project Co-Chair",
+      email: "pragash.20222206@iit.ac.lk",
+      phone: "+94779724396",
     },
   ];

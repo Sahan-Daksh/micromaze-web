@@ -44,7 +44,6 @@ const Contact = () => {
               <h2 className="contact-card-title">{contact.title}</h2>
               <p className="contact-card-name">{contact.name}</p>
               <p className="contact-card-detail">
-                Email:
                 <a
                   href={`mailto:${contact.email}`}
                   className="contact-card-email"
@@ -52,7 +51,11 @@ const Contact = () => {
                   {contact.email}
                 </a>
               </p>
-              <p className="contact-card-detail">Phone: {contact.phone}</p>
+              <p className="contact-card-detail">
+                <a href={`tel:${contact.phone}`} className="contact-card-email">
+                  {contact.phone}
+                </a>
+              </p>
             </motion.div>
           ))}
         </motion.div>

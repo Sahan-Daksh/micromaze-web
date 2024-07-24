@@ -50,3 +50,34 @@
     font-size: 0.9em;
     margin-top: 20px;
 }
+
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-media-link {
+    color: #fff;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.social-media-link svg {
+    width: 100%;
+    height: 100%;
+}

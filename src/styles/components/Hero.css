@@ -1,7 +1,8 @@
+/* src/styles/components/Hero.css */
+
 .hero-container {
   position: relative;
   background-color: #1e3a8a;
-  /* Tailwind's bg-blue-800 color */
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -12,7 +13,6 @@
   overflow: hidden;
 }
 
-/* Adjust the navbar within the hero container */
 .navbar {
   position: absolute;
   top: 0;
@@ -20,19 +20,16 @@
   width: 100%;
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
-  /* Semi-transparent background */
   backdrop-filter: blur(8px);
-  /* Blur effect */
   z-index: 10;
 }
 
-/* Ensure other styles remain as they are */
 .hero-content {
   position: relative;
   text-align: center;
   z-index: 1;
-  margin-top: -10vh;
-  /* Adjust this value to move the content higher */
+  margin-top: -15vh;
+  /* Adjust this value if needed */
 }
 
 .hero-heading {
@@ -56,6 +53,8 @@
   object-fit: cover;
   opacity: 0.5;
   z-index: 0;
+  top: 10%;
+  /* Adjusted value to move the image lower */
 }
 
 @media (min-width: 360px) and (max-width: 1200px) {
@@ -63,4 +62,3 @@
     font-size: 4rem;
   }
 }
-

@@ -88,16 +88,16 @@ const Footer = () => {
           >
             Connect with Us
           </motion.h2>
-          <div className="footer-social-links">
+          <div className="social-media-icons">
             {socialMediaLinks.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
-                whileHover={{ scale: 1.1, rotate: 10 }}
-                transition={{ duration: 0.3 }}
-                className="social-icon"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="social-media-link"
               >
-                <link.icon className="w-6 h-6" />
+                {link.icon()}
               </motion.a>
             ))}
           </div>

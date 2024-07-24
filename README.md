@@ -65,13 +65,9 @@ _Dates are tentative and subject to change._
   +94 76 564 2045  
   shamini.20221555@iit.ac.lk
 
-- **Atheeque Furkhan, Industry Outreach Co-Chair**  
-  +94 71 605 7710  
-  atheeque.20231063@iit.ac.lk
-
-- **Aaysha Mohamed, Event Co-Chair**  
+- **Atheeque Furkhan, Event Co-Chair**  
   +94 72 949 8655  
-  aaysha.20221493@iit.ac.lk
+  atheeque.20231063@iit.ac.lk
 
 - **Pragash Sasitharan, Program Co-Chair**  
   +94 77 972 4396  

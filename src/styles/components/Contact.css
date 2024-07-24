@@ -2,7 +2,7 @@
 
 /* Container for the contact section */
 .contact-container {
-    background: linear-gradient(to right, #4a148c, #ec407a, #000000);
+    background: linear-gradient(to right, #64748b, #1e293b);
     width: 100%;
     padding: 2.5rem 0;
 }

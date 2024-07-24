@@ -1,5 +1,3 @@
-/* About.css */
-
 .relative {
     position: relative;
 }
@@ -25,7 +23,13 @@
 }
 
 .text-9xl {
-    font-size: 5rem;
+    font-size: 6rem;
+    /* Adjust as necessary for responsive design */
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    /* Adjust as necessary for responsive design */
 }
 
 .text-2xl {
@@ -36,12 +40,12 @@
     color: white;
 }
 
-.text-purple-500 {
+.text-purple-700 {
     color: #6b46c1;
 }
 
-.bg-slate-50 {
-    background-color: #f8fafc;
+.bg-gray-100 {
+    background-color: #f7fafc;
 }
 
 .rounded-lg {
@@ -72,6 +76,6 @@
     opacity: 0.5;
 }
 
-.mix-blend-mode {
+.mix-blend-multiply {
     mix-blend-mode: multiply;
 }

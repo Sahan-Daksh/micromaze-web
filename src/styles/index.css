@@ -1,43 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
-
+/* Importing Apple fonts via CSS properties */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root variables */
 :root {
-  --font-sora: "Sora", sans-serif;
-  --font-code: "Source Code Pro", monospace;
-  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-sf: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  --font-sf-mono: "SF Mono", "Menlo", "Courier", monospace;
+  --font-new-york: "New York", serif;
 }
 
-
+/* Base styles */
 @layer base {
   body {
     @apply font-sans text-n-1 text-base;
+    font-family: var(--font-sf);
   }
 }
 
+/* Button gradient */
 .btn-gradient {
   background: linear-gradient(90deg, #0F0C29 0%, #302B63 50%, #24243E 100%);
   border: 2px solid white;
   color: white;
 }
 
-
+/* Container with scroll snap */
 .container-inbuilt {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
+/* Section styles */
 .section {
   scroll-snap-align: start;
-  /* Optional: Add padding for spacing */
 }
 
-/* Define specific section sizes */
+/* Specific section sizes */
 .section-100 {
   min-height: 100vh;
 }
@@ -54,10 +54,9 @@
   min-height: 25vh;
 }
 
-/* For WebKit browsers (Chrome, Safari) */
+/* Scrollbar styling for WebKit browsers */
 ::-webkit-scrollbar {
   width: 12px;
-  /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -68,9 +67,10 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgba(219, 52, 191, 0.8);
+  border-radius: 8px;
+  /* Added border-radius for smooth thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(191, 0, 255, 0.9);
-  /* Darker color with transparency when hovered */
 }

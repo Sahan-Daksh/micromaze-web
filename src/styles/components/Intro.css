@@ -1,5 +1,3 @@
-/* Intro.css */
-
 .intro-container {
     position: relative;
     height: 100vh;
@@ -11,7 +9,6 @@
     background-position: center;
     background-image: url('../../../public/bdc.png');
     overflow: hidden;
-    /* Ensure scrolling effect stays within bounds */
 }
 
 .intro-overlay {
@@ -23,23 +20,20 @@
     justify-content: center;
 }
 
-/* Endless Scroll Animation */
 .intro-title-container {
     display: flex;
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 1rem;
-    /* Increase the space between title and metrics */
 }
 
 .intro-title {
-    font-size: 12.5rem;
+    font-size: 15vw;
     font-weight: 700;
     color: white;
     text-align: center;
     display: inline-block;
     animation: scrollText 30s linear infinite;
-    /* Make the scroll slower */
 }
 
 @keyframes scrollText {
@@ -52,39 +46,45 @@
     }
 }
 
-/* Intro Stats Styles */
 .intro-stats {
     display: flex;
     gap: 3rem;
     margin-top: 2rem;
-    /* Adjust distance from the title if needed */
 }
 
 .intro-stat-card {
-    background-color: white;
     text-align: center;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    /* Make background transparent */
 }
 
 .intro-stat-number {
-    font-size: 4rem;
+    font-size: 6rem;
+    /* Increase font size */
     font-weight: 700;
-    color: #6b21a8;
+    color: white;
+    /* Whitish text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* 3D effect */
 }
 
 .intro-stat-text {
-    font-size: 1.25rem;
-    color: #4a5568;
+    font-size: 2rem;
+    /* Increase font size */
+    color: white;
+    /* Whitish text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    /* 3D effect */
 }
 
 @media (min-width: 360px) and (max-width: 1024px) {
     .intro-title {
         font-size: 4rem;
     }
-    .intro-stats{
+
+    .intro-stats {
         flex-direction: column;
     }
-  }
-  
+}

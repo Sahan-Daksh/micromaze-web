@@ -8,30 +8,30 @@ const About = () => {
       style={{ backgroundImage: "url('./what/what.png')" }}
     >
       <motion.div
-        className="relative z-10 h-full flex items-start justify-end pr-10"
+        className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 md:px-8 lg:px-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex flex-col items-end w-[80%] p-10">
+        <div className="flex flex-col items-center w-full max-w-4xl p-6 sm:p-8 md:p-10 lg:p-12">
           <motion.p
-            className="lg:text-9xl text-[40px] leading-10 text-white mb-8"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 sm:mb-8 lg:mb-10 text-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             <b>
-              What is <br/>MicroMaze?
+              What is <br />
+              MicroMaze?
             </b>
           </motion.p>
           <motion.div
-            className="flex flex-col items-end bg-slate-50 lg-w-[70%] rounded-lg p-6"
-            style={{ backgroundColor: "#D9D9D9" }}
+            className="flex flex-col items-center bg-gray-100 w-full max-w-3xl rounded-lg p-6 sm:p-8 md:p-10 shadow-lg"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <p className="text-2xl text-purple-500 text-center">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-purple-700 text-center">
               MicroMaze is an inter-university competition designed to challenge
               participants in developing a micro mouse capable of solving a maze
               within a specified timeframe. The main challenge is to design a
@@ -54,8 +54,8 @@ const About = () => {
       <img
         src="./what/whatGaze.png"
         alt="Overlay"
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-        style={{ mixBlendMode: "multiply", objectPosition: "left" }}
+        className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-multiply"
+        style={{ objectPosition: "left" }}
       />
     </div>
   );

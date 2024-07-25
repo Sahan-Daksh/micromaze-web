@@ -1,4 +1,4 @@
-/* src/styles/components/Hero.css */
+
 
 .hero-container {
   position: relative;
@@ -33,12 +33,14 @@
 }
 
 .hero-heading {
-  font-size: 15rem;
-  font-weight: 1000;
+  font-size: 10rem;
+  height: -300px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
   transition: transform 0.3s ease;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .hero-heading:hover {

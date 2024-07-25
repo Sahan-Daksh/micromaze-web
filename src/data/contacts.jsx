@@ -13,7 +13,7 @@ export   const contacts = [
     },
     {
       name: "Pragash Sasitharan",
-      title: "Project Co-Chair",
+      title: "Program Co-Chair",
       email: "pragash.20222206@iit.ac.lk",
       phone: "+94779724396",
     },

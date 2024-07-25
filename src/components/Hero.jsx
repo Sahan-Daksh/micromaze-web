@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <motion.div
       className="hero-container"
-      style={{ backgroundImage: "url('./hero/heroImage.png')" }}
+      style={{ backgroundImage: "url('./hero/hero-image.png')" }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -21,13 +21,14 @@ const Hero = () => {
       >
         <h1
           className="hero-heading"
-          style={{ fontFamily: "'Space Grotesk', 'Sora', 'Source Code Pro'" }}
+          style={{ fontFamily: '"Poppins", sans-serif' }}
+
         >
           MicroMaze
         </h1>
       </motion.div>
       <img
-        src="./hero/heroImageWithoutBg.png"
+        src="./hero/herobgremoved.png"
         alt="Overlay"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 5 }}

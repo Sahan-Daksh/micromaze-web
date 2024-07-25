@@ -7,6 +7,10 @@
     padding: 2.5rem;
 }
 
+.titanium {
+    background: linear-gradient(to right, #283048, #859398);
+  }
+
 /* Title section */
 .awards-title-container {
     padding-top: 0.75rem;

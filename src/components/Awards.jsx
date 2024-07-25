@@ -4,7 +4,7 @@ import { awardsImgs } from "../data/imgs/awardsImgs";
 const Awards = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-purple-900 via-pink-700 to-black w-full p-10">
+      <div className="bg-gradient-to-r from-slate-500 to-slate-800 w-full p-10">
         <div className="ml-[18%]">
           <div className="flex flex-col items-center w-[80%] my-10">
             <p className="text-6xl text-white font-bold">Awards</p>
@@ -17,18 +17,18 @@ const Awards = () => {
           <AwardCard
             title="1st Runner Up"
             image={awardsImgs.firstRunnerUp}
-            prize="$1,000"
+            prize="30,000 LKR"
           />
           <AwardCard
-            title="Winner"
+            title="Champions"
             image={awardsImgs.winner}
-            prize="$5,000"
+            prize="40,000 LKR"
             className="winner" // Add this class to highlight the winner card
           />
           <AwardCard
             title="2nd Runner Up"
             image={awardsImgs.secondRunnerUp}
-            prize="$500"
+            prize="20,000 LKR"
           />
         </div>
       </div>

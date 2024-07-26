@@ -1,5 +1,3 @@
-/* AwardCard.css */
-
 /* Base styles for the award card */
 .award-card {
     background-color: #2d3748;
@@ -8,6 +6,19 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Award card image */
@@ -39,14 +50,17 @@
 
 /* Special styling for the winner card */
 .award-card.winner {
-    background-color: #ffcc00;
     /* Gold color for emphasis */
     color: #000000;
     /* Black text for contrast */
-    border: 2px solid #ffd700;
     /* Gold border */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     /* More prominent shadow */
     transform: scale(1.05);
     /* Slightly larger to stand out */
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }

@@ -2,7 +2,6 @@
 
 .contact-container {
   padding: 40px;
-  background: linear-gradient(135deg, #2a034a, #451d67, #5d367d, #763d93, #9034a8, #ac1fbd);
   background-size: 200% 200%;
   animation: gradientAnimation 10s ease infinite;
   color: white;
@@ -11,19 +10,7 @@
   align-items: center;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
 
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .contact-title-container {
   text-align: center;

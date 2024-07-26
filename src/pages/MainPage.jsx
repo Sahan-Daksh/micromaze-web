@@ -14,55 +14,27 @@ import Footer from "../components/Footer";
 export default function MainPage() {
   return (
     <>
-      <div className="container-inbuilt">
-        <section className="section section-100">
-          <Hero />
-        </section>
-        <section className="section section-100">
-          <Intro />
-        </section>
-        <section className="section section-100">
-          <About />
-        </section>
-        <section className="section section-75">
-          <Countdown />
-        </section>
-        <section className="App section section-75 ">
-          <Milestones />
-        </section>
-        <section
-          className="section section-50"
-        >
-          <Awards />
-        </section>
-        <section
-          className="section section-50"
+      <Hero />
 
-        >
-          <FAQ />
-        </section>
-        <section
-          className="section section-50"
+      <Intro />
 
-        >
-          <Merch />
-        </section>
-        <section
-          className="section section-50"
+      <About />
 
-        >
-          <Partners />
-        </section>
-        <section
-          className="section section-25"
+      <Countdown />
 
-        >
-          <Contact />
-        </section>
-        <section className="section section-25">
-          <Footer />
-        </section>
-      </div>
+      <Milestones />
+
+      <Awards />
+
+      <FAQ />
+
+      <Merch />
+
+      <Partners />
+
+      <Contact />
+
+      <Footer />
     </>
   );
 }

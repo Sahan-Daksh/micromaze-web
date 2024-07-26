@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import About from "../components/About";
@@ -29,19 +30,33 @@ export default function MainPage() {
         <section className="section section-75">
           <Timeline />
         </section>
-        <section className="section section-50">
+        <section
+          className="section section-50"
+        >
           <Awards />
         </section>
-        <section className="section section-50">
+        <section
+          className="section section-50"
+
+        >
           <FAQ />
         </section>
-        <section className="section section-50">
+        <section
+          className="section section-50"
+
+        >
           <Merch />
         </section>
-        <section className="section section-50">
+        <section
+          className="section section-50"
+
+        >
           <Partners />
         </section>
-        <section className="section section-25">
+        <section
+          className="section section-25"
+
+        >
           <Contact />
         </section>
         <section className="section section-25">

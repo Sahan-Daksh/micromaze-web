@@ -1,3 +1,5 @@
+/* Intro.css */
+
 .intro-container {
     position: relative;
     height: 100vh;
@@ -18,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    will-change: opacity, transform;
 }
 
 .intro-title-container {
@@ -25,22 +28,39 @@
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    will-change: transform;
 }
 
 .intro-title {
-    font-size: 15vw;
+    font-size: 10vw;
     font-weight: 700;
     color: white;
     text-align: center;
     display: inline-block;
-    animation: scrollText 30s linear infinite;
+    animation: scrollText 20s linear infinite;
+    font-family: 'SF Pro Display', sans-serif;
+    will-change: transform;
+}
+
+.intro-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 10vw;
+    font-weight: 700;
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 @keyframes scrollText {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
-
     100% {
         transform: translateX(-100%);
     }
@@ -48,8 +68,10 @@
 
 .intro-stats {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .intro-stat-card {
@@ -57,34 +79,51 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: transparent;
-    /* Make background transparent */
 }
 
 .intro-stat-number {
-    font-size: 6rem;
-    /* Increase font size */
+    font-size: 15rem;
     font-weight: 700;
-    color: white;
-    /* Whitish text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* 3D effect */
+    color: #A9A9A9;
+    font-family: 'SF Pro Display', sans-serif;
+    will-change: text-shadow;
 }
 
 .intro-stat-text {
-    font-size: 2rem;
-    /* Increase font size */
-    color: white;
-    /* Whitish text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    /* 3D effect */
+    font-size: 4rem;
+    color: #A9A9A9;
+    font-family: 'IBM Plex Sans', sans-serif;
+    will-change: color;
 }
 
-@media (min-width: 360px) and (max-width: 1024px) {
+@media (max-width: 768px) {
     .intro-title {
-        font-size: 4rem;
+        font-size: 5vw;
     }
 
     .intro-stats {
         flex-direction: column;
+    }
+
+    .intro-stat-number {
+        font-size: 8rem;
+    }
+
+    .intro-stat-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 6vw; /* Increase font size for very small screens */
+    }
+
+    .intro-stat-number {
+        font-size: 6rem;
+    }
+
+    .intro-stat-text {
+        font-size: 1.5rem;
     }
 }

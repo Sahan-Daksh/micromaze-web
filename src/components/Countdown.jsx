@@ -26,49 +26,38 @@ const Countdown = () => {
     return { days, hours, minutes, seconds };
   };
 
-  const { days, hours, minutes, seconds } = getTime();
+  const { days, hours, minutes, _ } = getTime();
 
   return (
-    <>
-      <div
-        className="bg-cover bg-center h-screen w-full flex flex-col items-center justify-center relative"
-        style={{ backgroundImage: "url('./counter/counter.png')" }}
-      >
-        <div className="countdown-overlay"></div>
-        <div className="countdown-content flex flex-col items-center">
-          <div className="flex space-x-6 text-center">
-            <div className="flex flex-col items-center">
-              <p className="text-5xl text-white">Days</p>
-              <p className="text-8xl font-bold text-white">
-                {String(days).padStart(2, "0")}
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-5xl text-white">Hours</p>
-              <p className="text-8xl font-bold text-white">
-                {String(hours).padStart(2, "0")}
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-5xl text-white">Minutes</p>
-              <p className="text-8xl font-bold text-white">
-                {String(minutes).padStart(2, "0")}
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-5xl text-white">Seconds</p>
-              <p className="text-8xl font-bold text-white">
-                {String(seconds).padStart(2, "0")}
-              </p>
-            </div>
+    <div className="countdown-container">
+      <div className="countdown-overlay"></div>
+      <div className="countdown-content flex flex-col items-center">
+        <div className="countdown-time-units">
+          <div className="countdown-time-unit">
+            <p className="countdown-time-label">DAYS</p> <br />
+            <p className="countdown-time-value">
+              {String(days).padStart(2, "0")}
+            </p>
           </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-9xl text-white font-bold">GRAND FINALE</p>
+          <div className="countdown-time-unit">
+            <p className="countdown-time-label">HOURS</p> <br />
+            <p className="countdown-time-value">
+              {String(hours).padStart(2, "0")}
+            </p>
+          </div>
+          <div className="countdown-time-unit">
+            <p className="countdown-time-label">MINUTES</p>
+            <br />
+            <p className="countdown-time-value">
+              {String(minutes).padStart(2, "0")}
+            </p>
           </div>
         </div>
+        <div className="grand-finale">
+          <p className="grand-finale-text">Grand Finale</p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

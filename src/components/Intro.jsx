@@ -9,7 +9,7 @@ const Intro = () => {
     counters.forEach((counter) => {
       const target = parseInt(counter.getAttribute("data-target"), 10);
       let count = 0;
-      const increment = Math.ceil(target / 100); // Increment value
+      const increment = Math.ceil(target / 100);
 
       const interval = setInterval(() => {
         count += increment;
@@ -18,7 +18,7 @@ const Intro = () => {
           clearInterval(interval);
         }
         counter.textContent = count + "+";
-      }, 30); // Update interval
+      }, 30);
     });
   }, []);
 
@@ -36,9 +36,9 @@ const Intro = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            data-text="Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer"
           >
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
+            Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer
           </motion.h1>
         </div>
         <motion.div
@@ -47,35 +47,23 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div className="intro-stat-card">
             <h2 className="intro-stat-number" data-target="100">
               0
             </h2>
-            <p className="intro-stat-text">Teams Participated</p>
+            <p className="intro-stat-text">Teams</p>
           </motion.div>
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div className="intro-stat-card">
+            <h2 className="intro-stat-number" data-target="15">
+              0
+            </h2>
+            <p className="intro-stat-text">Universities</p>
+          </motion.div>
+          <motion.div className="intro-stat-card">
             <h2 className="intro-stat-number" data-target="500">
               0
             </h2>
-            <p className="intro-stat-text">Robots Designed</p>
-          </motion.div>
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2 className="intro-stat-number" data-target="50">
-              0
-            </h2>
-            <p className="intro-stat-text">Awards Won</p>
+            <p className="intro-stat-text">Participants</p>
           </motion.div>
         </motion.div>
       </motion.div>

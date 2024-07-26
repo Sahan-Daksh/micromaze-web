@@ -1,156 +1,167 @@
 import React from "react";
 import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Paper,
-  Avatar,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { Typography } from "@mui/material";
 
+// Background images
+const backgroundImages = [
+  "/timeline/tl-bg1.png",
+  "/timeline/tl-bg2.png",
+  "/timeline/tl-bg3.png",
+];
+
+// Timeline events data
 const timelineEvents = [
   {
     title: "Registrations Open",
     date: "20th July, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg1.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
   {
     title: "Awareness Session",
     date: "18th July, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg2.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
   {
     title: "Registrations Close",
     date: "18th July, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg3.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
   {
     title: "Online Session",
     date: "24th July, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg1.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
   {
     title: "Qualifier Round",
     date: "10th August, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg2.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
   {
     title: "The Finale",
     date: "11th August, 2024",
-    backgroundImage: "url('/public/timeline/tl-bg3.png')",
+    iconStyle: { background: "#757575", color: "#fff" },
   },
 ];
 
 const Timeline = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        backgroundColor: "black",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        pt: 10,
-        pb: 10,
+    <div
+      style={{
+        position: "relative",
+        padding: "40px 20px",
+        color: "white",
+        background: `url(${backgroundImages[0]}) no-repeat center center`,
+        backgroundSize: "cover",
+        minHeight: "100vh", // Ensure the section covers full height
+        overflow: "hidden", // Hide overflow caused by pseudo-element
       }}
     >
-      <Container>
-        <Typography
-          variant="h2"
-          component="p"
-          align="center"
-          color="white"
-          gutterBottom
-          sx={{ fontFamily: "var(--font-sora)" }}
-        >
-          Event Timeline
-        </Typography>
-        <Box
-          sx={{
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              top: 0,
-              bottom: 0,
-              width: "4px",
-              backgroundColor: "white",
+      {/* Background Blur Effect */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: `url(${backgroundImages[0]}) no-repeat center center`,
+          backgroundSize: "cover",
+          filter: "blur(8px)",
+          zIndex: -1,
+        }}
+      />
+
+      {/* Title */}
+      <Typography
+        variant="h2" // Adjust the size as needed
+        component="h1"
+        style={{
+          textAlign: "center",
+          marginBottom: "40px",
+          fontFamily: "Carbon, Arial, sans-serif",
+          color: "#fff",
+          zIndex: 1,
+          position: "relative",
+        }}
+      >
+        Event Timeline
+      </Typography>
+
+      <VerticalTimeline>
+        {timelineEvents.map((event, index) => (
+          <VerticalTimelineElement
+            key={index}
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "transparent", // Remove black blur
+              color: "#fff",
+              backdropFilter: "none", // Remove blur effect
+              boxShadow: "none",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid transparent" }} // Remove arrow color
+            iconStyle={{
+              ...event.iconStyle,
+              width: "60px", // Increase size
+              height: "60px", // Increase size
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "none",
+            }}
+            icon={
+              <div
+                style={{
+                  background: "#757575",
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "50%",
+                }}
+              />
+            }
+            style={{
+              marginBottom: "60px", // Add more space before and after intersection
+              position: "relative",
               zIndex: 1,
             }}
-          />
-          <Grid container spacing={6}>
-            {timelineEvents.map((event, index) => (
-              <Grid item xs={12} key={index} sx={{ zIndex: 2 }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    backgroundImage: event.backgroundImage,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    borderRadius: "15px",
-                    padding: "20px",
-                    margin: "20px 0",
-                  }}
-                >
-                  <Paper
-                    elevation={6}
-                    sx={{
-                      p: 3,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      bgcolor: "rgba(0, 0, 0, 0.7)",
-                      color: "white",
-                      borderRadius: "10px",
-                      textAlign: "center",
-                    }}
-                  >
-                    <Typography
-                      variant="h5"
-                      component="p"
-                      sx={{ fontFamily: "var(--font-sora)" }}
-                    >
-                      {event.title}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      component="p"
-                      sx={{ fontFamily: "var(--font-sora)" }}
-                    >
-                      {event.date}
-                    </Typography>
-                  </Paper>
-                  <Avatar
-                    sx={{
-                      bgcolor: "white",
-                      color: "black",
-                      height: 56,
-                      width: 56,
-                      mt: 3,
-                      boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)",
-                    }}
-                  >
-                    {index + 1}
-                  </Avatar>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Container>
-    </Box>
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: index % 2 === 0 ? "flex-start" : "flex-end", // Align text based on the side
+                textAlign: index % 2 === 0 ? "left" : "right", // Align text based on the side
+              }}
+            >
+              <Typography
+                variant="h4" // Increase font size
+                component="h3"
+                style={{
+                  fontFamily: "Carbon, Arial, sans-serif",
+                  color: "#fff",
+                }}
+              >
+                {event.title}
+              </Typography>
+              <Typography
+                variant="h5" // Increase font size
+                component="h4"
+                style={{
+                  fontFamily: "Carbon, Arial, sans-serif",
+                  color: "#fff",
+                }}
+              >
+                {event.date}
+              </Typography>
+            </div>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </div>
   );
 };
 

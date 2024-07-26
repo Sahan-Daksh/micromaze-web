@@ -8,26 +8,24 @@ const About = () => {
       style={{ backgroundImage: "url('./what/what.png')" }}
     >
       <motion.div
-        className="relative z-10 h-full flex items-start justify-center px-4 sm:px-6 md:px-8 lg:px-10"
+        className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         <div className="flex flex-col items-center w-full max-w-4xl p-6 sm:p-8 md:p-10 lg:p-12">
           <motion.p
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 sm:mb-8 lg:mb-10 text-center"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-8 text-center font-bold"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <b>
-              What is <br />
-              MicroMaze?
-            </b>
+            What is <br />
+            MicroMaze?
           </motion.p>
           <motion.div
-            className="flex flex-col items-center bg-gray-100 w-full max-w-3xl rounded-lg p-6 sm:p-8 md:p-10 shadow-lg"
-            initial={{ opacity: 0, scale: 0.9 }}
+            className="flex flex-col items-center bg-gray-100 w-full max-w-3xl rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
@@ -54,7 +52,7 @@ const About = () => {
       <img
         src="./what/whatGaze.png"
         alt="Overlay"
-        className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-multiply"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-multiply"
         style={{ objectPosition: "left" }}
       />
     </div>

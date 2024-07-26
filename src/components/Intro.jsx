@@ -47,35 +47,23 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div className="intro-stat-card">
             <h2 className="intro-stat-number" data-target="100">
               0
             </h2>
-            <p className="intro-stat-text">Teams Participated</p>
+            <p className="intro-stat-text">Teams</p>
           </motion.div>
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div className="intro-stat-card">
+            <h2 className="intro-stat-number" data-target="15">
+              0
+            </h2>
+            <p className="intro-stat-text">Universities</p>
+          </motion.div>
+          <motion.div className="intro-stat-card">
             <h2 className="intro-stat-number" data-target="500">
               0
             </h2>
-            <p className="intro-stat-text">Robots Designed</p>
-          </motion.div>
-          <motion.div
-            className="intro-stat-card"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2 className="intro-stat-number" data-target="50">
-              0
-            </h2>
-            <p className="intro-stat-text">Awards Won</p>
+            <p className="intro-stat-text">Participants</p>
           </motion.div>
         </motion.div>
       </motion.div>

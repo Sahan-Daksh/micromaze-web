@@ -9,7 +9,7 @@ const Intro = () => {
     counters.forEach((counter) => {
       const target = parseInt(counter.getAttribute("data-target"), 10);
       let count = 0;
-      const increment = Math.ceil(target / 100); // Increment value
+      const increment = Math.ceil(target / 100);
 
       const interval = setInterval(() => {
         count += increment;
@@ -18,7 +18,7 @@ const Intro = () => {
           clearInterval(interval);
         }
         counter.textContent = count + "+";
-      }, 30); // Update interval
+      }, 30);
     });
   }, []);
 
@@ -36,9 +36,9 @@ const Intro = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            data-text="Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer"
           >
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
+            Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer
           </motion.h1>
         </div>
         <motion.div

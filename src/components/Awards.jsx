@@ -1,19 +1,25 @@
+import React from "react";
 import AwardCard from "../component/AwardCard";
 import { awardsImgs } from "../data/imgs/awardsImgs";
 
 const Awards = () => {
   return (
-    <>
-      <div className="bg-gradient-to-r from-slate-500 to-slate-800 w-full p-10">
-        <div className="ml-[18%]">
-          <div className="flex flex-col items-center w-[80%] my-10">
-            <p className="text-6xl text-white font-bold">Awards</p>
-            <p className="text-xl text-gray-300 mt-4 text-center">
-              Recognizing outstanding achievements and milestones
-            </p>
-          </div>
+    <div
+      className="relative bg-gradient-to-r from-slate-500 to-slate-800 w-full py-20"
+      style={{
+        background: `url('./generic-bg.png') no-repeat center center/cover`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay for better text visibility */}
+      <div className="relative container mx-auto text-center text-white">
+        <div className="mb-10">
+          <h2 className="text-6xl font-bold animate-fade-in-up">Awards</h2>
+          <p className="text-xl text-gray-300 mt-4 animate-fade-in-up delay-2s">
+            Recognizing outstanding achievements and milestones
+          </p>
         </div>
-        <div className="flex flex-col justify-center items-center lg:flex-row gap-10 mt-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-10 animate-fade-in-up delay-4s">
           <AwardCard
             title="1st Runner Up"
             image={awardsImgs.firstRunnerUp}
@@ -32,7 +38,7 @@ const Awards = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

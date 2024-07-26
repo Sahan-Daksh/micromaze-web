@@ -5,6 +5,8 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import "../styles/components/Timeline.css";
 
 // Background images
 const backgroundImages = [
@@ -50,18 +52,20 @@ const timelineEvents = [
 const Timeline = () => {
   return (
     <div
+      className="timeline-container"
       style={{
         position: "relative",
         padding: "40px 20px",
         color: "white",
         background: `url(${backgroundImages[0]}) no-repeat center center`,
         backgroundSize: "cover",
-        minHeight: "100vh", // Ensure the section covers full height
-        overflow: "hidden", // Hide overflow caused by pseudo-element
+        minHeight: "100vh",
+        overflow: "hidden",
       }}
     >
       {/* Background Blur Effect */}
       <div
+        className="background-blur"
         style={{
           position: "absolute",
           top: 0,
@@ -77,8 +81,9 @@ const Timeline = () => {
 
       {/* Title */}
       <Typography
-        variant="h2" // Adjust the size as needed
+        variant="h2"
         component="h1"
+        className="timeline-title"
         style={{
           textAlign: "center",
           marginBottom: "40px",
@@ -97,16 +102,17 @@ const Timeline = () => {
             key={index}
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "transparent", // Remove black blur
+              background: "transparent",
               color: "#fff",
-              backdropFilter: "none", // Remove blur effect
+              backdropFilter: "none",
               boxShadow: "none",
+              borderRadius: "10px",
             }}
-            contentArrowStyle={{ borderRight: "7px solid transparent" }} // Remove arrow color
+            contentArrowStyle={{ borderRight: "7px solid transparent" }}
             iconStyle={{
               ...event.iconStyle,
-              width: "60px", // Increase size
-              height: "60px", // Increase size
+              width: "60px",
+              height: "60px",
               borderRadius: "50%",
               display: "flex",
               alignItems: "center",
@@ -114,31 +120,44 @@ const Timeline = () => {
               boxShadow: "none",
             }}
             icon={
-              <div
-                style={{
-                  background: "#757575",
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                }}
-              />
+              <motion.div
+                className="icon-container"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ scale: 1.2 }}
+              >
+                <div
+                  style={{
+                    background: "#757575",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "50%",
+                  }}
+                />
+              </motion.div>
             }
             style={{
-              marginBottom: "60px", // Add more space before and after intersection
+              marginBottom: "60px",
               position: "relative",
               zIndex: 1,
             }}
           >
-            <div
+            <motion.div
+              className="timeline-content"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: index % 2 === 0 ? "flex-start" : "flex-end", // Align text based on the side
-                textAlign: index % 2 === 0 ? "left" : "right", // Align text based on the side
+                alignItems: index % 2 === 0 ? "flex-start" : "flex-end",
+                textAlign: index % 2 === 0 ? "left" : "right",
               }}
             >
               <Typography
-                variant="h4" // Increase font size
+                variant="h4"
                 component="h3"
                 style={{
                   fontFamily: "Carbon, Arial, sans-serif",
@@ -148,7 +167,7 @@ const Timeline = () => {
                 {event.title}
               </Typography>
               <Typography
-                variant="h5" // Increase font size
+                variant="h5"
                 component="h4"
                 style={{
                   fontFamily: "Carbon, Arial, sans-serif",
@@ -157,7 +176,7 @@ const Timeline = () => {
               >
                 {event.date}
               </Typography>
-            </div>
+            </motion.div>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

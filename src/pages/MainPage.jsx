@@ -12,8 +12,6 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function MainPage() {
-  const bgImage = "./generic-bg.png"; // Background image path
-
   return (
     <>
       <div className="container-inbuilt">
@@ -34,46 +32,30 @@ export default function MainPage() {
         </section>
         <section
           className="section section-50"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-          }}
         >
           <Awards />
         </section>
         <section
           className="section section-50"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-          }}
+
         >
           <FAQ />
         </section>
         <section
           className="section section-50"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-          }}
+
         >
           <Merch />
         </section>
         <section
           className="section section-50"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-          }}
+
         >
           <Partners />
         </section>
         <section
           className="section section-25"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-          }}
+
         >
           <Contact />
         </section>

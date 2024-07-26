@@ -96,3 +96,106 @@
     background-position: center;
     z-index: 15;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .countdown-time-units {
+        gap: 4rem;
+        /* Decrease gap between time units */
+        margin-bottom: 2rem;
+        /* Decrease bottom margin */
+    }
+
+    .countdown-time-label {
+        font-size: 3rem;
+        /* Decrease font size for labels */
+        left: -2rem;
+        /* Adjust position */
+    }
+
+    .countdown-time-value {
+        font-size: 7.5rem;
+        /* Decrease font size for values */
+        padding-top: 1.5rem !important;
+        /* Adjust padding */
+    }
+
+    .grand-finale-text {
+        font-size: 4rem;
+        /* Decrease font size for GRAND FINALE text */
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-time-units {
+        gap: 2rem;
+        /* Further decrease gap between time units */
+        margin-bottom: 1rem;
+        /* Further decrease bottom margin */
+    }
+
+    .countdown-time-label {
+        font-size: 2.25rem;
+        /* Further decrease font size for labels */
+        left: -1.5rem;
+        /* Adjust position */
+    }
+
+    .countdown-time-value {
+        font-size: 5rem;
+        /* Further decrease font size for values */
+        padding-top: 1rem !important;
+        /* Adjust padding */
+    }
+
+    .grand-finale-text {
+        font-size: 3rem;
+        /* Further decrease font size for GRAND FINALE text */
+    }
+
+    .countdown-overlay {
+        top: 15%;
+        /* Adjust top position */
+        left: -2%;
+        /* Adjust left position */
+        width: 100%;
+        /* Adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-time-units {
+        gap: 1rem;
+        /* Further decrease gap between time units */
+        margin-bottom: 0.5rem;
+        /* Further decrease bottom margin */
+    }
+
+    .countdown-time-label {
+        font-size: 1.5rem;
+        /* Further decrease font size for labels */
+        left: -1rem;
+        /* Adjust position */
+    }
+
+    .countdown-time-value {
+        font-size: 3.5rem;
+        /* Further decrease font size for values */
+        padding-top: 0.5rem !important;
+        /* Adjust padding */
+    }
+
+    .grand-finale-text {
+        font-size: 2rem;
+        /* Further decrease font size for GRAND FINALE text */
+    }
+
+    .countdown-overlay {
+        top: 10%;
+        /* Adjust top position */
+        left: 0;
+        /* Adjust left position */
+        width: 100%;
+        /* Adjust width */
+    }
+}

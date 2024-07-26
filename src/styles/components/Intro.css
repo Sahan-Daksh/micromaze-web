@@ -1,3 +1,5 @@
+/* Intro.css */
+
 .intro-container {
     position: relative;
     height: 100vh;
@@ -18,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    will-change: opacity, transform;
 }
 
 .intro-title-container {
@@ -25,6 +28,9 @@
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    will-change: transform;
 }
 
 .intro-title {
@@ -33,15 +39,28 @@
     color: white;
     text-align: center;
     display: inline-block;
-    animation: scrollText 30s linear infinite;
+    animation: scrollText 20s linear infinite;
+    font-family: 'SF Pro Display', sans-serif;
+    will-change: transform;
+}
+
+.intro-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 10vw;
+    font-weight: 700;
+    color: white;
     font-family: 'SF Pro Display', sans-serif;
 }
 
 @keyframes scrollText {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
-
     100% {
         transform: translateX(-100%);
     }
@@ -52,6 +71,7 @@
     gap: 2rem;
     margin-top: 2rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .intro-stat-card {
@@ -63,26 +83,22 @@
 
 .intro-stat-number {
     font-size: 15rem;
-    /* Increased font size */
     font-weight: 700;
     color: #A9A9A9;
-    /* Dark gray color */
     font-family: 'SF Pro Display', sans-serif;
-    /* Removed text-shadow */
+    will-change: text-shadow;
 }
 
 .intro-stat-text {
     font-size: 4rem;
-    /* Increased font size */
     color: #A9A9A9;
-    /* Dark gray color */
     font-family: 'IBM Plex Sans', sans-serif;
-    /* Removed text-shadow */
+    will-change: color;
 }
 
 @media (max-width: 768px) {
     .intro-title {
-        font-size: 5rem;
+        font-size: 5vw;
     }
 
     .intro-stats {
@@ -91,11 +107,23 @@
 
     .intro-stat-number {
         font-size: 8rem;
-        /* Increased font size */
     }
 
     .intro-stat-text {
         font-size: 2rem;
-        /* Increased font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 6vw; /* Increase font size for very small screens */
+    }
+
+    .intro-stat-number {
+        font-size: 6rem;
+    }
+
+    .intro-stat-text {
+        font-size: 1.5rem;
     }
 }

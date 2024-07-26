@@ -1,82 +1,91 @@
 /* Contact.css */
 
-/* Container for the contact section */
 .contact-container {
-    background: linear-gradient(to right, #64748b, #1e293b);
-    width: 100%;
-    padding: 2.5rem 0;
+  padding: 40px;
+  background: linear-gradient(135deg, #2a034a, #451d67, #5d367d, #763d93, #9034a8, #ac1fbd);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Title section */
-.contact-title-container {
-    margin: 0 auto;
-    text-align: center;
-    padding: 2.5rem 0;
-}
-
-/* Main title */
-.contact-title {
-    font-size: 6rem;
-    color: white;
-    font-weight: bold;
-}
-
-/* Subtitle */
-.contact-subtitle {
-    font-size: 1.25rem;
-    color: #e0e0e0;
-    margin-top: 1rem;
-}
-
-/* Contacts list container */
-.contact-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 2.5rem;
-}
-
-/* Individual contact card */
-.contact-card {
-    background: rgba(0, 0, 0, 0.6);
-    /* Slightly transparent background for readability */
-    color: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Contact title */
-.contact-card-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-/* Contact name */
-.contact-card-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-/* Contact email and phone */
-.contact-card-detail {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-}
-
-/* Email link */
-.contact-card-email {
-    text-decoration: underline;
-}
-
-@media (min-width: 360px) and (max-width: 1200px) {
-    .contact-title {
-      font-size: 4.5rem;
-    }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact-title-container {
+  text-align: center;
+  z-index: 1;
+  /* Ensure content is above background */
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.contact-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+.contact-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-card-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #dddddd;
+}
+
+.contact-card-detail {
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+.contact-card-email {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.contact-card-email:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

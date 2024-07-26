@@ -82,7 +82,7 @@
 }
 
 .intro-stat-number {
-    font-size: 15rem;
+    font-size: 8rem;
     font-weight: 700;
     color: #A9A9A9;
     font-family: 'SF Pro Display', sans-serif;
@@ -90,7 +90,7 @@
 }
 
 .intro-stat-text {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #A9A9A9;
     font-family: 'IBM Plex Sans', sans-serif;
     will-change: color;

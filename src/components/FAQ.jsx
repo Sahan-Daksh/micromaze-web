@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/components/FAQ.css"; // Import the CSS file
 import { faqs } from "../data/faqs.jsx";
-import AnimatedBackground from "./AnimatedBackground.jsx";
 
 export default function FAQ() {
   const [selected, setSelected] = useState(null);
@@ -11,7 +10,7 @@ export default function FAQ() {
   };
 
   return (
-    <AnimatedBackground>
+    <>
       <div className="faq-container">
         <div className="faq-heading-container">
           <h2 className="faq-heading">Frequently Asked Questions (FAQ)</h2>
@@ -39,6 +38,6 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-    </AnimatedBackground>
+    </>
   );
 }

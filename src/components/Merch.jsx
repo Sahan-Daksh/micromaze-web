@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/components/Merch.css";
 import { products } from "../data/merchProducts";
-import AnimatedBackground from "./AnimatedBackground";
 
 export default function Merch() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -28,7 +27,7 @@ export default function Merch() {
   };
 
   return (
-    <AnimatedBackground>
+    <>
       <div className="merch-container">
         <div className="container mx-auto px-5">
           <motion.h2
@@ -133,6 +132,6 @@ export default function Merch() {
           </motion.div>
         )}
       </div>
-    </AnimatedBackground>
+    </>
   );
 }

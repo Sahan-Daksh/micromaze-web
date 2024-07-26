@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import PartnerCard from "../component/PartnerCard";
 import "../styles/components/Partners.css"; // Import the CSS file
 import { partners } from "../data/partners";
-import AnimatedBackground from "./AnimatedBackground";
 
 const Partners = () => {
   return (
-    <AnimatedBackground>
+    <>
       <div className="partners-container">
         <div className="flex flex-col items-center mb-10">
           <motion.p
@@ -37,7 +36,7 @@ const Partners = () => {
           </div>
         </div>
       </div>
-    </AnimatedBackground>
+    </>
   );
 };
 

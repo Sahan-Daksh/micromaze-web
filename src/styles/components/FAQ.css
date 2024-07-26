@@ -1,6 +1,5 @@
 /* Container for FAQ section */
 .faq-container {
-    background: linear-gradient(to right, #6b46c1, #d53f8c, #000);
     color: white;
     padding: 2.5rem 0;
     display: flex;

@@ -8,30 +8,30 @@ import {
   VStack,
   Flex,
   useColorModeValue,
-  useBreakpointValue
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import TimelineCard from "../component/TimelineCard";
-import '../styles/components/Timeline.css'
+import "../styles/components/Timeline.css";
 const milestones = [
   {
     id: 1,
     date: "MARCH 30, 2022",
     title: "Chakra Hackathon",
-    description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`
+    description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`,
   },
   {
     id: 2,
     date: "July 30, 2021",
     title: "Open Source, first contribution",
-    description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`
+    description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`,
   },
   {
     id: 3,
     date: "July 30, 2018",
     title: "Freelancing, started working for myself",
     description:
-      "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups."
-  }
+      "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
+  },
 ];
 
 const Milestones = () => {
@@ -39,41 +39,43 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
-        Places to Visit
-      </chakra.h3>
-      {milestones.map((milestone) => (
-        <Flex key={milestone.id} mb="10px">
-          {/* Desktop view(left card) */}
-          {isDesktop && milestone.id % 2 === 0 && (
-            <>
-              <EmptyCard />
-              <LineWithDot />
-              <CardX {...milestone} />
-            </>
-          )}
+    <div style={{ backgroundImage: "url('/timeline/tl-bg1.png')" }}>
+      <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+        <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
+          Places to Visit
+        </chakra.h3>
+        {milestones.map((milestone) => (
+          <Flex key={milestone.id} mb="10px">
+            {/* Desktop view(left card) */}
+            {isDesktop && milestone.id % 2 === 0 && (
+              <>
+                <EmptyCard />
+                <LineWithDot />
+                <CardX {...milestone} />
+              </>
+            )}
 
-          {/* Mobile view */}
-          {isMobile && (
-            <>
-              <LineWithDot />
-              <CardX {...milestone} />
-            </>
-          )}
+            {/* Mobile view */}
+            {isMobile && (
+              <>
+                <LineWithDot />
+                <CardX {...milestone} />
+              </>
+            )}
 
-          {/* Desktop view(right card) */}
-          {isDesktop && milestone.id % 2 !== 0 && (
-            <>
-              <CardX {...milestone} />
+            {/* Desktop view(right card) */}
+            {isDesktop && milestone.id % 2 !== 0 && (
+              <>
+                <CardX {...milestone} />
 
-              <LineWithDot />
-              <EmptyCard />
-            </>
-          )}
-        </Flex>
-      ))}
-    </Container>
+                <LineWithDot />
+                <EmptyCard />
+              </>
+            )}
+          </Flex>
+        ))}
+      </Container>
+    </div>
   );
 };
 
@@ -114,7 +116,7 @@ const CardX = ({ id, title, description, date }) => {
         position: "absolute",
         left: leftValue,
         right: rightValue,
-        display: "block"
+        display: "block",
       }}
     >
       <TimelineCard />

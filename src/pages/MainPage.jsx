@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import About from "../components/About";
@@ -10,59 +10,41 @@ import Merch from "../components/Merch";
 import Partners from "../components/Partners";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 export default function MainPage() {
+  const [activeSegment, setActiveSegment] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSegment((prevSegment) => (prevSegment + 1) % 4); // Change 4 to the number of segments you have
+    }, 5000); // Change the interval duration as needed
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-      <div className="container-inbuilt">
-        <section className="section section-100">
-          <Hero />
-        </section>
-        <section className="section section-100">
-          <Intro />
-        </section>
-        <section className="section section-100">
-          <About />
-        </section>
-        <section className="section section-75">
-          <Countdown />
-        </section>
-        <section className="App section section-75 ">
-          <Milestones />
-        </section>
-        <section
-          className="section section-50"
-        >
-          <Awards />
-        </section>
-        <section
-          className="section section-50"
+      <Hero />
+      <Intro />
+      <About />
+      <Countdown />
+      <Milestones />
+      <Awards />
 
-        >
-          <FAQ />
-        </section>
-        <section
-          className="section section-50"
+      <AnimatedBackground isActive={activeSegment === 0}>
+        <FAQ />
+      </AnimatedBackground>
+      <AnimatedBackground isActive={activeSegment === 1}>
+        <Merch />
+      </AnimatedBackground>
+      <AnimatedBackground isActive={activeSegment === 2}>
+        <Partners />
+      </AnimatedBackground>
+      <AnimatedBackground isActive={activeSegment === 3}>
+        <Contact />
+      </AnimatedBackground>
 
-        >
-          <Merch />
-        </section>
-        <section
-          className="section section-50"
-
-        >
-          <Partners />
-        </section>
-        <section
-          className="section section-25"
-
-        >
-          <Contact />
-        </section>
-        <section className="section section-25">
-          <Footer />
-        </section>
-      </div>
+      <Footer />
     </>
   );
 }

@@ -10,59 +10,34 @@ import Merch from "../components/Merch";
 import Partners from "../components/Partners";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import SmoothScrollWrapper from "../components/SmoothScrollWrapper";
 
 export default function MainPage() {
   return (
     <>
-      <div className="container-inbuilt">
-        <section className="section section-100">
-          <Hero />
-        </section>
-        <section className="section section-100">
-          <Intro />
-        </section>
-        <section className="section section-100">
-          <About />
-        </section>
-        <section className="section section-75">
-          <Countdown />
-        </section>
-        <section className="App section section-75 ">
-          <Milestones />
-        </section>
-        <section
-          className="section section-50"
-        >
-          <Awards />
-        </section>
-        <section
-          className="section section-50"
+    <SmoothScrollWrapper>
+      <Hero />
 
-        >
-          <FAQ />
-        </section>
-        <section
-          className="section section-50"
+      <Intro />
 
-        >
-          <Merch />
-        </section>
-        <section
-          className="section section-50"
+      <About />
 
-        >
-          <Partners />
-        </section>
-        <section
-          className="section section-25"
+      <Countdown />
 
-        >
-          <Contact />
-        </section>
-        <section className="section section-25">
-          <Footer />
-        </section>
-      </div>
+      <Milestones />
+
+      <Awards />
+
+      <FAQ />
+
+      <Merch />
+
+      <Partners />
+
+      <Contact />
+
+      <Footer />
+      </SmoothScrollWrapper>
     </>
   );
 }

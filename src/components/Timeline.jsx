@@ -1,187 +1,173 @@
 import React from "react";
 import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import "../styles/components/Timeline.css";
-
-// Background images
-const backgroundImages = [
-  "/timeline/tl-bg1.png",
-  "/timeline/tl-bg2.png",
-  "/timeline/tl-bg3.png",
+  Box,
+  chakra,
+  Container,
+  Text,
+  HStack,
+  VStack,
+  Flex,
+  useColorModeValue,
+  useBreakpointValue
+} from "@chakra-ui/react";
+import TimelineCard from "../component/TimelineCard";
+import '../styles/components/Timeline.css'
+const milestones = [
+  {
+    id: 1,
+    date: "MARCH 30, 2022",
+    title: "Chakra Hackathon",
+    description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`
+  },
+  {
+    id: 2,
+    date: "July 30, 2021",
+    title: "Open Source, first contribution",
+    description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`
+  },
+  {
+    id: 3,
+    date: "July 30, 2018",
+    title: "Freelancing, started working for myself",
+    description:
+      "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups."
+  }
 ];
 
-// Timeline events data
-const timelineEvents = [
-  {
-    title: "Registrations Open",
-    date: "20th July, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-  {
-    title: "Awareness Session",
-    date: "18th July, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-  {
-    title: "Registrations Close",
-    date: "18th July, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-  {
-    title: "Online Session",
-    date: "24th July, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-  {
-    title: "Qualifier Round",
-    date: "10th August, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-  {
-    title: "The Finale",
-    date: "11th August, 2024",
-    iconStyle: { background: "#757575", color: "#fff" },
-  },
-];
+const Milestones = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isDesktop = useBreakpointValue({ base: false, md: true });
 
-const Timeline = () => {
   return (
-    <div
-      className="timeline-container"
-      style={{
-        position: "relative",
-        padding: "40px 20px",
-        color: "white",
-        background: `url(${backgroundImages[0]}) no-repeat center center`,
-        backgroundSize: "cover",
-        minHeight: "100vh",
-        overflow: "hidden",
-      }}
-    >
-      {/* Background Blur Effect */}
-      <div
-        className="background-blur"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          background: `url(${backgroundImages[0]}) no-repeat center center`,
-          backgroundSize: "cover",
-          filter: "blur(8px)",
-          zIndex: -1,
-        }}
-      />
+    <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
+        Places to Visit
+      </chakra.h3>
+      {milestones.map((milestone) => (
+        <Flex key={milestone.id} mb="10px">
+          {/* Desktop view(left card) */}
+          {isDesktop && milestone.id % 2 === 0 && (
+            <>
+              <EmptyCard />
+              <LineWithDot />
+              <CardX {...milestone} />
+            </>
+          )}
 
-      {/* Title */}
-      <Typography
-        variant="h2"
-        component="h1"
-        className="timeline-title"
-        style={{
-          textAlign: "center",
-          marginBottom: "40px",
-          fontFamily: "Carbon, Arial, sans-serif",
-          color: "#fff",
-          zIndex: 1,
-          position: "relative",
-        }}
-      >
-        Event Timeline
-      </Typography>
+          {/* Mobile view */}
+          {isMobile && (
+            <>
+              <LineWithDot />
+              <CardX {...milestone} />
+            </>
+          )}
 
-      <VerticalTimeline>
-        {timelineEvents.map((event, index) => (
-          <VerticalTimelineElement
-            key={index}
-            className="vertical-timeline-element--work"
-            contentStyle={{
-              background: "transparent",
-              color: "#fff",
-              backdropFilter: "none",
-              boxShadow: "none",
-              borderRadius: "10px",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid transparent" }}
-            iconStyle={{
-              ...event.iconStyle,
-              width: "60px",
-              height: "60px",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "none",
-            }}
-            icon={
-              <motion.div
-                className="icon-container"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
-                whileHover={{ scale: 1.2 }}
-              >
-                <div
-                  style={{
-                    background: "#757575",
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "50%",
-                  }}
-                />
-              </motion.div>
-            }
-            style={{
-              marginBottom: "60px",
-              position: "relative",
-              zIndex: 1,
-            }}
-          >
-            <motion.div
-              className="timeline-content"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: index % 2 === 0 ? "flex-start" : "flex-end",
-                textAlign: index % 2 === 0 ? "left" : "right",
-              }}
-            >
-              <Typography
-                variant="h4"
-                component="h3"
-                style={{
-                  fontFamily: "Carbon, Arial, sans-serif",
-                  color: "#fff",
-                }}
-              >
-                {event.title}
-              </Typography>
-              <Typography
-                variant="h5"
-                component="h4"
-                style={{
-                  fontFamily: "Carbon, Arial, sans-serif",
-                  color: "#fff",
-                }}
-              >
-                {event.date}
-              </Typography>
-            </motion.div>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
-    </div>
+          {/* Desktop view(right card) */}
+          {isDesktop && milestone.id % 2 !== 0 && (
+            <>
+              <CardX {...milestone} />
+
+              <LineWithDot />
+              <EmptyCard />
+            </>
+          )}
+        </Flex>
+      ))}
+    </Container>
   );
 };
 
-export default Timeline;
+const CardX = ({ id, title, description, date }) => {
+  // For even id show card on left side
+  // For odd id show card on right side
+  const isEvenId = id % 2 === 0;
+  let borderWidthValue = isEvenId ? "15px 15px 15px 0" : "15px 0 15px 15px";
+  let leftValue = isEvenId ? "-15px" : "unset";
+  let rightValue = isEvenId ? "unset" : "-15px";
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  if (isMobile) {
+    leftValue = "-15px";
+    rightValue = "unset";
+    borderWidthValue = "15px 15px 15px 0";
+  }
+
+  return (
+    <HStack
+      flex={1}
+      p={{ base: 3, sm: 6 }}
+      bg={useColorModeValue("gray.100", "gray.800")}
+      spacing={5}
+      rounded="lg"
+      alignItems="center"
+      pos="relative"
+      _before={{
+        content: `""`,
+        w: "0",
+        h: "0",
+        borderColor: `transparent ${useColorModeValue(
+          "#edf2f6",
+          "#1a202c"
+        )} transparent`,
+        borderStyle: "solid",
+        borderWidth: borderWidthValue,
+        position: "absolute",
+        left: leftValue,
+        right: rightValue,
+        display: "block"
+      }}
+    >
+      <TimelineCard />
+    </HStack>
+  );
+};
+
+const LineWithDot = () => {
+  return (
+    <Flex
+      pos="relative"
+      alignItems="center"
+      mr={{ base: "40px", md: "40px" }}
+      ml={{ base: "0", md: "40px" }}
+    >
+      <chakra.span
+        position="absolute"
+        left="50%"
+        height="calc(100% + 10px)"
+        border="1px solid"
+        borderColor={useColorModeValue("gray.200", "gray.700")}
+        top="0px"
+      ></chakra.span>
+      <Box pos="relative" p="10px">
+        <Box
+          pos="absolute"
+          top="0"
+          left="0"
+          bottom="0"
+          right="0"
+          width="100%"
+          height="100%"
+          backgroundSize="cover"
+          backgroundRepeat="no-repeat"
+          backgroundPosition="center center"
+          bg={useColorModeValue("gray.600", "gray.200")}
+          borderRadius="100px"
+          backgroundImage="none"
+          opacity={1}
+        ></Box>
+      </Box>
+    </Flex>
+  );
+};
+
+const EmptyCard = () => {
+  return (
+    <Box
+      flex={{ base: 0, md: 1 }}
+      p={{ base: 0, md: 6 }}
+      bg="transparent"
+    ></Box>
+  );
+};
+
+export default Milestones;

@@ -257,3 +257,19 @@
     /* Further adjust font size for small screens */
   }
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
+}

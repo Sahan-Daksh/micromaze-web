@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Countdown from "../components/Countdown";
-import Timeline from "../components/Timeline";
+import Milestones from "../components/Timeline";
 import Awards from "../components/Awards";
 import FAQ from "../components/FAQ";
 import Merch from "../components/Merch";
@@ -27,8 +27,8 @@ export default function MainPage() {
         <section className="section section-75">
           <Countdown />
         </section>
-        <section className="section section-75">
-          <Timeline />
+        <section className="App section section-75 ">
+          <Milestones />
         </section>
         <section
           className="section section-50"

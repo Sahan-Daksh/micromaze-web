@@ -3,35 +3,41 @@ import {
   Box,
   chakra,
   Container,
-  Text,
   HStack,
-  VStack,
   Flex,
   useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import TimelineCard from "../component/TimelineCard";
 import "../styles/components/Timeline.css";
+
 const milestones = [
   {
     id: 1,
-    date: "MARCH 30, 2022",
-    title: "Chakra Hackathon",
-    description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`,
+    date: "20th July, 2024",
+    title: "Registrations Open",
+    description: ``,
   },
   {
     id: 2,
-    date: "July 30, 2021",
-    title: "Open Source, first contribution",
-    description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`,
+    date: "18th July, 2024",
+    title: "Awareness Session",
+    description: ``,
   },
   {
     id: 3,
-    date: "July 30, 2018",
-    title: "Freelancing, started working for myself",
-    description:
-      "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
+    date: "18th July, 2024",
+    title: "Registrations Close",
+    description: ``,
   },
+  { id: 4, date: "24th July, 2024", title: "Online Session", description: `` },
+  {
+    id: 5,
+    date: "10th August, 2024",
+    title: "Qualifier Round",
+    description: ``,
+  },
+  { id: 6, date: "11th August, 2024", title: "The Finale", description: `` },
 ];
 
 const Milestones = () => {
@@ -39,10 +45,20 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <div style={{ backgroundImage: "url('/timeline/tl-bg1.png')" }}>
+    <div
+      style={{
+        backgroundImage: "url('/timeline/tl-bg1.png')",
+      }}
+    >
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
-        <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
-          Places to Visit
+        <chakra.h3
+          fontSize="9xl"
+          fontWeight="bold"
+          mb={18}
+          textAlign="center"
+          style={{ color: "white" }}
+        >
+          Timeline
         </chakra.h3>
         {milestones.map((milestone) => (
           <Flex key={milestone.id} mb="10px">
@@ -67,7 +83,6 @@ const Milestones = () => {
             {isDesktop && milestone.id % 2 !== 0 && (
               <>
                 <CardX {...milestone} />
-
                 <LineWithDot />
                 <EmptyCard />
               </>
@@ -83,7 +98,7 @@ const CardX = ({ id, title, description, date }) => {
   // For even id show card on left side
   // For odd id show card on right side
   const isEvenId = id % 2 === 0;
-  let borderWidthValue = isEvenId ? "15px 15px 15px 0" : "15px 0 15px 15px";
+  let borderWidthValue = isEvenId ? "0" : "0";
   let leftValue = isEvenId ? "-15px" : "unset";
   let rightValue = isEvenId ? "unset" : "-15px";
 
@@ -91,35 +106,20 @@ const CardX = ({ id, title, description, date }) => {
   if (isMobile) {
     leftValue = "-15px";
     rightValue = "unset";
-    borderWidthValue = "15px 15px 15px 0";
+    borderWidthValue = "0";
   }
 
   return (
     <HStack
       flex={1}
       p={{ base: 3, sm: 6 }}
-      bg={useColorModeValue("gray.100", "gray.800")}
+      bg="transparent"
       spacing={5}
       rounded="lg"
       alignItems="center"
       pos="relative"
-      _before={{
-        content: `""`,
-        w: "0",
-        h: "0",
-        borderColor: `transparent ${useColorModeValue(
-          "#edf2f6",
-          "#1a202c"
-        )} transparent`,
-        borderStyle: "solid",
-        borderWidth: borderWidthValue,
-        position: "absolute",
-        left: leftValue,
-        right: rightValue,
-        display: "block",
-      }}
     >
-      <TimelineCard />
+      <TimelineCard title={title} description={description} date={date} />
     </HStack>
   );
 };
@@ -152,7 +152,7 @@ const LineWithDot = () => {
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center center"
-          bg={useColorModeValue("gray.600", "gray.200")}
+          bg={useColorModeValue("gray.400", "gray.200")}
           borderRadius="100px"
           backgroundImage="none"
           opacity={1}

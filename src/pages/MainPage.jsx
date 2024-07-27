@@ -25,7 +25,6 @@ export default function MainPage() {
 
   return (
     <>
-      <SmoothScrollWrapper>
       <Hero />
 
       <Intro />
@@ -52,7 +51,6 @@ export default function MainPage() {
       </AnimatedBackground>
 
       <Footer />
-      </SmoothScrollWrapper>
     </>
   );
 }

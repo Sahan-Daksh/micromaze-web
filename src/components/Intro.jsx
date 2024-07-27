@@ -43,7 +43,7 @@ const Intro = () => {
             transition={{ duration: 1, delay: 0.5 }}
             data-text="Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer "
           >
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
+            Build Develop Conquer Build Develop Conquer Build Develop Conquer 
             Build Develop Conquer Build Develop Conquer Build Develop Conquer
           </motion.h1>
         </div>

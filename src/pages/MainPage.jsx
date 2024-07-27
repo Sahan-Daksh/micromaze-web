@@ -9,7 +9,7 @@ import FAQ from "../components/FAQ";
 import Merch from "../components/Merch";
 import Partners from "../components/Partners";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import FooterExport from "../components/Footer";
 import AnimatedBackground from "../components/AnimatedBackground";
 
 export default function MainPage() {
@@ -49,7 +49,7 @@ export default function MainPage() {
         <Contact />
       </AnimatedBackground>
 
-      <Footer />
+      <FooterExport />
     </>
   );
 }

@@ -86,10 +86,10 @@
 /* Overlay Styles */
 .countdown-overlay {
     position: absolute;
-    top: 19.25%;
-    left: -4.5%;
+    top: 20.5%;
+    left: -5%;
     width: 90%;
-    height: 100%;
+    height: 90%;
     background-image: url('../../../public/counter/counterNoBg.png');
     background-size: contain;
     background-repeat: no-repeat;

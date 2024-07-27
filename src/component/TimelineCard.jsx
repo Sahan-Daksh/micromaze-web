@@ -1,27 +1,22 @@
 import React from "react";
 import "../styles/component/TimelineCard.css";
-import { MdTour } from "react-icons/md";
 
-const TimelineCard = () => {
+const TimelineCard = ({ title, description, date, align }) => {
+  const textAlign = align === "right" ? "left" : "right";
   return (
     <div className="card">
       <div className="content">
-        <div className="back">
-          <div className="back-content">
-            <MdTour size={50} />
-            <strong>Hover Me</strong>
-          </div>
-        </div>
         <div className="front">
           <div className="front-content">
-            <small className="badge">Ellora</small>
             <div className="description">
-              <div className="title">
+              <div className="title" style={{ textAlign }}>
                 <p className="title">
-                  <strong>4 Days Trip</strong>
+                  <strong>{title}</strong>
                 </p>
               </div>
-              <p class="card-footer">30 Mins &nbsp; | &nbsp; 1 Serving</p>
+              <p className="card-footer" style={{ textAlign }}>
+                {date}
+              </p>
             </div>
           </div>
         </div>

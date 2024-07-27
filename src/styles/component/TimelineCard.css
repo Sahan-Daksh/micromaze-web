@@ -35,12 +35,11 @@
 }
 
 .title {
-  font-size: 48px;
-  max-width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  color: lightgray;
+  font-family: Carbon;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 61.44px;
+  text-align: inherit;
 }
 
 .title p {
@@ -48,8 +47,9 @@
 }
 
 .card-footer {
-  margin-top: 5px;
-  font-size: 36px;
-  text-align: center;
-  color: lightgray;
+  font-family: Space Grotesk;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 51.04px;
+  text-align: inherit;
 }

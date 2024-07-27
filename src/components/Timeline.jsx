@@ -60,30 +60,30 @@ const Milestones = () => {
         >
           Timeline
         </chakra.h3>
-        {milestones.map((milestone) => (
+        {milestones.map((milestone, index) => (
           <Flex key={milestone.id} mb="10px">
             {/* Desktop view(left card) */}
-            {isDesktop && milestone.id % 2 === 0 && (
+            {isDesktop && index % 2 === 0 && (
               <>
                 <EmptyCard />
-                <LineWithDot />
-                <CardX {...milestone} />
+                <LineWithDot isFinal={index === milestones.length - 1} />
+                <CardX {...milestone} align="right" />
               </>
             )}
 
             {/* Mobile view */}
             {isMobile && (
               <>
-                <LineWithDot />
-                <CardX {...milestone} />
+                <LineWithDot isFinal={index === milestones.length - 1} />
+                <CardX {...milestone} align="center" />
               </>
             )}
 
             {/* Desktop view(right card) */}
-            {isDesktop && milestone.id % 2 !== 0 && (
+            {isDesktop && index % 2 !== 0 && (
               <>
-                <CardX {...milestone} />
-                <LineWithDot />
+                <CardX {...milestone} align="left" />
+                <LineWithDot isFinal={index === milestones.length - 1} />
                 <EmptyCard />
               </>
             )}
@@ -94,7 +94,7 @@ const Milestones = () => {
   );
 };
 
-const CardX = ({ id, title, description, date }) => {
+const CardX = ({ id, title, description, date, align }) => {
   // For even id show card on left side
   // For odd id show card on right side
   const isEvenId = id % 2 === 0;
@@ -119,12 +119,17 @@ const CardX = ({ id, title, description, date }) => {
       alignItems="center"
       pos="relative"
     >
-      <TimelineCard title={title} description={description} date={date} />
+      <TimelineCard
+        title={title}
+        description={description}
+        date={date}
+        align={align}
+      />
     </HStack>
   );
 };
 
-const LineWithDot = () => {
+const LineWithDot = ({ isFinal }) => {
   return (
     <Flex
       pos="relative"
@@ -135,12 +140,12 @@ const LineWithDot = () => {
       <chakra.span
         position="absolute"
         left="50%"
-        height="calc(100% + 10px)"
+        height={isFinal ? "75px" : "calc(100% + 10px)"}
         border="1px solid"
-        borderColor={useColorModeValue("gray.200", "gray.700")}
+        borderColor={useColorModeValue("#D9D9D9")}
         top="0px"
       ></chakra.span>
-      <Box pos="relative" p="10px">
+      <Box pos="relative" p="25px">
         <Box
           pos="absolute"
           top="0"
@@ -152,7 +157,7 @@ const LineWithDot = () => {
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center center"
-          bg={useColorModeValue("gray.400", "gray.200")}
+          bg={useColorModeValue("#D9D9D9")}
           borderRadius="100px"
           backgroundImage="none"
           opacity={1}

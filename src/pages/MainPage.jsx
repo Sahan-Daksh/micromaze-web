@@ -11,7 +11,7 @@ import Partners from "../components/Partners";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import AnimatedBackground from "../components/AnimatedBackground";
-import SmoothScrollWrapper from "../components/SmoothScrollWrapper";
+import SmoothScroll from "../components/SmoothScroll";
 
 export default function MainPage() {
   const [activeSegment, setActiveSegment] = useState(0);

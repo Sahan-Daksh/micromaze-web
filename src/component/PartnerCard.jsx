@@ -10,6 +10,7 @@ const PartnerCard = ({ partner }) => {
         alt={partner.alt}
         className="partner-card-image"
       />
+      <h3>SSSSS</h3>
     </div>
   );
 };

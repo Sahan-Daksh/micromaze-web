@@ -1,32 +1,32 @@
 export const partners = [
   {
     name: "Partner 1",
-    logo: "https://example.com/logo1.jpg",
+    logo: "../partners/Gafe-Title.png",
     description: "Description of Partner 1.",
   },
   {
     name: "Partner 2",
-    logo: "https://example.com/logo2.jpg",
+    logo: "../partners/Econsulate-Knowledge.jpg",
     description: "Description of Partner 2.",
   },
   {
     name: "Partner 3",
-    logo: "https://example.com/logo3.jpg",
+    logo: "../partners/Marksmen-Bronze.jpg",
     description: "Description of Partner 3.",
   },
   {
     name: "Partner 4",
-    logo: "https://example.com/logo4.jpg",
+    logo: "../partners/Celestia-Photography.png",
     description: "Description of Partner 4.",
   },
   {
     name: "Partner 5",
-    logo: "https://example.com/logo5.jpg",
+    logo: "../partners/Media.png",
     description: "Description of Partner 5.",
   },
   {
     name: "Partner 6",
-    logo: "https://example.com/logo6.jpg",
+    logo: "../partners/CodeChefsLogo-Media.png",
     description: "Description of Partner 6.",
   },
 ];

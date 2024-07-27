@@ -23,7 +23,12 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="intro-container">
+    <div
+        className="relative bg-gradient-to-r from-slate-500 to-slate-800 w-full h-screen py-20"
+        style={{
+          background: `url('./generic-bg.jpg') no-repeat center center/cover`,
+        }}
+      >
       <motion.div
         className="intro-overlay"
         initial={{ opacity: 0, y: 50 }}

@@ -8,15 +8,15 @@ const About = () => {
       style={{ backgroundImage: "url('./what/what.png')" }}
     >
       <motion.div
-        className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10 items-center"
+        className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10 pt-[30%] pb-[60%] items-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         style={{ willChange: "opacity, transform" }}
       >
-        <div className="flex flex-col items-center w-full max-w-4xl p-6 sm:p-8 md:p-10 lg:p-12 bg-transparent rounded-lg shadow-lg">
+        <div className="flex flex-col items-center w-full max-w-4xl sm:p-8 md:p-10 lg:p-12 bg-transparent rounded-lg shadow-lg">
           <motion.p
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-8 text-center font-bold"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-0 text-center font-bold"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -26,7 +26,7 @@ const About = () => {
             MicroMaze?
           </motion.p>
           <motion.div
-            className="flex flex-col items-center bg-transparent w-full max-w-3xl rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 "
+            className="flex flex-col items-center bg-transparent w-full max-w-3xl rounded-lg sm:p-8 md:p-10 lg:p-12 pb-0"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1 }}

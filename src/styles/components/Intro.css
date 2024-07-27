@@ -116,11 +116,11 @@
 
 @media (max-width: 480px) {
     .intro-title {
-        font-size: 6vw; /* Increase font size for very small screens */
+        font-size: 4rem; /* Increase font size for very small screens */
     }
 
     .intro-stat-number {
-        font-size: 6rem;
+        font-size: 4.5rem;
     }
 
     .intro-stat-text {

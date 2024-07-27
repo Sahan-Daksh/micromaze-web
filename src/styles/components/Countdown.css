@@ -2,7 +2,7 @@
 .countdown-container {
     background: url('../../../public/counter/counter.png') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     display: flex;
     gap: 8rem;
     /* Increased space between time units */
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 /* Individual time unit container */
@@ -86,7 +86,7 @@
 /* Overlay Styles */
 .countdown-overlay {
     position: absolute;
-    top: 19.75%;
+    top: 19.25%;
     left: -4.5%;
     width: 90%;
     height: 100%;

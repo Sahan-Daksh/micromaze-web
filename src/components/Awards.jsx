@@ -20,7 +20,7 @@ const Awards = () => {
               Recognizing outstanding achievements and milestones
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-10 animate-fade-in-up delay-4s">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mt-10 animate-fade-in-up delay-4s">
             <AwardCard
               title="1st Runner Up"
               image={awardsImgs.firstRunnerUp}

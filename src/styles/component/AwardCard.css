@@ -64,3 +64,10 @@
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 768px) {
+    .award-card.winner{
+        width:95%;
+        height: 0%;
+    }
+}

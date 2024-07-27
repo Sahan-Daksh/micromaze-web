@@ -1,10 +1,5 @@
-.bg-blur::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(10px);
-  z-index: 0;
-}
+/* Ensure the Apple font is imported */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;700&display=swap');
 
 .relative {
   position: relative;
@@ -53,76 +48,28 @@
   display: flex;
 }
 
-.flex-col {
-  flex-direction: column;
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .justify-center {
   justify-content: center;
 }
 
-.items-center {
-  align-items: center;
+.justify-start {
+  justify-content: flex-start;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.sm\\:px-6 {
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-.md\\:px-8 {
-  @media (min-width: 768px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-.lg\\:px-10 {
-  @media (min-width: 1024px) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-
-.sm\\:p-8 {
-  @media (min-width: 640px) {
-    padding: 2rem;
-  }
-}
-
-.md\\:p-10 {
-  @media (min-width: 768px) {
-    padding: 2.5rem;
-  }
-}
-
-.lg\\:p-12 {
-  @media (min-width: 1024px) {
-    padding: 3rem;
-  }
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
+.justify-end {
+  justify-content: flex-end;
 }
 
 .text-center {
@@ -137,72 +84,93 @@
   color: #ffffff;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+/* Adjusted font sizes */
+.text-sm {
+  font-size: 0.875rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-}
-
-.sm\\:text-5xl {
+.sm\:text-base {
   @media (min-width: 640px) {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 }
 
-.md\\:text-6xl {
+.md\:text-lg {
   @media (min-width: 768px) {
-    font-size: 3.75rem;
-  }
-}
-
-.lg\\:text-7xl {
-  @media (min-width: 1024px) {
-    font-size: 4.5rem;
-  }
-}
-
-.xl\\:text-8xl {
-  @media (min-width: 1280px) {
-    font-size: 6rem;
-  }
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-.sm\\:text-lg {
-  @media (min-width: 640px) {
     font-size: 1.125rem;
   }
 }
 
-.md\\:text-xl {
-  @media (min-width: 768px) {
+.lg\:text-xl {
+  @media (min-width: 1024px) {
     font-size: 1.25rem;
   }
 }
 
-.lg\\:text-2xl {
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
+.xl\:text-3xl {
+  @media (min-width: 1280px) {
+    font-size: 1.875rem;
   }
 }
 
-.text-purple-600 {
-  color: #805ad5;
+.text-gray-400 {
+  color: #9CA3AF;
 }
 
-.mix-blend-multiply {
-  mix-blend-mode: multiply;
+.grid {
+  display: grid;
 }
 
-.object-cover {
-  object-fit: cover;
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+/* Updated gap for more space */
+.gap-64 {
+  gap: 16rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
+}
+
+/* Ensure Apple font is used */
+.font-apple {
+  font-family: 'SF Pro', sans-serif;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }

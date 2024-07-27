@@ -114,16 +114,16 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .intro-title {
         font-size: 4rem; /* Increase font size for very small screens */
     }
 
     .intro-stat-number {
-        font-size: 4.5rem;
+        font-size: 4.8rem;
     }
 
     .intro-stat-text {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }

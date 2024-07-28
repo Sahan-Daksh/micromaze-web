@@ -111,7 +111,6 @@ const CardX = ({ id, title, description, date, align }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      width={{ base: "100%", md: "70%" }} /* Adjust card width */
     >
       <TimelineCard
         title={title}

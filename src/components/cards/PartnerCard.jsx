@@ -11,9 +11,6 @@ const PartnerCard = ({ partner }) => {
         className="partner-card-image"
       />
     </div>
-    <div className="partner-title-card">
-      <p className="partner-name">{partner.title}</p>
-    </div>
     </>
     
     

@@ -1,0 +1,17 @@
+/* Adjustments for Timeline styling */
+.timeline-container {
+    background-image: url('./timeline/TL-bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;
+  }
+  
+  .timeline-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+  }
+  

@@ -1,27 +1,27 @@
 import React from "react";
 import "../../assets/styles/components/cards/TimelineCard.css";
+import { Box, Text } from "@chakra-ui/react";
 
 const TimelineCard = ({ title, description, date, align }) => {
-  const textAlign = align === "right" ? "left" : "right";
   return (
-    <div className="card">
-      <div className="content">
-        <div className="front">
-          <div className="front-content">
-            <div className="description">
-              <div className="title" style={{ textAlign }}>
-                <p className="title">
-                  <strong>{title}</strong>
-                </p>
-              </div>
-              <p className="card-footer" style={{ textAlign }}>
-                {date}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box
+      bg="white"
+      p={4}
+      boxShadow="lg"
+      borderRadius="md"
+      width="100%"
+      textAlign={align}
+    >
+      <Text fontSize="xl" fontWeight="bold" color="black" mb={2}>
+        {title}
+      </Text>
+      <Text fontSize="md" color="gray.500">
+        {date}
+      </Text>
+      <Text fontSize="md" mt={2}>
+        {description}
+      </Text>
+    </Box>
   );
 };
 

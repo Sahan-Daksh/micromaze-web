@@ -1,0 +1,48 @@
+/* Ensure the Apple font is imported */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;700&display=swap');
+
+.bg-black {
+  background-color: #000000;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.font-apple {
+  font-family: 'SF Pro', sans-serif;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-6 > :not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+svg {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+svg:hover {
+  transform: scale(1.1);
+}

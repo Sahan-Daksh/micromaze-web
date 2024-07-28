@@ -31,15 +31,15 @@ const About = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <div className="grid grid-cols-2 grid-rows-2 gap-64 w-full max-w-7xl">
+        <div className="grid grid-cols-2 grid-rows-1 gap-8 w-full max-w-7xl">
           {/* Left Text in Top-Left Corner */}
           <motion.div
-            className="row-span-1 col-span-1 flex items-start justify-start bg-transparent rounded-lg"
+            className="row-span-1 col-span-1 flex items-center justify-center bg-transparent rounded-lg p-4"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple text-left">
               MicroMaze is an inter-university competition designed to challenge
               participants in developing a micro mouse capable of solving a maze
               within a specified timeframe.
@@ -48,12 +48,12 @@ const About = () => {
 
           {/* Right Text in Bottom-Right Corner */}
           <motion.div
-            className="row-span-2 col-span-1 flex items-end justify-end bg-transparent rounded-lg"
+            className="row-span-1 col-span-1 flex items-center justify-center bg-transparent rounded-lg p-4"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple text-right">
               This competition tests students' skills in robotics, programming,
               and problem-solving as they create robots that navigate from the
               start to the end of the maze efficiently and accurately. This

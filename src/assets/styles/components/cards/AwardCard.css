@@ -1,0 +1,18 @@
+.award-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.award-card .award-image {
+  position: relative;
+  z-index: 10;
+}
+
+.award-card .award-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}

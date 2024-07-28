@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Carbon:wght@400;700&display=swap');
+
+.animated-background-container {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #2a034a, #451d67, #5d367d, #763d93, #9034a8, #ac1fbd);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: background 1s ease;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-background-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.animated-background-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .animated-background-container {
+    padding: 20px 0;
+  }
+
+  .animated-background-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-background-container {
+    padding: 10px 0;
+  }
+
+  .animated-background-content {
+    padding: 5px;
+  }
+}

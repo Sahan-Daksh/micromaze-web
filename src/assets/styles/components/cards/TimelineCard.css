@@ -1,0 +1,135 @@
+/* Base styles for the card */
+.card {
+  overflow: visible;
+  width: 80%; /* Increased width for more text in one line */
+  max-width: 800px; /* Added max-width for better layout control */
+  height: 150px;
+  background: transparent;
+  animation: fade-in 0.5s ease-in-out;
+  margin: 0 auto; /* Center the card */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.front {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.description {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: lightgray;
+  font-family: 'Carbon', sans-serif;
+}
+
+.title {
+  font-family: Carbon;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 61.44px;
+  text-align: inherit;
+}
+
+.title p {
+  width: 100%;
+}
+
+.card-footer {
+  font-family: Space Grotesk;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 51.04px;
+  text-align: inherit;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 1024px) {
+  .card {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto;
+  }
+
+  .front .front-content {
+    padding: 2%;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 51px;
+  }
+
+  .card-footer {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width for mobile view */
+    height: auto;
+  }
+
+  .front .front-content {
+    padding: 2%;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 41px;
+  }
+
+  .card-footer {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+
+  .card-footer {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

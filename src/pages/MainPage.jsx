@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./layouts/Hero";
 import Intro from "./layouts/Intro";
 import About from "./layouts/About";
@@ -10,8 +10,7 @@ import Merch from "./layouts/Merch";
 import Partners from "./layouts/Partners";
 import Contact from "./layouts/Contact";
 import FooterExport from "./layouts/Footer";
-import AnimatedBackground from "../utils//AnimatedBackground";
-import { TimelineNew } from "./layouts/TimelineNew";
+import AnimatedBackground from "../utils/AnimatedBackground";
 
 export default function MainPage() {
   const [activeSegment, setActiveSegment] = useState(0);

@@ -11,6 +11,7 @@ import Partners from "./layouts/Partners";
 import Contact from "./layouts/Contact";
 import FooterExport from "./layouts/Footer";
 import AnimatedBackground from "../utils//AnimatedBackground";
+import { TimelineNew } from "./layouts/TimelineNew";
 
 export default function MainPage() {
   const [activeSegment, setActiveSegment] = useState(0);

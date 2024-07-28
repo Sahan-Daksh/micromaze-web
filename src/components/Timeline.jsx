@@ -8,35 +8,16 @@ import {
   useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import TimelineCard from "../component/TimelineCard";
 import "../styles/components/Timeline.css";
 
 const milestones = [
-  {
-    id: 1,
-    date: "20th July, 2024",
-    title: "Registrations Open",
-    description: ``,
-  },
-  {
-    id: 2,
-    date: "18th July, 2024",
-    title: "Awareness Session",
-    description: ``,
-  },
-  {
-    id: 3,
-    date: "18th July, 2024",
-    title: "Registrations Close",
-    description: ``,
-  },
+  { id: 1, date: "20th July, 2024", title: "Registrations Open", description: `` },
+  { id: 2, date: "18th July, 2024", title: "Awareness Session", description: `` },
+  { id: 3, date: "18th July, 2024", title: "Registrations Close", description: `` },
   { id: 4, date: "24th July, 2024", title: "Online Session", description: `` },
-  {
-    id: 5,
-    date: "10th August, 2024",
-    title: "Qualifier Round",
-    description: ``,
-  },
+  { id: 5, date: "10th August, 2024", title: "Qualifier Round", description: `` },
   { id: 6, date: "11th August, 2024", title: "The Finale", description: `` },
 ];
 
@@ -45,18 +26,18 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <div
-      style={{
-        backgroundImage: "url('/timeline/tl-bg1.png')",
-      }}
-    >
+    <div style={{ backgroundImage: "url('/timeline/tl-bg1.png')" }}>
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
         <chakra.h3
-          fontSize="9xl"
+          fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
           fontWeight="bold"
           mb={18}
           textAlign="center"
-          style={{ color: "white" }}
+          color="white"
+          as={motion.h3}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           Timeline
         </chakra.h3>
@@ -95,19 +76,8 @@ const Milestones = () => {
 };
 
 const CardX = ({ id, title, description, date, align }) => {
-  // For even id show card on left side
-  // For odd id show card on right side
-  const isEvenId = id % 2 === 0;
-  let borderWidthValue = isEvenId ? "0" : "0";
-  let leftValue = isEvenId ? "-15px" : "unset";
-  let rightValue = isEvenId ? "unset" : "-15px";
-
   const isMobile = useBreakpointValue({ base: true, md: false });
-  if (isMobile) {
-    leftValue = "-15px";
-    rightValue = "unset";
-    borderWidthValue = "0";
-  }
+  const alignValue = isMobile ? "center" : align;
 
   return (
     <HStack
@@ -118,12 +88,16 @@ const CardX = ({ id, title, description, date, align }) => {
       rounded="lg"
       alignItems="center"
       pos="relative"
+      as={motion.div}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <TimelineCard
         title={title}
         description={description}
         date={date}
-        align={align}
+        align={alignValue}
       />
     </HStack>
   );
@@ -136,6 +110,10 @@ const LineWithDot = ({ isFinal }) => {
       alignItems="center"
       mr={{ base: "40px", md: "40px" }}
       ml={{ base: "0", md: "40px" }}
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <chakra.span
         position="absolute"
@@ -169,11 +147,7 @@ const LineWithDot = ({ isFinal }) => {
 
 const EmptyCard = () => {
   return (
-    <Box
-      flex={{ base: 0, md: 1 }}
-      p={{ base: 0, md: 6 }}
-      bg="transparent"
-    ></Box>
+    <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 6 }} bg="transparent"></Box>
   );
 };
 

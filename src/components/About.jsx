@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "../styles/components/About.css";
+import { FaRobot, FaCode, FaCogs } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -22,46 +23,43 @@ const About = () => {
         >
           What is MicroMaze?
         </motion.p>
+        <motion.p
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-300"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.75 }}
+        >
+          An Exciting Challenge in Robotics and Programming
+        </motion.p>
       </motion.div>
 
-      {/* Grid Layout Section */}
+      {/* Text Sections */}
       <motion.div
-        className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        className="absolute top-40 left-10 w-1/3 p-4 bg-transparent rounded-lg"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
       >
-        <div className="grid grid-cols-2 grid-rows-1 gap-8 w-full max-w-7xl">
-          {/* Left Text in Top-Left Corner */}
-          <motion.div
-            className="row-span-1 col-span-1 flex items-center justify-center bg-transparent rounded-lg p-4"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-          >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple text-left">
-              MicroMaze is an inter-university competition designed to challenge
-              participants in developing a micro mouse capable of solving a maze
-              within a specified timeframe.
-            </p>
-          </motion.div>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-carbon text-left">
+          MicroMaze is an inter-university competition designed to challenge
+          participants in developing a micro mouse capable of solving a maze
+          within a specified timeframe. This competition tests students' skills
+          in robotics, programming, and problem-solving.
+        </p>
+      </motion.div>
 
-          {/* Right Text in Bottom-Right Corner */}
-          <motion.div
-            className="row-span-1 col-span-1 flex items-center justify-center bg-transparent rounded-lg p-4"
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-          >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-apple text-right">
-              This competition tests students' skills in robotics, programming,
-              and problem-solving as they create robots that navigate from the
-              start to the end of the maze efficiently and accurately. This
-              provides a platform for undergraduates to apply their knowledge in
-              a practical setting, fostering collaboration and learning.
-            </p>
-          </motion.div>
-        </div>
+      <motion.div
+        className="absolute bottom-40 right-10 w-1/3 p-4 bg-transparent rounded-lg"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+      >
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-gray-400 font-carbon text-right mt-4">
+          The event also includes workshops, mentoring sessions, and networking
+          opportunities with industry experts, further enhancing the learning
+          experience and preparing students for future careers in technology and
+          engineering.
+        </p>
       </motion.div>
     </div>
   );

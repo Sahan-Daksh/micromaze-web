@@ -2,58 +2,107 @@
 .navbar-container {
     width: 100%;
     padding: 0.25rem 0.5rem;
-    /* Reduced padding for a smaller height */
     backdrop-filter: blur(10px);
-    /* Optional: Adds a blur effect for a frosted glass look */
-}
-
-/* Navbar styling */
-.navbar {
+  }
+  
+  /* Navbar styling */
+  .navbar {
     background: transparent !important;
-}
-
-/* Logo styling */
-.navbar-logo {
+  }
+  
+  /* Logo styling */
+  .navbar-logo {
     display: flex;
     align-items: center;
-    /* Adjust vertical alignment as needed */
-}
-
-.navbar-logo-link {
+  }
+  
+  .navbar-logo-link {
     display: flex;
     align-items: center;
-}
-
-.navbar-logo-img {
+  }
+  
+  .navbar-logo-img {
     display: block;
     max-width: 100%;
     height: auto;
-    /* Ensure the logo scales correctly with the new height */
-}
-
-/* Button styling */
-.navbar-buttons {
+  }
+  
+  /* Button styling */
+  .navbar-buttons {
     display: flex;
     align-items: center;
-    /* Adjust alignment if necessary */
-}
-
-.btn-gradient {
+  }
+  
+  .btn-gradient {
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 100%);
     color: #fff;
     border: none;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
-    /* Reduced padding for buttons */
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn-gradient:hover {
+  }
+  
+  .btn-gradient:hover {
     background: linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(131, 58, 180, 1) 100%);
     transform: scale(1.05);
-}
-
-.btn-gradient:focus {
+  }
+  
+  .btn-gradient:focus {
     outline: none;
-}
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-menu-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile menu styling */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  @media (min-width: 1024px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-logo {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-buttons {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: flex;
+    }
+  }
+  

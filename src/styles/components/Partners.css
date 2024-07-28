@@ -57,8 +57,7 @@
 
 @media (min-width: 360px) and (max-width: 1200px) {
     .partners-title {
-      font-size: 2rem;
-      text-align: center;
+        font-size: 2rem;
+        text-align: center;
     }
-  }
-  
+}

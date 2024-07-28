@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-import About from "../components/About";
-import Countdown from "../components/Countdown";
-import Milestones from "../components/Timeline";
-import Awards from "../components/Awards";
-import FAQ from "../components/FAQ";
-import Merch from "../components/Merch";
-import Partners from "../components/Partners";
-import Contact from "../components/Contact";
-import FooterExport from "../components/Footer";
-import AnimatedBackground from "../components/AnimatedBackground";
+import Hero from "./layouts/Hero";
+import Intro from "./layouts/Intro";
+import About from "./layouts/About";
+import Countdown from "./layouts/Countdown";
+import Milestones from "./layouts/Timeline";
+import Awards from "./layouts/Awards";
+import FAQ from "./layouts/FAQ";
+import Merch from "./layouts/Merch";
+import Partners from "./layouts/Partners";
+import Contact from "./layouts/Contact";
+import FooterExport from "./layouts/Footer";
+import AnimatedBackground from "../utils//AnimatedBackground";
 
 export default function MainPage() {
   const [activeSegment, setActiveSegment] = useState(0);

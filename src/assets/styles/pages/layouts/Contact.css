@@ -1,0 +1,109 @@
+.contact-container {
+  padding: 20px;
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* Reduced from 100vh to 80vh */
+  @apply flex flex-col md: flex-row;
+}
+
+.contact-title-container {
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  padding: 0 20px;
+  @apply mb-6 md: mb-8;
+  /* Reduced margin-bottom */
+}
+
+.contact-title {
+  font-size: 2rem;
+  @apply sm: text-3xl md:text-4xl;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  @apply sm: text-xl md:text-2xl;
+  margin-bottom: 20px;
+}
+
+.contact-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  @apply sm: w-80;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+.contact-card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.contact-card-title {
+  font-size: 1.2rem;
+  @apply sm: text-xl;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-card-name {
+  font-size: 1rem;
+  @apply sm: text-lg;
+  margin-bottom: 10px;
+  color: #dddddd;
+}
+
+.contact-card-detail {
+  font-size: 0.9rem;
+  @apply sm: text-base;
+  color: #bbbbbb;
+}
+
+.contact-card-email {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.contact-card-email:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

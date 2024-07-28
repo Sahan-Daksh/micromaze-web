@@ -18,7 +18,7 @@ export const products = [
   },
   {
     name: "Hoodie",
-    image: "./merch/item1/img2.jpeg",
+    image: "./merch/item1/img1.jpeg",
     price: "$45.00",
     allImages: [
       "./merch/item1/img1.jpeg",
@@ -35,7 +35,7 @@ export const products = [
   },
   {
     name: "Cap",
-    image: "./merch/item1/img3.jpeg",
+    image: "./merch/item1/img1.jpeg",
     price: "$15.00",
     allImages: [
       "./merch/item1/img1.jpeg",
@@ -52,7 +52,7 @@ export const products = [
   },
   {
     name: "Mug",
-    image: "./merch/item1/img4.jpeg",
+    image: "./merch/item1/img1.jpeg",
     price: "$10.00",
     allImages: [
       "./merch/item1/img1.jpeg",

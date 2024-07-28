@@ -16,7 +16,7 @@
 /* Flex container for time units */
 .countdown-time-units {
     display: flex;
-    gap: 8rem;
+    gap: 7rem;
     /* Increased space between time units */
     margin-bottom: 6rem;
 }
@@ -26,21 +26,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1.5rem;
+    
     /* Added more padding */
     position: relative;
+    margin-top: 1rem;
 }
 
 /* Labels for time units */
 .countdown-time-label {
     font-family: 'Carbon', sans-serif;
     /* Font for labels */
-    font-size: 5rem;
+    font-size: 4.2rem;
     /* Increased font size */
     color: white;
-    position: absolute;
+    position: relative;
     /* Changed to absolute positioning */
-    left: -4rem;
+    left: -1rem;
+    margin-top: -1rem;
     /* Shift labels to the left */
     margin-bottom: 0;
     /* No bottom margin needed */
@@ -55,6 +57,7 @@
     font-family: 'SF Pro Display', sans-serif;
     /* Font for values */
     font-size: 12.5rem;
+    left:-1rem;
     /* Increased font size */
     font-weight: bold;
     /* Darkish color for Apple font style */
@@ -160,6 +163,11 @@
         /* Adjust left position */
         width: 100%;
         /* Adjust width */
+    }
+
+    .countdown-time-units {
+        display: flex;
+        flex-direction: column;
     }
 }
 

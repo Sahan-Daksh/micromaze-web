@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../../assets/styles/pages/layouts/Countdown.css";
 
 const Countdown = () => {
-  const targetDate = new Date("2024-12-31T23:59:59").getTime(); // Change this to your target date
+  const targetDate = new Date("2024-08-10T23:59:59").getTime(); // Change this to your target date
   const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Countdown = () => {
     return { days, hours, minutes, seconds };
   };
 
-  const { days, hours, minutes, _ } = getTime();
+  const { days, hours, minutes, seconds} = getTime();
 
   return (
     <div className="countdown-container">
@@ -50,6 +50,13 @@ const Countdown = () => {
             <br />
             <p className="countdown-time-value">
               {String(minutes).padStart(2, "0")}
+            </p>
+          </div>
+          <div className="countdown-time-unit">
+            <p className="countdown-time-label">SECONDS</p>
+            <br />
+            <p className="countdown-time-value">
+              {String(seconds).padStart(2, "0")}
             </p>
           </div>
         </div>

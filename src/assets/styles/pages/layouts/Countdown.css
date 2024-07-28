@@ -29,7 +29,7 @@
     
     /* Added more padding */
     position: relative;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Labels for time units */
@@ -64,7 +64,7 @@
     position: relative;
     z-index: 2;
     /* Ensure values are above labels */
-    padding-top: 2.75rem !important;
+    
 }
 
 /* GRAND FINALE section */

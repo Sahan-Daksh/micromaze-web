@@ -22,14 +22,7 @@ const About = () => {
         >
           What is MicroMaze?
         </motion.p>
-        <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-3xl text-gray-300"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.75 }}
-        >
-          An Exciting Challenge in Robotics and Programming
-        </motion.p>
+        
       </motion.div>
 
       {/* Text Sections */}

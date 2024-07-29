@@ -7,7 +7,7 @@ const About = () => {
       className="relative h-screen w-full bg-cover bg-left bg-no-repeat overflow-hidden"
       style={{ backgroundImage: "url('./what/RobotAI.png')" }}
     >
-      {/* Title Section */}
+      {/* Title Section  className="title-text" */}
       <motion.div
         className="absolute top-10 w-full text-center"
         initial={{ opacity: 0, y: -50 }}
@@ -15,7 +15,7 @@ const About = () => {
         transition={{ duration: 1 }}
       >
         <motion.p
-          className="title-text"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}

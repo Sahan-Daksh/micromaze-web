@@ -96,6 +96,12 @@
     will-change: color;
 }
 
+@media (max-width: 1024px){
+    .intro-stats{
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .intro-title {
         font-size: 5vw;

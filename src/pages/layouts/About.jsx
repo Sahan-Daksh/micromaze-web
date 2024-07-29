@@ -27,7 +27,7 @@ const About = () => {
 
       {/* Text Sections */}
       <motion.div
-        className="absolute top-40 left-10 w-1/3 p-4 bg-transparent rounded-lg"
+        className="absolute top-40 left-10 w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 p-4 bg-transparent rounded-lg"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
@@ -41,7 +41,7 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-40 right-10 w-1/3 p-4 bg-transparent rounded-lg"
+        className="absolute bottom-40 right-10 w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 p-4 bg-transparent rounded-lg"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}

@@ -64,7 +64,7 @@
     position: relative;
     z-index: 2;
     /* Ensure values are above labels */
-    
+    padding-top: 2.75rem !important;
 }
 
 /* GRAND FINALE section */
@@ -103,9 +103,10 @@
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
     .countdown-time-units {
-        gap: 4rem;
-        /* Decrease gap between time units */
-        margin-bottom: 2rem;
+        gap: 1rem;
+        /* Further decrease gap between time units */
+        margin-bottom: 0.5rem;
+        position: relative;
         /* Decrease bottom margin */
     }
 
@@ -131,16 +132,17 @@
 
 @media (max-width: 768px) {
     .countdown-time-units {
-        gap: 2rem;
+        gap: 1rem;
         /* Further decrease gap between time units */
-        margin-bottom: 1rem;
-        /* Further decrease bottom margin */
+        margin-bottom: 0.5rem;
+        position: relative;
     }
 
     .countdown-time-label {
         font-size: 2.25rem;
         /* Further decrease font size for labels */
         left: -1.5rem;
+        position: absolute;
         /* Adjust position */
     }
 
@@ -176,13 +178,15 @@
         gap: 1rem;
         /* Further decrease gap between time units */
         margin-bottom: 0.5rem;
+        position: relative;
         /* Further decrease bottom margin */
     }
 
     .countdown-time-label {
         font-size: 1.5rem;
         /* Further decrease font size for labels */
-        left: -1rem;
+        left: -2rem;
+        position: absolute;
         /* Adjust position */
     }
 
@@ -205,5 +209,6 @@
         /* Adjust left position */
         width: 100%;
         /* Adjust width */
+        z-index: 1;
     }
 }

@@ -45,10 +45,10 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <div style={{ backgroundImage: "url('./timeline/TL-bg1.png')" }}>
+    <div className="timeline-container">
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
         <chakra.h3
-          fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+          fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
           fontWeight="bold"
           mb={18}
           textAlign="center"
@@ -57,12 +57,12 @@ const Milestones = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="timeline-header"
         >
           Timeline
         </chakra.h3>
         {milestones.map((milestone, index) => (
           <Flex key={milestone.id} mb="10px">
-            {/* Desktop view(left card) */}
             {isDesktop && index % 2 === 0 && (
               <>
                 <EmptyCard />
@@ -71,7 +71,6 @@ const Milestones = () => {
               </>
             )}
 
-            {/* Mobile view */}
             {isMobile && (
               <>
                 <LineWithDot isFinal={index === milestones.length - 1} />
@@ -79,7 +78,6 @@ const Milestones = () => {
               </>
             )}
 
-            {/* Desktop view(right card) */}
             {isDesktop && index % 2 !== 0 && (
               <>
                 <CardX {...milestone} align="left" />
@@ -90,6 +88,13 @@ const Milestones = () => {
           </Flex>
         ))}
       </Container>
+      {/* Adding stars and floating elements */}
+      <div className="star star1"></div>
+      <div className="star star2"></div>
+      <div className="star star3"></div>
+      <div className="floating-element floating1"></div>
+      <div className="floating-element floating2"></div>
+      <div className="floating-element floating3"></div>
     </div>
   );
 };
@@ -111,7 +116,7 @@ const CardX = ({ id, title, description, date, align }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      width={{ base: "100%", md: "70%" }} /* Adjust card width */
+      width={{ base: "100%", md: "70%" }}
     >
       <TimelineCard
         title={title}

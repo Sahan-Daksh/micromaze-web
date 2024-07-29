@@ -8,10 +8,6 @@ const socialMediaLinks = [
     icon: () => <i className="fab fa-facebook-f"></i>,
   },
   {
-    href: "https://twitter.com",
-    icon: () => <i className="fab fa-twitter"></i>,
-  },
-  {
     href: "https://linkedin.com",
     icon: () => <i className="fab fa-linkedin-in"></i>,
   },
@@ -40,8 +36,7 @@ const FooterExport = () => {
           >
             <h2 className="footer-title">Micro Maze</h2>
             <p className="footer-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
-              fermentum nisl. Nulla facilisi. Sed a diam vel arcu cursus auctor.
+            MicroMaze is an inter-university competition designed to challenge participants in developing a micro mouse capable of solving a maze within a specified timeframe.  The main challenge is to design a micro mouse capable of solving a maze within a specified time frame.  
             </p>
           </motion.div>
           <motion.div
@@ -67,7 +62,7 @@ const FooterExport = () => {
                 </motion.a>
               ))}
             </div>
-            <p className="footer-email">contact@micromaze.com</p>
+            <p className="footer-email">@ieeeras@iit.ac.lk</p>
           </motion.div>
         </div>
       </div>

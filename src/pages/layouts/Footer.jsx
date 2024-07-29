@@ -1,49 +1,85 @@
-import "../../assets/styles/pages/layouts/Footer.css";
-import {
-  Footer,
-  FooterCopyright,
-  FooterLinkGroup,
-  FooterLink,
-} from "flowbite-react";
-import {
-  BsDribbble,
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitter,
-} from "react-icons/bs";
+import { motion } from "framer-motion";
+import "../../assets/styles/pages/layouts/Footer.css"; // Import the CSS file
+
+// Define social media links
+const socialMediaLinks = [
+  {
+    href: "https://facebook.com",
+    icon: () => <i className="fab fa-facebook-f"></i>,
+  },
+  {
+    href: "https://twitter.com",
+    icon: () => <i className="fab fa-twitter"></i>,
+  },
+  {
+    href: "https://linkedin.com",
+    icon: () => <i className="fab fa-linkedin-in"></i>,
+  },
+  {
+    href: "https://youtube.com",
+    icon: () => <i className="fab fa-youtube"></i>,
+  },
+  { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
+];
 
 const FooterExport = () => {
   return (
-    <Footer container className="footer bg-white text-black py-6">
-      <div className="container mx-auto px-4 flex flex-col items-center">
-        {/* Social Media Icons Section */}
-        <FooterLinkGroup className="flex space-x-6 mb-4">
-          <FooterLink href="#" className="social-icon">
-            <BsFacebook size={24} />
-          </FooterLink>
-          <FooterLink href="#" className="social-icon">
-            <BsGithub size={24} />
-          </FooterLink>
-          <FooterLink href="#" className="social-icon">
-            <BsInstagram size={24} />
-          </FooterLink>
-          <FooterLink href="#" className="social-icon">
-            <BsTwitter size={24} />
-          </FooterLink>
-          <FooterLink href="#" className="social-icon">
-            <BsDribbble size={24} />
-          </FooterLink>
-        </FooterLinkGroup>
-        {/* Copyright Section */}
-        <FooterCopyright
-          href="#"
-          by="MicroMaze™"
-          year={2024}
-          className="text-center"
-        />
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="footer-content container mx-auto px-5 py-6">
+        <div className="footer-sections">
+          <motion.div
+            className="footer-info"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="footer-title">Micro Maze</h2>
+            <p className="footer-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at
+              fermentum nisl. Nulla facilisi. Sed a diam vel arcu cursus auctor.
+            </p>
+          </motion.div>
+          <motion.div
+            className="footer-connect"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="footer-title">Follow Us on</h2>
+            <div className="social-media">
+              {socialMediaLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="social-media-link"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {link.icon()}
+                </motion.a>
+              ))}
+            </div>
+            <p className="footer-email">contact@micromaze.com</p>
+          </motion.div>
+        </div>
       </div>
-    </Footer>
+      <motion.div
+        className="footer-credits"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <p>&copy; {new Date().getFullYear()} - MicroMaze</p>
+      </motion.div>
+    </motion.footer>
   );
 };
 

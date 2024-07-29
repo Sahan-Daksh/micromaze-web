@@ -15,7 +15,7 @@ const About = () => {
         transition={{ duration: 1 }}
       >
         <motion.p
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   chakra,
@@ -8,15 +7,48 @@ import {
   useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { motion } from "framer-motion";
+import TimelineCard from "../../components/cards/TimelineCard";
+import "../../assets/styles/pages/layouts/Timeline.css";
 
-const Timeline = () => {
+const milestones = [
+  {
+    id: 1,
+    date: "20th July, 2024",
+    title: "Registrations Open",
+    description: ``,
+  },
+  {
+    id: 2,
+    date: "18th July, 2024",
+    title: "Awareness Session",
+    description: ``,
+  },
+  {
+    id: 3,
+    date: "18th July, 2024",
+    title: "Registrations Close",
+    description: ``,
+  },
+  { id: 4, date: "24th July, 2024", title: "Online Session", description: `` },
+  {
+    id: 5,
+    date: "10th August, 2024",
+    title: "Qualifier Round",
+    description: ``,
+  },
+  { id: 6, date: "11th August, 2024", title: "The Finale", description: `` },
+];
+
+const Milestones = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isDesktop = useBreakpointValue({ base: false, md: true });
+
   return (
-    <div style={{ backgroundImage: "url('./timeline/TL-bg1.png')" }}>
-    <chakra.h3
-          fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+    <div className="timeline-container">
+      <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+        <chakra.h3
+          fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
           fontWeight="bold"
           mb={18}
           textAlign="center"
@@ -25,74 +57,127 @@ const Timeline = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="timeline-header"
         >
           Timeline
         </chakra.h3>
-    <VerticalTimeline>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-      
-      >
-        <h3 className="vertical-timeline-element-title">Registration Open</h3>
-        <h4 className="vertical-timeline-element-subtitle">1st July, 2024</h4>
-        
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        
-      >
-        <h3 className="vertical-timeline-element-title">Awareness Session</h3>
-        <h4 className="vertical-timeline-element-subtitle">14th July, 2024</h4>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        
-      >
-        <h3 className="vertical-timeline-element-title">Registration Close</h3>
-        <h4 className="vertical-timeline-element-subtitle">17th July, 2024</h4>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        
-      >
-        <h3 className="vertical-timeline-element-title">Online Workshop</h3>
-        <h4 className="vertical-timeline-element-subtitle">20th July, 2024</h4>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        contentStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        
-      >
-        <h3 className="vertical-timeline-element-title">Qualifier Round</h3>
-        <h4 className="vertical-timeline-element-subtitle">10th August, 2024</h4>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        contentStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        
-      >
-        <h3 className="vertical-timeline-element-title">The Finale</h3>
-        <h4 className="vertical-timeline-element-subtitle">11th August, 2024</h4>
-      </VerticalTimelineElement>
-    </VerticalTimeline>
+        {milestones.map((milestone, index) => (
+          <Flex key={milestone.id} mb="10px">
+            {isDesktop && index % 2 === 0 && (
+              <>
+                <EmptyCard />
+                <LineWithDot isFinal={index === milestones.length - 1} />
+                <CardX {...milestone} align="right" />
+              </>
+            )}
+
+            {isMobile && (
+              <>
+                <LineWithDot isFinal={index === milestones.length - 1} />
+                <CardX {...milestone} align="center" />
+              </>
+            )}
+
+            {isDesktop && index % 2 !== 0 && (
+              <>
+                <CardX {...milestone} align="left" />
+                <LineWithDot isFinal={index === milestones.length - 1} />
+                <EmptyCard />
+              </>
+            )}
+          </Flex>
+        ))}
+      </Container>
+      {/* Adding stars and floating elements */}
+      <div className="star star1"></div>
+      <div className="star star2"></div>
+      <div className="star star3"></div>
+      <div className="floating-element floating1"></div>
+      <div className="floating-element floating2"></div>
+      <div className="floating-element floating3"></div>
     </div>
   );
 };
 
-export default Timeline;
+const CardX = ({ id, title, description, date, align }) => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  const alignValue = isMobile ? "center" : align;
+
+  return (
+    <HStack
+      flex={1}
+      p={{ base: 3, sm: 6 }}
+      bg="transparent"
+      spacing={5}
+      rounded="lg"
+      alignItems="center"
+      pos="relative"
+      as={motion.div}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      width={{ base: "100%", md: "70%" }}
+    >
+      <TimelineCard
+        title={title}
+        description={description}
+        date={date}
+        align={alignValue}
+      />
+    </HStack>
+  );
+};
+
+const LineWithDot = ({ isFinal }) => {
+  return (
+    <Flex
+      pos="relative"
+      alignItems="center"
+      mr={{ base: "40px", md: "40px" }}
+      ml={{ base: "0", md: "40px" }}
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <chakra.span
+        position="absolute"
+        left="50%"
+        height={isFinal ? "75px" : "calc(100% + 10px)"}
+        border="1px solid"
+        borderColor={useColorModeValue("#D9D9D9")}
+        top="0px"
+      ></chakra.span>
+      <Box pos="relative" p="25px">
+        <Box
+          pos="absolute"
+          top="0"
+          left="0"
+          bottom="0"
+          right="0"
+          width="100%"
+          height="100%"
+          backgroundSize="cover"
+          backgroundRepeat="no-repeat"
+          backgroundPosition="center center"
+          bg={useColorModeValue("#D9D9D9")}
+          borderRadius="100px"
+          backgroundImage="none"
+          opacity={1}
+        ></Box>
+      </Box>
+    </Flex>
+  );
+};
+
+const EmptyCard = () => {
+  return (
+    <Box
+      flex={{ base: 0, md: 1 }}
+      p={{ base: 0, md: 6 }}
+      bg="transparent"
+    ></Box>
+  );
+};
+
+export default Milestones;

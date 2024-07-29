@@ -28,6 +28,7 @@ const Partners = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               <PartnerCard partner={partner} />
             </motion.div>

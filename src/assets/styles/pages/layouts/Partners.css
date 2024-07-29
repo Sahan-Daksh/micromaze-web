@@ -1,23 +1,15 @@
-/* Partners.css */
-
 /* Container for the partner section */
 .partners-container {
-    /* Equivalent to bg-purple-800 */
     width: 100%;
     padding-top: 7rem;
-    /* Equivalent to py-10 */
     padding-bottom: 2.5rem;
-    /* Equivalent to py-10 */
 }
 
 /* Title of the partner section */
 .partners-title {
     font-size: 5rem;
-    /* Equivalent to text-4xl */
     color: white;
-    /* Equivalent to text-white */
     margin-bottom: 1.5rem;
-    /* Equivalent to mb-6 */
     text-align: center;
 }
 
@@ -33,7 +25,6 @@
     display: flex;
     flex-wrap: nowrap;
     width: 200%;
-    /* Twice the width to accommodate the scrolling effect */
     animation: scroll-left 20s linear infinite;
 }
 
@@ -41,7 +32,14 @@
 .partner-card-wrapper {
     flex: 1 0 auto;
     margin-right: 1.5rem;
-    /* Space between cards */
+}
+
+/* Ensure images fit within their containers */
+.partner-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 150px;
 }
 
 /* Keyframes for infinite scroll animation */

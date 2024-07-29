@@ -8,13 +8,6 @@
   position: absolute;
 }
 
-.inset-0 {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 .h-screen {
   height: 100vh;
 }
@@ -39,22 +32,6 @@
   overflow: hidden;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
 .text-center {
   text-align: center;
 }
@@ -67,40 +44,12 @@
   color: #ffffff;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.sm\:text-base {
-  @media (min-width: 640px) {
-    font-size: 1rem;
-  }
-}
-
-.md\:text-lg {
-  @media (min-width: 768px) {
-    font-size: 1.125rem;
-  }
-}
-
-.lg\:text-xl {
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-  }
-}
-
-.xl\:text-3xl {
-  @media (min-width: 1280px) {
-    font-size: 1.875rem;
-  }
+.text-gray-300 {
+  color: #D1D5DB;
 }
 
 .text-gray-400 {
   color: #9CA3AF;
-}
-
-.text-gray-300 {
-  color: #D1D5DB;
 }
 
 .font-carbon {
@@ -111,89 +60,96 @@
   padding: 1rem;
 }
 
-.w-1/3 {
-  width: 33.333333%;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.bottom-40 {
-  bottom: 10rem;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .title-text {
-  font-size: 3rem;
+  font-size: 2rem;
+
   @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 768px) {
     font-size: 4rem;
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: 1024px) {
     font-size: 5rem;
   }
-  @media (min-width: 1024px) {
+
+  @media (min-width: 1280px) {
     font-size: 6rem;
   }
-  @media (min-width: 1280px) {
-    font-size: 7rem;
-  }
+
   color: white;
   font-weight: bold;
 }
 
 .subtitle-text {
-  font-size: 1.25rem;
+  font-size: 1rem;
+
   @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
     font-size: 2rem;
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: 1024px) {
     font-size: 3rem;
   }
-  @media (min-width: 1024px) {
+
+  @media (min-width: 1280px) {
     font-size: 4rem;
   }
-  @media (min-width: 1280px) {
-    font-size: 5rem;
-  }
+
   color: #D1D5DB;
 }
 
 .content-text {
   font-size: 1rem;
+
   @media (min-width: 640px) {
     font-size: 1.125rem;
   }
+
   @media (min-width: 768px) {
     font-size: 1.25rem;
   }
+
   @media (min-width: 1024px) {
     font-size: 1.5rem;
   }
+
   @media (min-width: 1280px) {
     font-size: 1.875rem;
   }
+
   color: #9CA3AF;
-  font-family: 'Carbon', sans-serif;
+  font-family: 'Carbon',
+  sans-serif;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
 
+  .top-40,
+  .bottom-40 {
+    top: 20rem;
+    bottom: 20rem;
+  }
+
+  .left-10,
+  .right-10 {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .text-left,
+  .text-right {
+    text-align: center;
+  }
+
+  .content-text {
+    font-size: 0.875rem;
+  }
+}

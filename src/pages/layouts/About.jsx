@@ -15,24 +15,23 @@ const About = () => {
         transition={{ duration: 1 }}
       >
         <motion.p
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold"
+          className="title-text"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           What is MicroMaze?
         </motion.p>
-        
       </motion.div>
 
       {/* Text Sections */}
       <motion.div
-        className="absolute top-40 left-10 w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 p-4 bg-transparent rounded-lg"
+        className="absolute top-40 left-10 w-full md:w-1/3 p-4 bg-transparent rounded-lg"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-400 font-carbon text-left pt-5">
+        <p className="content-text text-left pt-5">
           MicroMaze is an inter-university competition designed to challenge
           participants in developing a micro mouse capable of solving a maze
           within a specified timeframe. This competition tests students' skills
@@ -41,12 +40,12 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-40 right-10 w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 p-4 bg-transparent rounded-lg"
+        className="absolute bottom-40 right-10 w-full md:w-1/3 p-4 bg-transparent rounded-lg"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-400 font-carbon text-right mt-4 pl-5 ">
+        <p className="content-text text-right mt-4 pl-5 ">
           The event also includes workshops, mentoring sessions, and networking
           opportunities with industry experts, further enhancing the learning
           experience and preparing students for future careers in technology and

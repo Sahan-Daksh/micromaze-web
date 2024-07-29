@@ -3,7 +3,7 @@ import Hero from "./layouts/Hero";
 import Intro from "./layouts/Intro";
 import About from "./layouts/About";
 import Countdown from "./layouts/Countdown";
-import Milestones from "./layouts/Timeline";
+import Timeline from "./layouts/Timeline";
 import Awards from "./layouts/Awards";
 import FAQ from "./layouts/FAQ";
 import Merch from "./layouts/Merch";
@@ -32,7 +32,7 @@ export default function MainPage() {
 
       <Countdown />
 
-      <Milestones />
+      <Timeline />
 
       <Awards />
 

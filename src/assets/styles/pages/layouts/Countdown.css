@@ -63,6 +63,7 @@
     /* Darkish color for Apple font style */
     position: relative;
     z-index: 2;
+    color: white;
     /* Ensure values are above labels */
     padding-top: 2.75rem !important;
 }

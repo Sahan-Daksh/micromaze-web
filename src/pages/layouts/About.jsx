@@ -4,7 +4,7 @@ import "../../assets/styles/pages/layouts/About.css";
 const About = () => {
   return (
     <div
-      className="relative h-screen w-full bg-cover bg-left bg-no-repeat overflow-hidden"
+      className="relative h-screen w-full bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: "url('./what/RobotAI.png')" }}
     >
       {/* Title Section  className="title-text" */}
@@ -26,12 +26,12 @@ const About = () => {
 
       {/* Text Sections */}
       <motion.div
-        className="absolute top-40 left-10 w-full md:w-1/3 p-4 bg-transparent rounded-lg"
+        className="relative lg:absolute lg:left-10 top-40 w-full md:w-1/3 p-4 rounded-lg backdrop-blur-sm bg-white/10"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <p className="content-text text-left pt-5">
+        <p className="content-text text-left lg:pt-0">
           MicroMaze is an inter-university competition designed to challenge
           participants in developing a micro mouse capable of solving a maze
           within a specified timeframe. This competition tests students' skills
@@ -40,19 +40,19 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-40 right-10 w-full md:w-1/3 p-4 bg-transparent rounded-lg"
+        className="relative lg:absolute lg:bottom-40 lg:right-10 top-48  w-full md:w-1/3 sm:pt-[10] p-1 rounded-lg backdrop-blur-sm bg-white/10"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <p className="content-text text-right mt-4 pl-5 ">
+        <p className="content-text text-right m-1 pl-5 md:pt-0 lg:p-0">
           The event also includes workshops, mentoring sessions, and networking
           opportunities with industry experts, further enhancing the learning
           experience and preparing students for future careers in technology and
           engineering.
         </p>
       </motion.div>
-    </div>
+      </div>
   );
 };
 

@@ -61,7 +61,7 @@
 }
 
 .title-text {
-  font-size: 2rem;
+  font-size: 4rem;
 
   @media (min-width: 640px) {
     font-size: 3rem;

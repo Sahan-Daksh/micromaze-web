@@ -1,6 +1,6 @@
 /* Countdown container */
 .countdown-container {
-    background: url('/counter/Counter.png') no-repeat center center;
+    background: url('/counter/WebsiteCountdown.png') no-repeat center center;
     background-size: cover;
     height: 120vh;
     width: 100%;
@@ -16,7 +16,7 @@
 /* Flex container for time units */
 .countdown-time-units {
     display: flex;
-    gap: 7rem;
+    gap: 4rem;
     /* Increased space between time units */
     margin-bottom: 6rem;
 }
@@ -27,6 +27,7 @@
     flex-direction: column;
     align-items: center;
     
+    
     /* Added more padding */
     position: relative;
     margin-top: 0.5rem;
@@ -35,8 +36,9 @@
 /* Labels for time units */
 .countdown-time-label {
     font-family: 'Carbon', sans-serif;
+    font-weight: bold;
     /* Font for labels */
-    font-size: 4.2rem;
+    font-size: 3rem;
     /* Increased font size */
     color: white;
     position: relative;
@@ -65,7 +67,7 @@
     z-index: 2;
     color: white;
     /* Ensure values are above labels */
-    padding-top: 2.75rem !important;
+    padding-top: -5rem !important;
 }
 
 /* GRAND FINALE section */
@@ -74,26 +76,27 @@
     bottom: 2rem;
     text-align: center;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 
 /* GRAND FINALE text */
 .grand-finale-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
     /* Font for GRAND FINALE text */
-    font-size: 6rem;
+    font-size: 8rem;
     /* Increased font size */
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
+    opacity: 100%;
+    color:white;
 }
 
 /* Overlay Styles */
 .countdown-overlay {
     position: absolute;
     top: 22.5%;
-    left: -4.3%;
-    width: 90%;
-    height: 90%;
+    left: -8.3%;
+    width: 80%;
+    height: 80%;
     background-image: url('/counter/CounterNoBg.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -126,7 +129,7 @@
     }
 
     .grand-finale-text {
-        font-size: 4rem;
+        font-size: 5rem;
         /* Decrease font size for GRAND FINALE text */
     }
 }

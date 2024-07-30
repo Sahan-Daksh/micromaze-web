@@ -24,7 +24,7 @@ const Intro = () => {
 
   return (
     <div
-      className="relative bg-gradient-to-r from-slate-500 to-slate-800 w-full h-screen py-20"
+      className="relative bg-gradient-to-r from-fuchsia-800 to-indigo-900 w-full h-screen py-20"
       style={{
         background: `url('./generic-bg.jpg') no-repeat center center/cover`,
       }}
@@ -43,7 +43,6 @@ const Intro = () => {
             transition={{ duration: 1, delay: 0.5 }}
             data-text="Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer Build Develop Conquer "
           >
-            Build Develop Conquer Build Develop Conquer Build Develop Conquer
             Build Develop Conquer Build Develop Conquer Build Develop Conquer
           </motion.h1>
         </div>

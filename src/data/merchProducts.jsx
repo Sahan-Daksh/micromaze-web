@@ -1,7 +1,7 @@
 export const products = [
   {
     name: "MicroMaze T-shirt",
-    image: "./merch/item1/img1.jpeg",
+    image: "./merch/item1/Tshirt.png",
     price: "1800.00 LKR",
     allImages: [
       "./merch/item1/img1.jpeg",
@@ -18,7 +18,7 @@ export const products = [
   },
   {
     name: "MicroMaze Wristband",
-    image: "./merch/item1/img1.jpeg",
+    image: "./merch/item1/Wristband.png",
     price: "250.00 LKR",
     allImages: [
       "./merch/item1/img1.jpeg",
@@ -35,7 +35,7 @@ export const products = [
   },
   {
     name: "T-Shirt + Wristband + Free Sticker",
-    image: "./merch/item1/img1.jpeg",
+    image: "./merch/item1/Combo.png",
     price: "2000.00 LKR",
     allImages: [
       "./merch/item1/img1.jpeg",
@@ -52,7 +52,7 @@ export const products = [
   },
   {
     name: "Sticker + Wristband",
-    image: "./merch/item1/img1.jpeg",
+    image: "./merch/item1/StickerBand.png",
     price: "450.00 LKR",
     allImages: [
       "./merch/item1/img1.jpeg",

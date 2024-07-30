@@ -36,7 +36,11 @@ const FooterExport = () => {
           >
             <h2 className="footer-title">Micro Maze</h2>
             <p className="footer-description">
-            MicroMaze is an inter-university competition designed to challenge participants in developing a micro mouse capable of solving a maze within a specified timeframe.  The main challenge is to design a micro mouse capable of solving a maze within a specified time frame.  
+              MicroMaze is an inter-university competition designed to challenge
+              participants in developing a micro mouse capable of solving a maze
+              within a specified timeframe. The main challenge is to design a
+              micro mouse capable of solving a maze within a specified time
+              frame.  
             </p>
           </motion.div>
           <motion.div

@@ -1,18 +1,31 @@
 .award-card {
   position: relative;
-  background-size: cover;
-  background-position: center;
+  /* Card background color */
+  border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Shadow effect */
+  transition: box-shadow 0.3s ease;
+  /* Smooth shadow transition */
+}
+
+.award-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  /* More pronounced shadow on hover */
 }
 
 .award-card .award-image {
   position: relative;
   z-index: 10;
+  max-width: 100%;
+  /* Ensure the image scales properly */
+  height: auto;
 }
 
 .award-card .award-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
+  /* Overlay for text visibility */
   z-index: 5;
 }

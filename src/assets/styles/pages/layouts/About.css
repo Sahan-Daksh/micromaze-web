@@ -20,8 +20,8 @@
   background-size: cover;
 }
 
-.bg-center {
-  background-position: center;
+.bg-left {
+  background-position: left;
 }
 
 .bg-no-repeat {
@@ -44,6 +44,14 @@
   color: #ffffff;
 }
 
+.text-gray-300 {
+  color: #D1D5DB;
+}
+
+.text-gray-400 {
+  color: #9CA3AF;
+}
+
 .font-carbon {
   font-family: 'Carbon', sans-serif;
 }
@@ -56,11 +64,11 @@
   font-size: 4rem;
 
   @media (min-width: 640px) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   @media (min-width: 768px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   @media (min-width: 1024px) {
@@ -68,11 +76,33 @@
   }
 
   @media (min-width: 1280px) {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 
   color: white;
   font-weight: bold;
+}
+
+.subtitle-text {
+  font-size: 1rem;
+
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 4rem;
+  }
+
+  color: #D1D5DB;
 }
 
 .content-text {
@@ -91,7 +121,7 @@
   }
 
   @media (min-width: 1280px) {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
   }
 
   color: #9CA3AF;
@@ -102,38 +132,24 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
 
-  .title-text {
-    font-size: 3rem;
-    /* Increased font size for mobile */
+  .top-40,
+  .bottom-40 {
+    top: 20rem;
+    bottom: 20rem;
   }
 
-  .top-24 {
-    top: 8rem;
-    /* Adjusted to create more space below the title */
+  .left-10,
+  .right-10 {
+    left: 1rem;
+    right: 1rem;
   }
-
-  .bottom-24 {
-    bottom: 8rem;
-    /* Adjusted to create more space above the bottom of the screen */
-  }
-
-  .content-text {
-    font-size: 1.125rem;
-    /* Increased font size for better readability on mobile */
-  }
-
-  .mobile-text {
-    padding: 1.5rem;
-    /* Adjust padding for mobile */
-    /* Semi-transparent background for better readability */
-    /* Rounded corners */
-    backdrop-filter: blur(10px);
-    /* Apply blur effect */
-  }
-
 
   .text-left,
   .text-right {
     text-align: center;
+  }
+
+  .content-text {
+    font-size: 0.875rem;
   }
 }

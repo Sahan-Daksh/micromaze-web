@@ -20,7 +20,7 @@ const Awards = () => {
     <div
       className="relative bg-gradient-to-r from-slate-500 to-slate-800 w-full py-20"
       style={{
-        background: `url('./generic-bg.jpg') no-repeat center center/cover`,
+        background: `url('./generic-bg1.png') no-repeat center center/cover`,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -56,17 +56,20 @@ const Awards = () => {
           <AwardCard
             title="1st Runner Up"
             image={awardsImgs.firstRunnerUp.image}
+            shadowImage={awardsImgs.firstRunnerUp.shadow}
             prize="30,000 LKR"
           />
           <AwardCard
             title="Champions"
             image={awardsImgs.winner.image}
+            shadowImage={awardsImgs.winner.shadow}
             prize="40,000 LKR"
             className="winner"
           />
           <AwardCard
             title="2nd Runner Up"
             image={awardsImgs.secondRunnerUp.image}
+            shadowImage={awardsImgs.secondRunnerUp.shadow}
             prize="20,000 LKR"
           />
         </motion.div>

@@ -2,13 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../../assets/styles/components/cards/AwardCard.css";
 
-const AwardCard = ({ title, image, prize, custom }) => {
+const AwardCard = ({ title, image, shadowImage, prize, custom }) => {
   return (
     <motion.div
       className="award-card relative text-center p-6 rounded-lg shadow-lg"
       initial="hidden"
       animate="visible"
       custom={custom}
+      style={{
+        backgroundImage: `url(${shadowImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="relative z-10">
         <img src={image} alt={title} className="award-image mx-auto mb-4" />

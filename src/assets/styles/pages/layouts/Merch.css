@@ -1,5 +1,3 @@
-/* Default styles for desktop and larger screens */
-
 .merch-container {
     color: white;
     padding: 5rem 0;
@@ -33,6 +31,7 @@
 .merch-image {
     width: 100%;
     height: 15rem;
+    /* Increased height for better visibility */
     object-fit: cover;
 }
 
@@ -50,7 +49,6 @@
     color: #d1d5db;
 }
 
-/* Ensure the popup stays on top of everything */
 .merch-popup-overlay {
     position: fixed;
     top: 0;
@@ -62,9 +60,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* High z-index to stay on top */
-    overflow: auto;
-    /* Ensure it can handle overflow content */
 }
 
 .merch-popup {
@@ -77,11 +72,10 @@
     max-width: 90%;
     max-height: 90%;
     width: 80%;
+    /* Increased width */
     height: auto;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
-    /* Ensure it is above the overlay */
 }
 
 .merch-popup-close {
@@ -93,20 +87,19 @@
     border: none;
     color: white;
     cursor: pointer;
-    z-index: 1002;
-    /* Ensure it is above the popup */
 }
-
 
 .merch-popup-content {
     display: flex;
     flex-direction: row;
-    width: 100%;
     height: auto;
+    /* Adjusted for better responsiveness */
+    width: 100%;
 }
 
 .merch-popup-details {
     flex: 2;
+    /* Adjusted for better layout */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -162,14 +155,19 @@
     max-height: 60vh;
     object-fit: contain;
     border-radius: 1rem;
+    /* Curved edges */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
     border: 2px solid #d7336f;
+    /* Optional border */
 }
 
 .merch-popup-thumbnail {
     flex: 0 0 auto;
     width: 100px;
+    /* Thumbnail width */
     height: 100px;
+    /* Thumbnail height */
     object-fit: cover;
     cursor: pointer;
     transition: opacity 0.3s;
@@ -185,40 +183,8 @@
     opacity: 0.7;
 }
 
-/* Mobile-specific styles */
-
-@media (max-width: 600px) {
+@media (min-width: 360px) and (max-width: 1200px) {
     .merch-title {
-        font-size: 2.6rem;
+      font-size: 2.6rem;
     }
-
-    .merch-popup {
-        width: 95%;
-        padding: 0.5rem;
-    }
-
-    .merch-popup-content {
-        flex-direction: column;
-    }
-
-    .merch-popup-name {
-        font-size: 1.25rem;
-    }
-
-    .merch-popup-price {
-        font-size: 1rem;
-    }
-
-    .merch-popup-description {
-        font-size: 0.9rem;
-    }
-
-    .merch-popup-button {
-        padding: 0.5rem 1rem;
-    }
-
-    .merch-popup-thumbnail {
-        width: 60px;
-        height: 60px;
-    }
-}
+  }

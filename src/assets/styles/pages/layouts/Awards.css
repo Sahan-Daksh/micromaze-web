@@ -1,3 +1,4 @@
+/* Awards.css */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -20,30 +21,4 @@
 
 .animate-fade-in-up.delay-4s {
     animation-delay: 0.4s;
-}
-
-/* Ensure the AwardCard images have consistent sizing and positioning */
-.award-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.award-card img {
-    width: 100%;
-    height: auto;
-}
-
-.award-card .shadow-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.award-card .main-image {
-    position: relative;
-    z-index: 2;
 }

@@ -27,48 +27,37 @@
   width: 100%;
 }
 
-.footer-info {
-  flex: 3; /* Increase the flex value to make it larger */
-  min-width: 500px; /* Adjust the minimum width */
-  padding: 20px; /* Add padding for more space */
-  border-radius: 10px; /* Optional: Add border-radius for better visuals */
-}
-
+.footer-info,
 .footer-connect {
-  flex: 1; /* Keep the smaller flex value */
+  flex: 1;
   min-width: 300px;
-  text-align: right; /* Aligns content to the right */
-  padding: 20px; /* Add padding for more space */
-  border-radius: 10px; /* Optional: Add border-radius for better visuals */
 }
 
 .footer-title {
-  font-size: 24px; /* Increase font size for the title */
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 10px;
   color: #7d26af;
   font-weight: bold;
 }
 
 .footer-description {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .footer-email {
-  margin-top: 15px; /* Increase margin for spacing */
-  font-size: 16px; /* Increase font size for better visibility */
+  margin-top: 10px;
+  font-size: 14px;
   color: #7d26af;
 }
 
 .social-media {
   display: flex;
-  justify-content: flex-end; /* Aligns social media icons to the right */
-  gap: 20px; /* Increase gap for more spacing */
-  margin-bottom: 15px; /* Add margin for better spacing */
+  gap: 15px;
 }
 
 .social-media a {
   color: #e0e0e0;
-  font-size: 26px; /* Increase font size for icons */
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +88,7 @@
   }
 
   .footer-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .footer-description {
@@ -107,22 +96,12 @@
   }
 
   .social-media a {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .footer-sections {
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer-info,
-  .footer-connect {
-    text-align: center;
-    padding: 15px; /* Adjust padding for mobile */
-  }
-
-  .social-media {
-    justify-content: center;
   }
 }
 
@@ -132,7 +111,7 @@
   }
 
   .footer-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .footer-description {
@@ -140,11 +119,6 @@
   }
 
   .social-media a {
-    font-size: 20px;
-  }
-
-  .footer-info,
-  .footer-connect {
-    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 18px;
   }
 }

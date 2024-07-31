@@ -23,7 +23,7 @@ const Hero = () => {
       >
         <h1
           className="hero-heading"
-          style={{ fontFamily: '"SF Pro Display", sans-serif' }}
+          style={{ fontFamily: '"Carbon", sans-serif' }}
         >
           MicroMaze
         </h1>

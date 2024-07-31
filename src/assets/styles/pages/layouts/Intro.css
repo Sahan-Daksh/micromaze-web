@@ -82,16 +82,20 @@
 }
 
 .intro-stat-number {
-    font-size: 8rem;
+    font-size: 9rem;
     font-weight: 700;
-    color: #A9A9A9;
+    background: #E4EEF1;
+background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
     font-family: 'SF Pro Display', sans-serif;
     will-change: text-shadow;
 }
 
 .intro-stat-text {
-    font-size: 3rem;
-    color: #A9A9A9;
+    font-size: 4rem;
+    color: #ffffff;
     font-family: 'Carbon', sans-serif;
     will-change: color;
 }

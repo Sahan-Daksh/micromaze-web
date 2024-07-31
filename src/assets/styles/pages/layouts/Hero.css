@@ -31,10 +31,9 @@
 }
 
 .hero-heading {
-  font-size: 10rem;
+  font-size: 13rem;
   font-weight: 600;
-  font-family: 'SF Pro Display', sans-serif;
-  height: 210px;
+  height: 320px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;

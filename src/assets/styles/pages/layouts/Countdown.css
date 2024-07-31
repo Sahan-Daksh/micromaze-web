@@ -65,7 +65,11 @@
     /* Darkish color for Apple font style */
     position: relative;
     z-index: 2;
-    color: white;
+    background: #E4EEF1;
+    background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
     /* Ensure values are above labels */
     padding-top: -5rem !important;
 }

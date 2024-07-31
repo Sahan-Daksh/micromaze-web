@@ -1,43 +1,53 @@
+import React from "react";
 import {
   Box,
   chakra,
   Container,
+  Text,
   HStack,
+  VStack,
   Flex,
   useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import TimelineCard from "../../components/cards/TimelineCard";
-import "../../assets/styles/pages/layouts/Timeline.css";
 
 const milestones = [
   {
     id: 1,
     date: "20th July, 2024",
     title: "Registrations Open",
-    description: ``,
+    description: `The beginning of an exciting journey!`,
   },
   {
     id: 2,
     date: "18th July, 2024",
     title: "Awareness Session",
-    description: ``,
+    description: `An informative session to kick things off.`,
   },
   {
     id: 3,
     date: "18th July, 2024",
     title: "Registrations Close",
-    description: ``,
+    description: `Last chance to be a part of this event.`,
   },
-  { id: 4, date: "24th July, 2024", title: "Online Session", description: `` },
+  {
+    id: 4,
+    date: "24th July, 2024",
+    title: "Online Session",
+    description: `Join us online for an engaging session.`,
+  },
   {
     id: 5,
     date: "10th August, 2024",
     title: "Qualifier Round",
-    description: ``,
+    description: `Show your skills and qualify for the finale.`,
   },
-  { id: 6, date: "11th August, 2024", title: "The Finale", description: `` },
+  {
+    id: 6,
+    date: "11th August, 2024",
+    title: "The Finale",
+    description: `The grand finale - don't miss it!`,
+  },
 ];
 
 const Milestones = () => {
@@ -45,122 +55,139 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <div className="timeline-container">
-      <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
-        <chakra.h3
-          fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
-          fontWeight="bold"
-          mb={18}
-          textAlign="center"
-          color="white"
-          as={motion.h3}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="timeline-header"
-        >
-          Timeline
+    <Box position="relative">
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        bgGradient="linear(to-r, purple.400, pink.400, red.400)"
+        zIndex={-1}
+      />
+      <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} borderRadius="lg">
+        <chakra.h3 fontSize="6xl" fontWeight="bold" mb={18} textAlign="center">
+          Milestones
         </chakra.h3>
-        {milestones.map((milestone, index) => (
+        {milestones.map((milestone) => (
           <Flex key={milestone.id} mb="10px">
-            {isDesktop && index % 2 === 0 && (
+            {/* Desktop view(left card) */}
+            {isDesktop && milestone.id % 2 === 0 && (
               <>
                 <EmptyCard />
-                <LineWithDot isFinal={index === milestones.length - 1} />
-                <CardX {...milestone} align="right" />
+                <LineWithDot />
+                <Card {...milestone} />
               </>
             )}
 
+            {/* Mobile view */}
             {isMobile && (
               <>
-                <LineWithDot isFinal={index === milestones.length - 1} />
-                <CardX {...milestone} align="center" />
+                <LineWithDot />
+                <Card {...milestone} />
               </>
             )}
 
-            {isDesktop && index % 2 !== 0 && (
+            {/* Desktop view(right card) */}
+            {isDesktop && milestone.id % 2 !== 0 && (
               <>
-                <CardX {...milestone} align="left" />
-                <LineWithDot isFinal={index === milestones.length - 1} />
+                <Card {...milestone} />
+                <LineWithDot />
                 <EmptyCard />
               </>
             )}
           </Flex>
         ))}
       </Container>
-      {/* Adding stars and floating elements */}
-      <div className="star star1"></div>
-      <div className="star star2"></div>
-      <div className="star star3"></div>
-      <div className="floating-element floating1"></div>
-      <div className="floating-element floating2"></div>
-      <div className="floating-element floating3"></div>
-    </div>
+    </Box>
   );
 };
 
-const CardX = ({ id, title, description, date, align }) => {
+const Card = ({ id, title, description, date }) => {
+  // For even id show card on left side
+  // For odd id show card on right side
+  const isEvenId = id % 2 === 0;
+  let borderWidthValue = isEvenId ? "15px 15px 15px 0" : "15px 0 15px 15px";
+  let leftValue = isEvenId ? "-15px" : "unset";
+  let rightValue = isEvenId ? "unset" : "-15px";
+
   const isMobile = useBreakpointValue({ base: true, md: false });
-  const alignValue = isMobile ? "center" : align;
+  if (isMobile) {
+    leftValue = "-15px";
+    rightValue = "unset";
+    borderWidthValue = "15px 15px 15px 0";
+  }
 
   return (
     <HStack
       flex={1}
       p={{ base: 3, sm: 6 }}
-      bg="transparent"
+      bg={useColorModeValue("gray.100", "gray.800")}
       spacing={5}
       rounded="lg"
       alignItems="center"
       pos="relative"
-      as={motion.div}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      width={{ base: "100%", md: "70%" }}
+      _before={{
+        content: `""`,
+        w: "0",
+        h: "0",
+        borderColor: `transparent ${useColorModeValue(
+          "#edf2f6",
+          "#1a202c"
+        )} transparent`,
+        borderStyle: "solid",
+        borderWidth: borderWidthValue,
+        position: "absolute",
+        left: leftValue,
+        right: rightValue,
+        display: "block",
+      }}
     >
-      <TimelineCard
-        title={title}
-        description={description}
-        date={date}
-        align={alignValue}
-      />
+      <Box>
+        <Text fontSize="lg" color={isEvenId ? "teal.400" : "blue.400"}>
+          {date}
+        </Text>
+
+        <VStack spacing={2} mb={3} textAlign="left">
+          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+            {title}
+          </chakra.h1>
+          <Text fontSize="md">{description}</Text>
+        </VStack>
+      </Box>
     </HStack>
   );
 };
 
-const LineWithDot = ({ isFinal }) => {
+const LineWithDot = () => {
   return (
     <Flex
       pos="relative"
       alignItems="center"
       mr={{ base: "40px", md: "40px" }}
       ml={{ base: "0", md: "40px" }}
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
     >
       <chakra.span
         position="absolute"
         left="50%"
-        height={isFinal ? "75px" : "calc(100% + 10px)"}
+        height="calc(100% + 10px)"
         border="1px solid"
-        borderColor={useColorModeValue("#D9D9D9")}
+        borderColor={useColorModeValue("gray.200", "gray.700")}
         top="0px"
       ></chakra.span>
-      <Box pos="relative" p="25px">
+      <Box pos="relative" p="10px">
         <Box
           pos="absolute"
           top="0"
           left="0"
           bottom="0"
           right="0"
-          width="100%"
-          height="100%"
+          width="12px"
+          height="12px"
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center center"
-          bg={useColorModeValue("#D9D9D9")}
+          bg={useColorModeValue("gray.600", "gray.200")}
           borderRadius="100px"
           backgroundImage="none"
           opacity={1}

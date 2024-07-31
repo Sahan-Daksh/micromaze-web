@@ -20,7 +20,7 @@ const Awards = () => {
     <div
       className="relative bg-gradient-to-r from-slate-500 to-slate-800 w-full py-20"
       style={{
-        background: `url('./microIntro.png') no-repeat center center/cover`,
+        background: `url('./bg2.png') no-repeat center center/cover`,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>

@@ -64,6 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
 }
 
 /* Expanded FAQ answer */
@@ -73,6 +74,7 @@
     background-color: #1a202c;
     animation: fadeIn 0.3s ease;
     /* Fade-in animation */
+    text-align: left;
 }
 
 /* Active state for FAQ question */

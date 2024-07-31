@@ -15,7 +15,7 @@ const socialMediaLinks = [
     href: "https://youtube.com",
     icon: () => <i className="fab fa-youtube"></i>,
   },
-  { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
+  // { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
 ];
 
 const FooterExport = () => {

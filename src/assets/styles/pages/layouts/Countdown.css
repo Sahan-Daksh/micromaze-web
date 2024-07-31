@@ -91,7 +91,7 @@
     /* Increased font size */
     font-weight: bold;
     opacity: 100%;
-    color:white;
+    color: rgb(223, 185, 230);
 }
 
 /* Overlay Styles */
@@ -105,7 +105,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 15;
+    z-index: 5;
 }
 
 /* Mobile responsiveness */

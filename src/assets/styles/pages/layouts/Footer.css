@@ -2,6 +2,7 @@
 .footer {
   background-color: #1c1c1c;
   color: #e0e0e0;
+  font-family:'Carbon',sans-serif;
   padding: 20px 10px;
   font-size: 14px;
   position: relative;
@@ -45,7 +46,9 @@
 .footer-title {
   font-size: 24px; /* Increase font size for the title */
   margin-bottom: 15px;
-  color: #7d26af;
+  background: linear-gradient(169deg, #D4C0F7 0%, #564E66 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 

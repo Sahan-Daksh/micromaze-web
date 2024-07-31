@@ -34,7 +34,7 @@ const FooterExport = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="footer-title">Micro Maze</h2>
+            <h2 className="footer-title">MicroMaze</h2>
             <p className="footer-description">
               MicroMaze is an inter-university competition designed to challenge
               participants in developing a micro mouse capable of solving a maze
@@ -66,7 +66,7 @@ const FooterExport = () => {
                 </motion.a>
               ))}
             </div>
-            <p className="footer-email">@ieeeras@iit.ac.lk</p>
+            <p className="footer-email" href="ieeeras@iit.ac.lk">@ieeeras@iit.ac.lk</p>
           </motion.div>
         </div>
       </div>

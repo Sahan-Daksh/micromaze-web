@@ -64,7 +64,8 @@ const Milestones = () => {
     >
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} borderRadius="lg">
         <chakra.h3
-          fontSize="6xl"
+          fontSize="8xl"
+          fontFamily={'SF Pro Display'}
           fontWeight="bold"
           mb={18}
           textAlign="center"

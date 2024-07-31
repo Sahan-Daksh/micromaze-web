@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       className="relative h-screen w-full bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{ backgroundImage: "url('./what/IntroBg.png')" }}
+      style={{ background: `url('./bgFx.png') no-repeat center center/cover` }}
     >
       {/* Title Section */}
       <motion.div

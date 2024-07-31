@@ -1,6 +1,6 @@
 /* Countdown container */
 .countdown-container {
-    background: url('/counter/WebsiteCountdown.png') no-repeat center center;
+    background: url('/counter/countBg.png') no-repeat center center;
     background-size: cover;
     height: 120vh;
     width: 100%;
@@ -36,17 +36,17 @@
 /* Labels for time units */
 .countdown-time-label {
     font-family: 'Carbon', sans-serif;
-    font-weight: bold;
+
     /* Font for labels */
     font-size: 3rem;
     /* Increased font size */
     color: white;
     position: relative;
     /* Changed to absolute positioning */
-    left: -1rem;
-    margin-top: -1rem;
+    left: -3rem;
+    margin-top: 0rem;
     /* Shift labels to the left */
-    margin-bottom: 0;
+    margin-bottom: -8.2rem;
     /* No bottom margin needed */
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
     /* Darker shadow for better readability */

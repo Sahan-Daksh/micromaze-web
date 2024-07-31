@@ -33,7 +33,7 @@ const milestones = [
   {
     id: 4,
     date: "24th July, 2024",
-    title: "Online Session",
+    title: "Online Workshop",
     description: `Join us online for an engaging session.`,
   },
   {
@@ -46,7 +46,7 @@ const milestones = [
     id: 6,
     date: "11th August, 2024",
     title: "The Finale",
-    description: `The grand finale - don't miss it!`,
+    description: `The grand finale - Get Ready to conquer the Maze!`,
   },
 ];
 

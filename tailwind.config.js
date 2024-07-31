@@ -38,6 +38,7 @@ export default {
         black: "#000000",
       },
       fontFamily: {
+        'sf-pro-display': ['"SF Pro Display"', 'sans-serif'],
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",

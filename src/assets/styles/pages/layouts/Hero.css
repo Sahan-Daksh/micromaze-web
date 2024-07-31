@@ -32,13 +32,13 @@
 
 .hero-heading {
   font-size: 10rem;
-  height: -300px;
+  font-weight: 600;
+  font-family: 'SF Pro Display', sans-serif;
+  height: 210px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
   transition: transform 0.3s ease;
-  font-weight: 800;
-  font-style: normal;
 }
 
 .hero-heading:hover {

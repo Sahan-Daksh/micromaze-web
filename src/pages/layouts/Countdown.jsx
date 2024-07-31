@@ -61,7 +61,7 @@ const Countdown = () => {
           </div>
         </div>
         <div className="grand-finale">
-          <p className="grand-finale-text">Grand Finale</p>
+          <p className="grand-finale-text">The Grand Finale</p>
         </div>
       </div>
     </div>

@@ -54,6 +54,9 @@
 
 .title-text {
   font-size: 4rem;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: bold;
+
 
   @media (min-width: 640px) {
     font-size: 4rem;
@@ -94,9 +97,8 @@
     font-size: 1.75rem;
   }
 
-  color: #9CA3AF;
-  font-family: 'Carbon',
-  sans-serif;
+  color: #ffffff;
+  font-family: 'Carbon',sans-serif;
 }
 
 /* Responsive Adjustments */

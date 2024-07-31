@@ -19,12 +19,16 @@
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'SF Pro Display', sans-serif;
+  margin-top:-50px;
   margin-bottom: 10px;
 }
 
 .contact-subtitle {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-family: 'SF Pro Display', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -32,7 +36,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .contact-card {
@@ -52,28 +56,34 @@
 }
 
 .contact-card-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
   object-fit: cover;
   margin-bottom: 10px;
-  margin-left: 32%;
+  margin-left: 15%;
 }
 
 .contact-card-title {
   font-size: 1.2rem;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style:italic;
+  font-weight: 400;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
 .contact-card-name {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'SF Pro Display', sans-serif;
   margin-bottom: 10px;
   color: #dddddd;
 }
 
 .contact-card-detail {
   font-size: 0.9rem;
+  font-family: 'SF Pro Display', sans-serif;
   color: #bbbbbb;
 }
 

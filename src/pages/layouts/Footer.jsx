@@ -4,7 +4,7 @@ import "../../assets/styles/pages/layouts/Footer.css"; // Import the CSS file
 // Define social media links
 const socialMediaLinks = [
   {
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/ieeerasiit?mibextid=LQQJ4d",
     icon: () => <i className="fab fa-facebook-f"></i>,
   },
   {
@@ -12,8 +12,8 @@ const socialMediaLinks = [
     icon: () => <i className="fab fa-linkedin-in"></i>,
   },
   {
-    href: "https://youtube.com",
-    icon: () => <i className="fab fa-youtube"></i>,
+    href: "https://www.instagram.com/ieeeras_iit?igsh=M2E3eTA4em1tcm9w",
+    icon: () => <i className="fab fa-instagram"></i>,
   },
   // { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
 ];

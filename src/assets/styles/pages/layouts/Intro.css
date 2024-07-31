@@ -9,7 +9,7 @@
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-image: url('./bdc.png');
+    background-image: url('./microIntro.png');
     overflow: hidden;
 }
 
@@ -35,12 +35,12 @@
 
 .intro-title {
     font-size: 10vw;
-    font-weight: 700;
+  font-weight: 700;
+  font-family: 'SF Pro Display', sans-serif;
     color: white;
     text-align: center;
     display: inline-block;
     animation: scrollText 20s linear infinite;
-    font-family: 'SF Pro Display', sans-serif;
     will-change: transform;
 }
 
@@ -92,7 +92,7 @@
 .intro-stat-text {
     font-size: 3rem;
     color: #A9A9A9;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Carbon', sans-serif;
     will-change: color;
 }
 

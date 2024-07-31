@@ -6,9 +6,11 @@
 }
 
 .merch-title {
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-top: -50px;
+    margin-bottom: 4rem;
     text-align: center;
 }
 

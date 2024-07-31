@@ -15,7 +15,7 @@ const socialMediaLinks = [
     href: "https://www.instagram.com/ieeeras_iit?igsh=M2E3eTA4em1tcm9w",
     icon: () => <i className="fab fa-instagram"></i>,
   },
-  { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
+  // { href: "https://tiktok.com", icon: () => <i className="fab fa-tiktok"></i> },
 ];
 
 const FooterExport = () => {

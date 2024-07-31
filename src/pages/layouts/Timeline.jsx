@@ -55,19 +55,22 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box position="relative">
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        bgGradient="linear(to-r, purple.400, pink.400, red.400)"
-        zIndex={-1}
-      />
+    <Box
+      position="relative"
+      bgImage="url('/timeline/bg.png')"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      bgSize="cover"
+    >
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} borderRadius="lg">
-        <chakra.h3 fontSize="6xl" fontWeight="bold" mb={18} textAlign="center">
-          Milestones
+        <chakra.h3
+          fontSize="6xl"
+          fontWeight="bold"
+          mb={18}
+          textAlign="center"
+          style={{ color: "white" }}
+        >
+          Timeline
         </chakra.h3>
         {milestones.map((milestone) => (
           <Flex key={milestone.id} mb="10px">
@@ -164,15 +167,15 @@ const LineWithDot = () => {
     <Flex
       pos="relative"
       alignItems="center"
-      mr={{ base: "40px", md: "40px" }}
-      ml={{ base: "0", md: "40px" }}
+      mr={{ base: '40px', md: '40px' }}
+      ml={{ base: '0', md: '40px' }}
     >
       <chakra.span
         position="absolute"
         left="50%"
         height="calc(100% + 10px)"
         border="1px solid"
-        borderColor={useColorModeValue("gray.200", "gray.700")}
+        borderColor={useColorModeValue('gray.200', 'gray.700')}
         top="0px"
       ></chakra.span>
       <Box pos="relative" p="10px">
@@ -182,12 +185,12 @@ const LineWithDot = () => {
           left="0"
           bottom="0"
           right="0"
-          width="12px"
-          height="12px"
+          width="100%"
+          height="100%"
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center center"
-          bg={useColorModeValue("gray.600", "gray.200")}
+          bg={useColorModeValue('gray.600', 'gray.200')}
           borderRadius="100px"
           backgroundImage="none"
           opacity={1}
@@ -196,7 +199,6 @@ const LineWithDot = () => {
     </Flex>
   );
 };
-
 const EmptyCard = () => {
   return (
     <Box

@@ -26,7 +26,7 @@ const Intro = () => {
     <div
       className="relative bg-gradient-to-r from-fuchsia-800 to-indigo-900 w-full h-screen py-20"
       style={{
-        background: `url('./generic-bg.jpg') no-repeat center center/cover`,
+        background: `url('./microIntro.png') no-repeat center center/cover`,
       }}
     >
       <motion.div

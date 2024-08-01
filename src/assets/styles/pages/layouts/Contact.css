@@ -110,3 +110,20 @@
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-top:-30px;
+    margin-bottom: 10px;
+  }
+
+  .contact-subtitle{
+    font-size: 2rem;
+    font-family: 'Carbon', sans-serif;
+    margin-bottom: 20px;
+  }
+}
+

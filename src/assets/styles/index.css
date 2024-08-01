@@ -1,20 +1,25 @@
 /* Importing Apple fonts via CSS properties */
+@import url("https://use.typekit.net/hzv1rhy.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 /* Root variables */
 :root {
   --font-sf: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   --font-sf-mono: "SF Mono", "Menlo", "Courier", monospace;
   --font-new-york: "New York", serif;
+  --font-carbon: "carbon", sans-serif;
 }
 
 /* Base styles */
 @layer base {
   body {
     @apply font-sans text-n-1 text-base;
-    font-family: var(--font-sf);
+    font-family: var(--font-carbon);
   }
 }
 

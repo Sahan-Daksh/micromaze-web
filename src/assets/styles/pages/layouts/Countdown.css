@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'carbon', sans-serif;
     /* Default font */
 }
 
@@ -85,12 +85,13 @@
 
 /* GRAND FINALE text */
 .grand-finale-text {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'carbon', sans-serif;
     /* Font for GRAND FINALE text */
     font-size: 8rem;
     /* Increased font size */
     font-weight: bold;
     opacity: 100%;
+    letter-spacing: 0.45cm;
     color: rgb(223, 185, 230);
 }
 

@@ -65,7 +65,7 @@ const Milestones = () => {
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} borderRadius="lg">
         <chakra.h3
           fontSize="8xl"
-          fontFamily={'SF Pro Display'}
+          fontFamily="carbon"
           fontWeight="bold"
           mb={18}
           textAlign="center"
@@ -148,15 +148,15 @@ const Card = ({ id, title, description, date }) => {
       }}
     >
       <Box>
-        <Text fontSize="lg" color={isEvenId ? "teal.400" : "blue.400"}>
+        <Text fontSize="lg" fontFamily={"carbon"} color={isEvenId ? "teal.400" : "blue.400"}>
           {date}
         </Text>
 
         <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+          <chakra.h1 fontFamily={"carbon"} fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
             {title}
           </chakra.h1>
-          <Text fontSize="md">{description}</Text>
+          <Text fontFamily={"carbon"} fontSize="md">{description}</Text>
         </VStack>
       </Box>
     </HStack>

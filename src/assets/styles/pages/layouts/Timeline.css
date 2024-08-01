@@ -3,11 +3,12 @@
   position: relative;
   overflow: hidden;
   padding: 20px;
-  font-family: "'Carbon', sans-serif";
+  font-family: "carbon", sans-serif;
 }
 
 .timeline-header {
   font-size: 2rem;
+  font-family: "carbon", sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;

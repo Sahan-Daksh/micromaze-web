@@ -6,6 +6,7 @@
     padding: 2.5rem 0;
     display: flex;
     align-items: flex-start;
+    animation: gradientAnimation 10s ease infinite;
     justify-content: center;
     flex-wrap: wrap;
     /* For better responsiveness */
@@ -24,8 +25,9 @@
 /* Heading for FAQ section */
 .faq-heading {
     font-size: 5rem;
-    font-weight: bold;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: "reross-quadratic", sans-serif;
+font-weight: 400;
+font-style: normal;
     margin-top:-30px;
     text-transform: uppercase;
     color: #ffffff;

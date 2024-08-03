@@ -5,13 +5,15 @@
 font-weight: 700;
 font-style: normal;
     color: white;
+    animation: gradientAnimation 10s ease infinite;
     padding: 5rem 0;
 }
 
 .merch-title {
     font-size: 5rem;
-    font-weight: bold;
-    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-family: "reross-quadratic", sans-serif;
+font-style: normal;
     margin-top: -50px;
     margin-bottom: 4rem;
     text-align: center;

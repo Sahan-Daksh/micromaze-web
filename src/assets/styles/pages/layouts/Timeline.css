@@ -3,13 +3,15 @@
   position: relative;
   overflow: hidden;
   padding: 20px;
-  font-family: "carbon", sans-serif;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: "t26-carbon", monospace;
 }
 
 .timeline-header {
   font-size: 2rem;
-  font-family: "carbon", sans-serif;
-  font-weight: bold;
+  font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: normal;
   margin-bottom: 20px;
   text-align: center;
   color: white;

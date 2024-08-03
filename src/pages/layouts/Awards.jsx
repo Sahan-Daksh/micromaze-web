@@ -28,7 +28,7 @@ const Awards = () => {
       <div className="relative container mx-auto text-center text-white px-4">
         <div className="mb-10">
           <motion.h2
-            className="text-5xl sm:text-5xl md:text-8xl font-bold font-family:'SF Pro Display',sans-serif"
+            className="font-reross font-normal text-5xl sm:text-5xl md:text-8xl font-bold "
             initial="hidden"
             animate="visible"
             variants={fadeInUpVariants}

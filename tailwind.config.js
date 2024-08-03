@@ -6,6 +6,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'reross': ['"reross-quadratic"', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: 400,
+      },
       colors: {
         color: {
           1: "#AC6AFF",

@@ -36,7 +36,8 @@
 .intro-title {
     font-size: 10vw;
   font-weight: 700;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "reross-quadratic", sans-serif;
+font-style: bold;
     color: rgb(223, 185, 230);
     text-align: center;
     display: inline-block;
@@ -88,7 +89,6 @@
 background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-
     font-family: 'SF Pro Display', sans-serif;
     will-change: text-shadow;
 }

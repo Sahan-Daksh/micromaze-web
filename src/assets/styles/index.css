@@ -12,7 +12,7 @@
   --font-sf: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   --font-sf-mono: "SF Mono", "Menlo", "Courier", monospace;
   --font-new-york: "New York", serif;
-  --font-carbon: "carbon", sans-serif;
+  --font-carbon: "t26-carbon", monospace;
 }
 
 /* Base styles */

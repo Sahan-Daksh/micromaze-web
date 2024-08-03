@@ -35,9 +35,10 @@
   font-weight: 600;
   height: 320px;
   color: #ffffff;
-  font-family: "jaf-mashine-rounded", sans-serif;
-font-weight: 400;
+font-family: "t26-carbon", monospace;
+font-weight: 600;
 font-style: normal;
+
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
   transition: transform 0.3s ease;

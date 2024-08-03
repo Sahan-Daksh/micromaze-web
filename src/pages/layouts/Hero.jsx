@@ -23,7 +23,7 @@ const Hero = () => {
       >
         <h1
           className="hero-heading"
-          style={{ fontFamily: '"jaf-mashine-rounded", sans-serif' }}
+          style={{ fontFamily: '"t26-carbon", monospace' }}
         >
           MicroMaze
         </h1>

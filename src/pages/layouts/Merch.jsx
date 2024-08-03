@@ -106,7 +106,7 @@ export default function Merch() {
                     {selectedProduct.description || "No description available."}
                   </p>
                   <a
-                    href={selectedProduct.buyLink || "#"}
+                    href={selectedProduct.buyLink || "https://bit.ly/MicroMaze-Merch"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="merch-popup-button"

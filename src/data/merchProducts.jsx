@@ -1,17 +1,5 @@
 export const products = [
   {
-    name: "MicroMaze T-shirt",
-    image: "./merch/item1/Tshirt.png",
-    price: "1800.00 LKR",
-    allImages: [
-      "./merch/item1/Tshirt.png",
-      "./merch/item1/Tshirt.png",
-      "./merch/item1/Tshirt.png",
-    ],
-    description:
-      "A captivating maze pattern in a vibrant purple hue, representing the intricate puzzles faced by MicroMaze competitors.Black with purple accents.High-quality, breathable fabric for all-day comfort.",
-  },
-  {
     name: "MicroMaze Wristband",
     image: "./merch/item1/Wristband.png",
     price: "250.00 LKR",
@@ -23,6 +11,31 @@ export const products = [
     description:
       "A captivating maze pattern in a vibrant purple hue, representing the challenges of the MicroMaze competition.Black with purple accents. High-quality, durable silicone.",
   },
+  
+  {
+    name: "Sticker + Wristband",
+    image: "./merch/item1/StickerBand.png",
+    price: "450.00 LKR",
+    allImages: [
+      "./merch/item1/StickerBand.png",
+      "./merch/item1/Wristband.png",
+    ],
+    description:
+      "Durable silicone with a matching maze design and A variety of cool MicroMaze and IEEE-RAS stickers.",
+  },
+  {
+    name: "MicroMaze T-shirt",
+    image: "./merch/item1/Tshirt.png",
+    price: "1800.00 LKR",
+    allImages: [
+      "./merch/item1/Tshirt.png",
+      "./merch/item1/Tshirt.png",
+      "./merch/item1/Tshirt.png",
+    ],
+    description:
+      "A captivating maze pattern in a vibrant purple hue, representing the intricate puzzles faced by MicroMaze competitors.Black with purple accents.High-quality, breathable fabric for all-day comfort.",
+  },
+  
   {
     name: "T-Shirt + Wristband + Free Sticker",
     image: "./merch/item1/Combo.png",
@@ -34,16 +47,5 @@ export const products = [
     ],
     description:
       "T-Shirt: High-quality, breathable fabric with a unique maze pattern. Durable silicone with a matching maze design.A variety of cool MicroMaze and IEEE-RAS stickers.",
-  },
-  {
-    name: "Sticker + Wristband",
-    image: "./merch/item1/StickerBand.png",
-    price: "450.00 LKR",
-    allImages: [
-      "./merch/item1/StickerBand.png",
-      "./merch/item1/Wristband.png",
-    ],
-    description:
-      "Durable silicone with a matching maze design and A variety of cool MicroMaze and IEEE-RAS stickers.",
   },
 ];

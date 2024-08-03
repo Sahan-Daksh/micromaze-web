@@ -94,9 +94,11 @@ background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
 }
 
 .intro-stat-text {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffffff;
-    font-family: 'Carbon', sans-serif;
+    font-family: "t26-carbon", monospace;
+    font-weight: 400;
+    font-style: normal; 
     will-change: color;
 }
 

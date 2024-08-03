@@ -2,14 +2,14 @@
 .countdown-container {
     background: url('/counter/countBg.png') no-repeat center center;
     background-size: cover;
-    height: 120vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    font-family: 'carbon', sans-serif;
+    font-family: "SF Pro Display", sans-serif;
     /* Default font */
 }
 
@@ -35,7 +35,7 @@
 
 /* Labels for time units */
 .countdown-time-label {
-    font-family: 'Carbon', sans-serif;
+    font-family: "t26-carbon", monospace;
 
     /* Font for labels */
     font-size: 3rem;
@@ -85,13 +85,12 @@
 
 /* GRAND FINALE text */
 .grand-finale-text {
-    font-family: 'carbon', sans-serif;
+    font-family: "SF Pro Display", sans-serif;
     /* Font for GRAND FINALE text */
     font-size: 8rem;
     /* Increased font size */
     font-weight: bold;
     opacity: 100%;
-    letter-spacing: 0.45cm;
     color: rgb(223, 185, 230);
 }
 

@@ -2,7 +2,9 @@
 .footer {
   background-color: #1c1c1c;
   color: #e0e0e0;
-  font-family:'Carbon',sans-serif;
+  font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: normal;
   padding: 20px 10px;
   font-size: 14px;
   position: relative;

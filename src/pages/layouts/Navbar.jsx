@@ -23,7 +23,7 @@ const Navbar = () => {
             className="text-3xl font-bold text-white flex items-center"
           >
             <img
-              src="./micromazeLogo.png"
+              src="./titleIcon.png"
               alt="Logo"
               width={50}
               height={50}
@@ -50,7 +50,7 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <button className="btn-gradient font-bold py-2 px-4 rounded w-full">
+          <button className="btn-gradient font-bold py-2 px-4 rounded w-full ">
             Resources
           </button>
         </motion.div>

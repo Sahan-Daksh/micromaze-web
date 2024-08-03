@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../../assets/styles/pages/layouts/Countdown.css";
 
 const Countdown = () => {
-  const targetDate = new Date("2024-08-10T23:59:59").getTime(); // Change this to your target date
+  const targetDate = new Date("2024-08-24T23:59:59").getTime(); // Change this to your target date
   const [timeRemaining, setTimeRemaining] = useState(targetDate - Date.now());
 
   useEffect(() => {

@@ -37,7 +37,7 @@ const Awards = () => {
             Awards
           </motion.h2>
           <motion.p
-            className="font-t26-carbon text-lg sm:text-xl md:text-4xl text-gray-300 mt-4 "
+            className="font-t26-carbon text-xl sm:text-xl md:text-4xl text-gray-300 mt-4 "
             initial="hidden"
             animate="visible"
             variants={fadeInUpVariants}

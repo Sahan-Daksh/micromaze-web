@@ -23,10 +23,10 @@ const Navbar = () => {
             className="text-3xl font-bold text-white flex items-center"
           >
             <img
-              src="./titleIcon.png"
+              src="./MicroMazeLogo.png"
               alt="Logo"
-              width={50}
-              height={50}
+              width={120}
+              height={120}
               className="mx-auto"
             />
           </a>

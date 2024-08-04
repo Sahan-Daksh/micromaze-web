@@ -8,7 +8,7 @@ const socialMediaLinks = [
     icon: () => <i className="fab fa-facebook-f"></i>,
   },
   {
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/ieee-robotics-and-automation-society-of-iit/",
     icon: () => <i className="fab fa-linkedin-in"></i>,
   },
   {

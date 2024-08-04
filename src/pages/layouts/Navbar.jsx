@@ -32,9 +32,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex items-center">
-          <button className="btn-gradient font-bold py-2 px-4 rounded">
+          <a className="btn-gradient font-bold py-2 px-4 rounded resources-btn" href="https://bit.ly/MicroMazeDelegateBooklet">
             Resources
-          </button>
+          </a>
           <div className="lg:hidden">
             <button className="mobile-menu-button" onClick={handleMenuToggle}>
               ☰
@@ -50,9 +50,9 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <button className="btn-gradient font-bold py-2 px-4 rounded w-full ">
+          <a className="btn-gradient font-bold py-2 px-4 rounded w-full" href="https://bit.ly/MicroMazeDelegateBooklet">
             Resources
-          </button>
+          </a>
         </motion.div>
       )}
     </motion.div>

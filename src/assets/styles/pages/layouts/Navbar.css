@@ -51,6 +51,18 @@
   .btn-gradient:focus {
     outline: none;
   }
+
+  .resources-btn {
+    display: inline-block; /* Ensure the element is not hidden by default */
+    /* Other styles for the button, such as background, font size, etc. */
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .resources-btn {
+      display: none; /* Hide the button on screens smaller than 768px */
+    }
+  }
   
   /* Mobile menu button */
   .mobile-menu-button {

@@ -29,3 +29,13 @@
   /* Overlay for text visibility */
   z-index: 5;
 }
+
+.font-reross{
+  font-family: "reross-quadratic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-sf-pro-display{
+  font-family: "SF Pro Display", sans-serif;
+}

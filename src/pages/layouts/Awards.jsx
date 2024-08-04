@@ -28,7 +28,7 @@ const Awards = () => {
       <div className="relative container mx-auto text-center text-white px-4">
         <div className="mb-10">
           <motion.h2
-            className="font-reross font-normal text-5xl sm:text-5xl md:text-8xl font-bold "
+            className="font-reross text-5xl sm:text-5xl md:text-8xl font-normal "
             initial="hidden"
             animate="visible"
             variants={fadeInUpVariants}
@@ -37,7 +37,7 @@ const Awards = () => {
             Awards
           </motion.h2>
           <motion.p
-            className="text-lg sm:text-xl md:text-4xl text-gray-300 mt-4 "
+            className="font-t26-carbon text-lg sm:text-xl md:text-4xl text-gray-300 mt-4 "
             initial="hidden"
             animate="visible"
             variants={fadeInUpVariants}

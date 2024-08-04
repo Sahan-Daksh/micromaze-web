@@ -1,26 +1,38 @@
 /* General footer styling */
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
 .footer {
   background-color: #1c1c1c;
   color: #e0e0e0;
   font-family: "t26-carbon", monospace;
 font-weight: 400;
 font-style: normal;
-  padding: 20px 10px;
   font-size: 14px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .footer-content {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .footer-sections {
@@ -28,21 +40,31 @@ font-style: normal;
   justify-content: space-between;
   gap: 30px;
   width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-info {
-  flex: 3; /* Increase the flex value to make it larger */
-  min-width: 500px; /* Adjust the minimum width */
   padding: 20px; /* Add padding for more space */
   border-radius: 10px; /* Optional: Add border-radius for better visuals */
+  width: 100%;
+  max-width: 100%;
+  min-width: unset;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .footer-connect {
-  flex: 1; /* Keep the smaller flex value */
-  min-width: 300px;
+
   text-align: right; /* Aligns content to the right */
   padding: 20px; /* Add padding for more space */
   border-radius: 10px; /* Optional: Add border-radius for better visuals */
+  width: 100%;
+  max-width: 100%;
+  min-width: unset;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .footer-title {
@@ -109,6 +131,8 @@ font-style: normal;
 
   .footer-description {
     font-size: 14px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .social-media a {
@@ -123,7 +147,7 @@ font-style: normal;
   .footer-info,
   .footer-connect {
     text-align: center;
-    padding: 15px; /* Adjust padding for mobile */
+    padding: 10px; /* Adjust padding for mobile */
   }
 
   .social-media {
@@ -142,8 +166,8 @@ font-style: normal;
 
   .footer-description {
     font-size: 12px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .social-media a {
@@ -152,6 +176,6 @@ font-style: normal;
 
   .footer-info,
   .footer-connect {
-    padding: 10px; /* Adjust padding for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
   }
 }

@@ -39,12 +39,15 @@ export default function MainPage() {
       <AnimatedBackground isActive={activeSegment === 0}>
         <FAQ />
       </AnimatedBackground>
+
       <AnimatedBackground isActive={activeSegment === 1}>
         <Merch />
       </AnimatedBackground>
+
       <AnimatedBackground isActive={activeSegment === 2}>
         <Partners />
       </AnimatedBackground>
+
       <AnimatedBackground isActive={activeSegment === 3}>
         <Contact />
       </AnimatedBackground>

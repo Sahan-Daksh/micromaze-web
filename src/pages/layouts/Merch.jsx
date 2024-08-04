@@ -10,10 +10,12 @@ export default function Merch() {
   const handleCardClick = (product) => {
     setSelectedProduct(product);
     setCurrentImageIndex(0); // Reset image index
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
   };
 
   const handleClosePopup = () => {
     setSelectedProduct(null);
+    document.body.style.overflow = 'auto'; // Restore background scroll
   };
 
   const handleThumbnailClick = (index) => {
@@ -78,11 +80,6 @@ export default function Merch() {
           >
             <motion.div
               className="merch-popup"
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                borderColor: "white",
-              }}
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               exit={{ y: "100vh" }}

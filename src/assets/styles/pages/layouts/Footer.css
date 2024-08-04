@@ -142,6 +142,8 @@ font-style: normal;
 
   .footer-description {
     font-size: 12px;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   .social-media a {

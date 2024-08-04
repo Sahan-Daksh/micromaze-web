@@ -22,8 +22,8 @@
   font-size: 5rem;
   font-weight: bold;
   font-family: "reross-quadratic", sans-serif;
-font-weight: 400;
-font-style: bold;
+  font-weight: 400;
+  font-style: bold;
   margin-top:-20px;
   margin-bottom: 10px;
 }
@@ -120,9 +120,9 @@ font-style: normal;
 
 @media (max-width: 480px) {
   .contact-title {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     font-weight: bold;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: "reross-quadratic", sans-serif;
     margin-top:-30px;
     margin-bottom: 10px;
   }

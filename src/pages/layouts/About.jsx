@@ -20,7 +20,7 @@ const About = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          What is MicroMaze?
+          <h1> What is MicroMaze?</h1>
         </motion.p>
       </motion.div>
 

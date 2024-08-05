@@ -45,7 +45,9 @@
 }
 
 .font-carbon {
-  font-family: 'Carbon', sans-serif;
+  font-family: "t26-carbon", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .p-4 {
@@ -53,28 +55,9 @@
 }
 
 .title-text {
-  font-size: 9rem; /* Increased font size */
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: bold;
-
-  @media (min-width: 640px) {
-    font-size: 9rem;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 9rem;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 9rem;
-  }
-
-  @media (min-width: 1280px) {
-    font-size:9rem;
-  }
-
-  color: white;
-  font-weight: bold;
+  font-family: "reross-quadratic", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
 }
 
 .content-text {
@@ -97,33 +80,36 @@
   }
 
   color: #ffffff;
-  font-family: 'Carbon',sans-serif;
+  font-family: "t26-carbon", monospace;
+
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .title-text {
-    font-size: 5rem; /* Increased font size for mobile */
-  }
-
   .top-24 {
-    top: 8rem; /* Adjusted to create more space below the title */
+    top: 8rem;
+    /* Adjusted to create more space below the title */
   }
 
   .bottom-24 {
-    bottom: 8rem; /* Adjusted to create more space above the bottom of the screen */
+    bottom: 8rem;
+    /* Adjusted to create more space above the bottom of the screen */
   }
 
   .content-text {
-    font-size: 1.125rem; /* Increased font size for better readability on mobile */
+    font-size: 1.125rem;
+    /* Increased font size for better readability on mobile */
   }
 
   .mobile-text {
-    padding: 1.5rem; /* Adjust padding for mobile */
+    padding: 1.5rem;
+    /* Adjust padding for mobile */
     /* Semi-transparent background for better readability */
     /* Rounded corners */
-    backdrop-filter: blur(10px); /* Apply blur effect */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
   }
+
 
   .text-left,
   .text-right {

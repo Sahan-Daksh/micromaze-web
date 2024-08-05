@@ -111,8 +111,30 @@
   }
 
 
+
   .text-left,
   .text-right {
-    text-align: center;
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-text {
+    padding: 1.5rem;
+    /* Adjust padding for mobile */
+    /* Semi-transparent background for better readability */
+    /* Rounded corners */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+  }
+
+  .second-pg{
+    margin-left:33%;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 768px) {
+  .micromaze-head{
+    font-size: 2rem;
   }
 }

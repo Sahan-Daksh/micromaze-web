@@ -20,13 +20,13 @@ const About = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <h1> What is MicroMaze?</h1>
+          <h1 className="micromaze-head"> What is MicroMaze?</h1>
         </motion.p>
       </motion.div>
 
       {/* Text Sections */}
       <motion.div
-        className="absolute lg:left-10 top-24 lg:top-40 w-full md:w-1/3 p-4 rounded-lg mobile-text"
+        className="absolute lg:left-10 top-24 lg:top-40 w-full md:w-2/3 lg:w-1/3 md:mt-10 lg:p-4 md:mt-3 rounded-lg mobile-text first-pg"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
@@ -40,7 +40,7 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        className="absolute lg:right-10 bottom-24 lg:bottom-40 w-full md:w-1/3 p-4 rounded-lg mobile-text"
+        className="absolute lg:right-10 bottom-24 lg:bottom-40 w-full md:w-2/3 lg:w-1/3 md:mb-5 lg:p-4 rounded-lg mobile-text second-pg"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}

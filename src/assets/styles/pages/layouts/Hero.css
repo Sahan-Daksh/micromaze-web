@@ -82,10 +82,26 @@ font-style: normal;
   /* Adjusted value to move the image lower */
 }
 
-@media (min-width: 350px) and (max-width: 1200px) {
+@media (min-width: 350px) and (max-width: 480px) {
   .hero-heading {
     position: relative;
-    font-size: 5.5rem;
+    font-size: 6rem;
+    margin-left: -3%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+  .hero-heading {
+    position: relative;
+    font-size: 7.5rem;
+    margin-left: -3%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .hero-heading {
+    position: relative;
+    font-size: 9rem;
     margin-left: -3%;
   }
 }

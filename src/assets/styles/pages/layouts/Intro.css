@@ -1,5 +1,4 @@
 /* Intro.css */
-
 .intro-container {
     position: relative;
     height: 100vh;
@@ -36,8 +35,9 @@
 .intro-title {
     font-size: 10vw;
   font-weight: 700;
-  font-family: 'SF Pro Display', sans-serif;
-    color: white;
+  font-family: "reross-quadratic", sans-serif;
+font-style: bold;
+    color: rgb(223, 185, 230);
     text-align: center;
     display: inline-block;
     animation: scrollText 20s linear infinite;
@@ -53,7 +53,7 @@
     white-space: nowrap;
     font-size: 10vw;
     font-weight: 700;
-    color: white;
+    color: rgb(223, 185, 230);
     font-family: 'SF Pro Display', sans-serif;
 }
 
@@ -82,17 +82,22 @@
 }
 
 .intro-stat-number {
-    font-size: 8rem;
+    font-size: 9rem;
     font-weight: 700;
-    color: #A9A9A9;
+    background: #E4EEF1;
+background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
     font-family: 'SF Pro Display', sans-serif;
     will-change: text-shadow;
 }
 
 .intro-stat-text {
     font-size: 3rem;
-    color: #A9A9A9;
-    font-family: 'Carbon', sans-serif;
+    color: #ffffff;
+    font-family: "t26-carbon", monospace;
+    font-weight: 400;
+    font-style: normal; 
     will-change: color;
 }
 

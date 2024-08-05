@@ -8,8 +8,9 @@
 /* Title of the partner section */
 .partners-title {
     font-size: 5rem;
-  font-weight: bold;
-  font-family: 'SF Pro Display', sans-serif;
+    font-family: "reross-quadratic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: white;
     margin-top:-100px;
     margin-bottom: 1.5rem;
@@ -58,7 +59,7 @@
 
 @media (min-width: 360px) and (max-width: 1200px) {
     .partners-title {
-        font-size: 2rem;
+        font-size: 3.5rem;
         text-align: center;
     }
 }

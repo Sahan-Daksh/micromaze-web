@@ -38,14 +38,14 @@ const milestones = [
   },
   {
     id: 5,
-    date: "10th August, 2024",
+    date: "24th August, 2024",
     title: "Qualifier Round",
     description: `Show your skills and qualify for the finale.`,
   },
   {
     id: 6,
-    date: "11th August, 2024",
-    title: "The Finale",
+    date: "25th August, 2024",
+    title: "The Grand Finale",
     description: `The grand finale - Get Ready to conquer the Maze!`,
   },
 ];
@@ -64,8 +64,9 @@ const Milestones = () => {
     >
       <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} borderRadius="lg">
         <chakra.h3
-          fontSize="6xl"
-          fontWeight="bold"
+          fontSize="7xl"
+          fontFamily="reross-quadratic"
+          fontWeight="normal"
           mb={18}
           textAlign="center"
           style={{ color: "white" }}
@@ -147,15 +148,15 @@ const Card = ({ id, title, description, date }) => {
       }}
     >
       <Box>
-        <Text fontSize="lg" color={isEvenId ? "teal.400" : "blue.400"}>
+        <Text fontSize="3xl" fontFamily={"t26-carbon"} fontWeight={"bold"} color={isEvenId ? "teal.400" : "blue.400"}>
           {date}
         </Text>
 
         <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+          <chakra.h1 fontFamily={"reross-quadratic"} fontSize="3xl" lineHeight={1.2} fontWeight="bold" w="100%">
             {title}
           </chakra.h1>
-          <Text fontSize="md">{description}</Text>
+          <Text fontFamily={"t26-carbon"} fontSize="2xl">{description}</Text>
         </VStack>
       </Box>
     </HStack>

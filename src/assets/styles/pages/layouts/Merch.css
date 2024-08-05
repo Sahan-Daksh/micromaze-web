@@ -1,14 +1,19 @@
 /* Default styles for desktop and larger screens */
 
 .merch-container {
+    font-family: "t26-carbon", monospace;
+font-weight: 700;
+font-style: normal;
     color: white;
+    animation: gradientAnimation 10s ease infinite;
     padding: 5rem 0;
 }
 
 .merch-title {
     font-size: 5rem;
-    font-weight: bold;
-    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-family: "reross-quadratic", sans-serif;
+font-style: normal;
     margin-top: -50px;
     margin-bottom: 4rem;
     text-align: center;
@@ -43,13 +48,15 @@
 }
 
 .merch-name {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 .merch-price {
+    font-weight: bold;
+    font-size:1.25rem;
+    font-family: 'SF Pro Display', sans-serif;
     margin-top: 0.5rem;
-    color: #d1d5db;
+    color: #d7336f;
 }
 
 /* Ensure the popup stays on top of everything */
@@ -115,18 +122,22 @@
 }
 
 .merch-popup-name {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .merch-popup-price {
-    font-size: 1.75rem;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'SF Pro Display', sans-serif;
     color: #d7336f;
     margin-bottom: 1rem;
 }
 
 .merch-popup-description {
+    font-family: 'SF Pro Display', sans-serif;
+    text-align: left;
     font-size: 1.1rem;
     color: white;
     margin-bottom: 1rem;
@@ -140,6 +151,7 @@
     text-decoration: none;
     border-radius: 0.5rem;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .merch-popup-thumbnails {
@@ -187,11 +199,15 @@
     opacity: 0.7;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 /* Mobile-specific styles */
 
 @media (max-width: 600px) {
     .merch-title {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
 
     .merch-popup {

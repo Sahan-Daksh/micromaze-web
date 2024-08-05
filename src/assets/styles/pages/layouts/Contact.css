@@ -21,14 +21,19 @@
 .contact-title {
   font-size: 5rem;
   font-weight: bold;
-  font-family: 'SF Pro Display', sans-serif;
-  margin-top:-50px;
+  font-family: "reross-quadratic", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  margin-top:-20px;
   margin-bottom: 10px;
 }
 
 .contact-subtitle {
   font-size: 2rem;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: normal;
+margin-top: -20px;
   margin-bottom: 20px;
 }
 
@@ -42,9 +47,10 @@
 .contact-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
+  height:480px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -56,20 +62,19 @@
 }
 
 .contact-card-image {
-  width: 180px;
-  height: 180px;
-  border-radius: 10px;
+  width: 500px;
+  height: 300px;
   object-fit: cover;
   margin-bottom: 10px;
-  margin-left: 15%;
+
 }
 
 .contact-card-title {
-  font-size: 1.2rem;
-  font-family: 'SF Pro Display', sans-serif;
-  font-style:italic;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-family: "reross-quadratic", sans-serif;
+font-weight: 400;
+font-style: normal;
+  margin-bottom: 0;
   color: #ffffff;
 }
 
@@ -82,8 +87,10 @@
 }
 
 .contact-card-detail {
-  font-size: 0.9rem;
-  font-family: 'SF Pro Display', sans-serif;
+  font-size: 1.2rem;
+  font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: normal;
   color: #bbbbbb;
 }
 
@@ -110,3 +117,20 @@
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 3.4rem;
+    font-weight: normal;
+    font-family: "reross-quadratic", sans-serif;
+    margin-top:0;
+    margin-bottom: 40px;
+  }
+
+  .contact-subtitle{
+    font-size: 2rem;
+    font-family: "t26-carbon", monospace;
+    margin-bottom: 20px;
+  }
+}
+

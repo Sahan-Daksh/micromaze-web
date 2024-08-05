@@ -44,12 +44,24 @@
   }
   
   .btn-gradient:hover {
-    background: linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(131, 58, 180, 1) 100%);
+    background: linear-gradient(90deg, rgb(51, 29, 87) 0%, rgba(131, 58, 180, 1) 100%);
     transform: scale(1.05);
   }
   
   .btn-gradient:focus {
     outline: none;
+  }
+
+  .resources-btn {
+    display: inline-block; /* Ensure the element is not hidden by default */
+    /* Other styles for the button, such as background, font size, etc. */
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .resources-btn {
+      display: none; /* Hide the button on screens smaller than 768px */
+    }
   }
   
   /* Mobile menu button */

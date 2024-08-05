@@ -1,3 +1,12 @@
+@keyframes textShine {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
 .hero-container {
   position: relative;
   background-color: #1e3a8a;
@@ -26,19 +35,35 @@
   position: relative;
   text-align: center;
   z-index: 1;
-  margin-top: -15vh;
+  margin-top: -18vh;
   /* Adjust this value if needed */
 }
 
 .hero-heading {
-  font-size: 10rem;
+  font-size: 14rem;
   font-weight: 600;
-  font-family: 'SF Pro Display', sans-serif;
-  height: 210px;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  height: 320px;
+letter-spacing: -15px;
+font-family: "t26-carbon", monospace;
+font-weight: 600;
+font-style: normal;
+  text-shadow: 2px;
   margin: 0;
   transition: transform 0.3s ease;
+    background: linear-gradient(
+        to right,
+
+        #ffffff 20%,
+        #999999 30%,
+        #d7d2db 70%,
+        #bfb0df 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
 }
 
 .hero-heading:hover {
@@ -57,8 +82,10 @@
   /* Adjusted value to move the image lower */
 }
 
-@media (min-width: 360px) and (max-width: 1200px) {
+@media (min-width: 350px) and (max-width: 1200px) {
   .hero-heading {
-    font-size: 3.8rem;
+    position: relative;
+    font-size: 5.5rem;
+    margin-left: -3%;
   }
 }

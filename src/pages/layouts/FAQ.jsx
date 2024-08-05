@@ -14,7 +14,7 @@ export default function FAQ() {
     <>
       <div className="faq-container">
         <div className="faq-heading-container">
-          <h2 className="faq-heading">Frequently Asked Questions (FAQ)</h2>
+          <h2 className="faq-heading">FAQ</h2>
         </div>
         <div className="faq-content-container">
           <div className="space-y-4">

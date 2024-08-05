@@ -6,6 +6,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'reross': ['"reross-quadratic"', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: 400,
+      },
       colors: {
         color: {
           1: "#AC6AFF",
@@ -42,6 +48,7 @@ export default {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
+        'carbon': ["carbon", "sans-serif"],
       },
       letterSpacing: {
         tagline: ".15em",

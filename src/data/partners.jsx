@@ -35,4 +35,16 @@ export const partners = [
     description: "Description of Partner 6.",
     title: "Digital Media Partner"
   },
+  {
+    name: "Partner 7",
+    logo: "./partners/Noriza-Videography.jpg",
+    description: "Description of Partner 7.",
+    title: "Videography Partner"
+  },
+  {
+    name: "Partner 6",
+    logo: "./partners/Linal-Photography.png",
+    description: "Description of Partner 8.",
+    title: "Photography Partner"
+  },
 ];

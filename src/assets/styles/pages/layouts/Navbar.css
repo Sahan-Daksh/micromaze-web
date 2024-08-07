@@ -117,4 +117,10 @@
       display: flex;
     }
   }
+
+  @media (max-height: 480px){
+    .resources-btn {
+      display: none;
+    }
+  }
   

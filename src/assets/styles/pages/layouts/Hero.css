@@ -105,3 +105,13 @@ font-style: normal;
     margin-left: -3%;
   }
 }
+
+@media (max-height:480px){
+  .hero-content {
+    margin-top: 15vh;
+  }
+
+  .navbar{
+    backdrop-filter: blur(0px);
+  }
+}

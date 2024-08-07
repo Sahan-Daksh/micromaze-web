@@ -223,3 +223,12 @@ font-style: normal;
         z-index: 1;
     }
 }
+
+@media (max-height: 480px){
+    .countdown-time-units {
+        display: flex;
+        flex-direction: row;
+        gap:3.5rem;
+        margin-left: 7%;
+    }
+}

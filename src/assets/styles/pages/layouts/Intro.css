@@ -142,3 +142,20 @@ background: linear-gradient(to top, #E4EEF1 4%, #C8C4CB 100%);
         font-size: 1.8rem;
     }
 }
+
+
+@media (max-height: 480px){
+    .intro-stats{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .intro-stat-number {
+        font-size: 4.8rem;
+    }
+
+    .intro-stat-text {
+        font-size: 1.8rem;
+    }
+}

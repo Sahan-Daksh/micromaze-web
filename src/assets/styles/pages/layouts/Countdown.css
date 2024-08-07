@@ -228,7 +228,7 @@ font-style: normal;
     .countdown-time-units {
         display: flex;
         flex-direction: row;
-        gap:3.5rem;
-        margin-left: 7%;
+        gap:3rem;
+        margin-left: 3%;
     }
 }

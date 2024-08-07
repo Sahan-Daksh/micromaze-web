@@ -10,12 +10,12 @@ export default function Merch() {
   const handleCardClick = (product) => {
     setSelectedProduct(product);
     setCurrentImageIndex(0); // Reset image index
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    document.body.classList.add("no-scroll"); // Prevent background scroll
   };
 
   const handleClosePopup = () => {
     setSelectedProduct(null);
-    document.body.style.overflow = 'auto'; // Restore background scroll
+    document.body.classList.remove("no-scroll"); // Restore background scroll
   };
 
   const handleThumbnailClick = (index) => {
@@ -72,14 +72,14 @@ export default function Merch() {
 
         {selectedProduct && (
           <motion.div
-            className="merch-popup-overlay"
+            className="merch-popup-overlay overlay-all"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleOverlayClick}
           >
             <motion.div
-              className="merch-popup"
+              className="merch-popup overlay-all"
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               exit={{ y: "100vh" }}
@@ -103,7 +103,10 @@ export default function Merch() {
                     {selectedProduct.description || "No description available."}
                   </p>
                   <a
-                    href={selectedProduct.buyLink || "https://bit.ly/MicroMaze-Merch"}
+                    href={
+                      selectedProduct.buyLink ||
+                      "https://bit.ly/MicroMaze-Merch"
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="merch-popup-button"

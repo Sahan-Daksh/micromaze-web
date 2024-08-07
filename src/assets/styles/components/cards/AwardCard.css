@@ -16,7 +16,6 @@
 
 .award-card .award-image {
   position: relative;
-  z-index: 10;
   max-width: 100%;
   /* Ensure the image scales properly */
   height: auto;
@@ -27,7 +26,6 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
   /* Overlay for text visibility */
-  z-index: 5;
 }
 
 .font-reross{

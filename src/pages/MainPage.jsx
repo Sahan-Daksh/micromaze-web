@@ -55,6 +55,7 @@ export default function MainPage() {
       </AnimatedBackground>
 
       <FooterExport />
+
     </>
   );
 }

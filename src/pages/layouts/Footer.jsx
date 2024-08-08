@@ -40,7 +40,7 @@ const FooterExport = () => {
               participants in developing a micro mouse capable of solving a maze
               within a specified timeframe. The main challenge is to design a
               micro mouse capable of solving a maze within a specified time
-              frame.  
+              frame.
             </p>
           </motion.div>
           <motion.div
@@ -66,7 +66,9 @@ const FooterExport = () => {
                 </motion.a>
               ))}
             </div>
-            <p className="footer-email" href="ieeeras@iit.ac.lk">@ieeeras@iit.ac.lk</p>
+            <p className="footer-email" href="ieeeras@iit.ac.lk">
+              @ieeeras@iit.ac.lk
+            </p>
           </motion.div>
         </div>
       </div>

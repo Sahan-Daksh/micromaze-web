@@ -1,9 +1,8 @@
 /* Default styles for desktop and larger screens */
-
 .merch-container {
     font-family: "t26-carbon", monospace;
-font-weight: 700;
-font-style: normal;
+    font-weight: 700;
+    font-style: normal;
     color: white;
     animation: gradientAnimation 10s ease infinite;
     padding: 5rem 0;
@@ -13,7 +12,7 @@ font-style: normal;
     font-size: 5rem;
     font-weight: 400;
     font-family: "reross-quadratic", sans-serif;
-font-style: normal;
+    font-style: normal;
     margin-top: -50px;
     margin-bottom: 4rem;
     text-align: center;
@@ -53,7 +52,7 @@ font-style: normal;
 
 .merch-price {
     font-weight: bold;
-    font-size:1.25rem;
+    font-size: 1.25rem;
     font-family: 'SF Pro Display', sans-serif;
     margin-top: 0.5rem;
     color: #d7336f;
@@ -70,10 +69,9 @@ font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    /* High z-index to stay on top */
+    z-index: 9999;
+    /* Ensure it is on top of everything else */
     overflow: auto;
-    /* Ensure it can handle overflow content */
 }
 
 .merch-popup {
@@ -89,8 +87,8 @@ font-style: normal;
     height: auto;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
-    /* Ensure it is above the overlay */
+    z-index: 10000;
+    /* Ensure it is on top of the overlay */
 }
 
 .merch-popup-close {
@@ -102,10 +100,9 @@ font-style: normal;
     border: none;
     color: white;
     cursor: pointer;
-    z-index: 1002;
-    /* Ensure it is above the popup */
+    z-index: 10001;
+    /* Ensure it is on top of the popup */
 }
-
 
 .merch-popup-content {
     display: flex;
@@ -199,7 +196,8 @@ font-style: normal;
     opacity: 0.7;
 }
 
-.no-scroll{
+/* Prevent background scroll */
+.no-scroll {
     overflow: hidden;
 }
 

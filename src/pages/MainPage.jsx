@@ -10,7 +10,8 @@ import Merch from "./layouts/Merch";
 import Partners from "./layouts/Partners";
 import Contact from "./layouts/Contact";
 import FooterExport from "./layouts/Footer";
-import AnimatedBackground from "../utils//AnimatedBackground";
+import AnimatedBackground from "../utils/AnimatedBackground";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function MainPage() {
   const [activeSegment, setActiveSegment] = useState(0);
@@ -39,10 +40,11 @@ export default function MainPage() {
       <AnimatedBackground isActive={activeSegment === 0}>
         <FAQ />
       </AnimatedBackground>
-
-      <AnimatedBackground isActive={activeSegment === 1}>
-        <Merch />
-      </AnimatedBackground>
+      <div style={{ zIndex: 9999 }}>
+        <AnimatedBackground isActive={activeSegment === 1}>
+          <Merch />
+        </AnimatedBackground>
+      </div>
 
       <AnimatedBackground isActive={activeSegment === 2}>
         <Partners />

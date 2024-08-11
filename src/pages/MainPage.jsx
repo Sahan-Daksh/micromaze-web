@@ -40,17 +40,17 @@ export default function MainPage() {
       <AnimatedBackground isActive={activeSegment === 0}>
         <FAQ />
       </AnimatedBackground>
-      <div style={{ zIndex: 9999 }}>
-        <AnimatedBackground isActive={activeSegment === 1}>
+      <div>
+        <AnimatedBackground isActive={activeSegment === 1}  style={{ zIndex: 1000 }}>
           <Merch />
         </AnimatedBackground>
       </div>
 
-      <AnimatedBackground isActive={activeSegment === 2} style={{ zIndex: -1 }}>
+      <AnimatedBackground isActive={activeSegment === 2}>
         <Partners />
       </AnimatedBackground>
 
-      <AnimatedBackground isActive={activeSegment === 3} style={{ zIndex: -1 }}>
+      <AnimatedBackground isActive={activeSegment === 3}>
         <Contact />
       </AnimatedBackground>
 

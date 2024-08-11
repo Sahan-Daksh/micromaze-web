@@ -78,6 +78,8 @@ export default {
         3: "3",
         4: "4",
         5: "5",
+        'custom-z': '100000',
+        'low-z':'1000'
       },
       borderWidth: {
         DEFAULT: "0.0625rem",

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../assets/styles/utils/AnimatedBackground.css";
 
-const AnimatedBackground = ({ children, isActive }) => {
+const AnimatedBackground = ({ children, isActive, style }) => {
   const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const AnimatedBackground = ({ children, isActive }) => {
   return (
     <motion.div
       className={`animated-background-container ${animationClass}`}
+      style={style}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
